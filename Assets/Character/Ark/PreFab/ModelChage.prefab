@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &775627099114940519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4448282646234366635}
+  - component: {fileID: 4261959722027624538}
+  - component: {fileID: 2948820279359299335}
+  - component: {fileID: 4481376533055949778}
+  m_Layer: 0
+  m_Name: ModelChage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4448282646234366635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775627099114940519}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.22015, y: 6.659444, z: -0.5991765}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4261959722027624538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775627099114940519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b56ff4580368841b5040b6f2b710a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionPanel: {fileID: 0}
+  steampunkButton: {fileID: 0}
+  runeButton: {fileID: 0}
+  SteamPunkPlayer: {fileID: 0}
+  MagicPlayer: {fileID: 0}
+  UI: {fileID: 0}
+  inventory: {fileID: 0}
+  select: 0
+  SystemSteamPunk: 0
+  SystemMagic: 0
+  dashstackUI: {fileID: 0}
+  camerafollow: {fileID: 0}
+  cameracontroller: {fileID: 0}
+--- !u!114 &2948820279359299335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775627099114940519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d7d72629cb6d349bd80c6587862057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4481376533055949778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775627099114940519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bfdd348c0d03f45adbb89c57c00526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steamPressureUI: {fileID: 0}
+  manaUI: {fileID: 0}
+  QSkill: {fileID: 0}
+  WSkill: {fileID: 0}
+  HookUI: {fileID: 0}
+  OverHeatUI: {fileID: 0}
+  Steampunk: 0
+  ManaSystem: 0
+  hookUI: {fileID: 0}

@@ -1,0 +1,1794 @@
+fileFormatVersion: 2
+guid: 3e53c035de197a6438baa336593c5c3c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7882967547237600754
+    second: ilde_0
+  - first:
+      213: 8595589414596055125
+    second: ilde_1
+  - first:
+      213: 8969809024767441344
+    second: ilde_2
+  - first:
+      213: 2317551176318694478
+    second: ilde_3
+  - first:
+      213: 9013479335195543278
+    second: ilde_4
+  - first:
+      213: -6140530358361685777
+    second: ilde_5
+  - first:
+      213: -699236810116789243
+    second: ilde_6
+  - first:
+      213: -165791835936622352
+    second: ilde_7
+  - first:
+      213: -2975067234504303072
+    second: ilde_8
+  - first:
+      213: -6112828415796826574
+    second: ilde_9
+  - first:
+      213: -5672179930933879637
+    second: ilde_10
+  - first:
+      213: -4019060910025519181
+    second: ilde_11
+  - first:
+      213: 8176560949640704417
+    second: ilde_12
+  - first:
+      213: 4597361169950807823
+    second: ilde_13
+  - first:
+      213: -5309673098274233974
+    second: ilde_14
+  - first:
+      213: -4454778202314124843
+    second: ilde_15
+  - first:
+      213: -8594408521988494410
+    second: ilde_16
+  - first:
+      213: -113185383840053570
+    second: ilde_17
+  - first:
+      213: 1733722397111854704
+    second: ilde_18
+  - first:
+      213: -5845132420944321357
+    second: ilde_19
+  - first:
+      213: 8073127393883843951
+    second: ilde_20
+  - first:
+      213: -5411682441830880373
+    second: ilde_21
+  - first:
+      213: -3829559865155983174
+    second: ilde_22
+  - first:
+      213: -8822667972806460379
+    second: ilde_23
+  - first:
+      213: 7723970895712478803
+    second: ilde_24
+  - first:
+      213: 1298023931449464255
+    second: ilde_25
+  - first:
+      213: -8755782541922065222
+    second: ilde_26
+  - first:
+      213: -5598695694081733004
+    second: ilde_27
+  - first:
+      213: 4089271701478868500
+    second: ilde_28
+  - first:
+      213: -7833403487993219063
+    second: ilde_29
+  - first:
+      213: 2978029696558020341
+    second: ilde_30
+  - first:
+      213: 8238627559626017281
+    second: ilde_31
+  - first:
+      213: -6499285005250280890
+    second: ilde_32
+  - first:
+      213: 8527178054042773282
+    second: ilde_33
+  - first:
+      213: 2624910588607134431
+    second: ilde_34
+  - first:
+      213: -7201014299662863357
+    second: ilde_35
+  - first:
+      213: 3115842890920389154
+    second: ilde_36
+  - first:
+      213: -1491790637108035871
+    second: ilde_37
+  - first:
+      213: -9205415260181127681
+    second: ilde_38
+  - first:
+      213: 9077610598064361036
+    second: ilde_39
+  - first:
+      213: -3337903868844400518
+    second: ilde_40
+  - first:
+      213: 8122601491974635124
+    second: ilde_41
+  - first:
+      213: 4570565755416497033
+    second: ilde_42
+  - first:
+      213: 129830520801624452
+    second: ilde_43
+  - first:
+      213: 6295796446249976588
+    second: ilde_44
+  - first:
+      213: 4691943395452857401
+    second: ilde_45
+  - first:
+      213: 6626716673879694928
+    second: ilde_46
+  - first:
+      213: 4036435673677072635
+    second: ilde_47
+  - first:
+      213: -7071219028385224345
+    second: ilde_48
+  - first:
+      213: 6299076189111137585
+    second: ilde_49
+  - first:
+      213: -298975645460393369
+    second: ilde_50
+  - first:
+      213: -2008899624864797843
+    second: ilde_51
+  - first:
+      213: 3193049066584987231
+    second: ilde_52
+  - first:
+      213: -3936886747090959116
+    second: ilde_53
+  - first:
+      213: -472819730833501674
+    second: ilde_54
+  - first:
+      213: -7085374354336858463
+    second: ilde_55
+  - first:
+      213: -5707880662866211179
+    second: ilde_56
+  - first:
+      213: 4935939601405187309
+    second: ilde_57
+  - first:
+      213: 3170552194508811850
+    second: ilde_58
+  - first:
+      213: 6663446971954836378
+    second: ilde_59
+  - first:
+      213: -1803417031504887120
+    second: ilde_60
+  - first:
+      213: 1268436372306491988
+    second: ilde_61
+  - first:
+      213: 2376414024444689563
+    second: ilde_62
+  - first:
+      213: 2318200057774360777
+    second: ilde_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ilde_0
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1916
+        width: 138
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd870de73de56d60800000000000000
+      internalID: 7882967547237600754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1916
+        width: 140
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5501b1cf70ba94770800000000000000
+      internalID: 8595589414596055125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_2
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1916
+        width: 140
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c93b50b8c92b7c70800000000000000
+      internalID: 8969809024767441344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_3
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1916
+        width: 140
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44b3451488992020800000000000000
+      internalID: 2317551176318694478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_4
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1916
+        width: 140
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee687ac23bf461d70800000000000000
+      internalID: 9013479335195543278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_5
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1916
+        width: 140
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe089594c2478caa0800000000000000
+      internalID: -6140530358361685777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_6
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 1916
+        width: 141
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c8c1f63dfcb46f0800000000000000
+      internalID: -699236810116789243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_7
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 1915
+        width: 141
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f87650243df2bdf0800000000000000
+      internalID: -165791835936622352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_8
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1659
+        width: 141
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e9770ec1076b6d0800000000000000
+      internalID: -2975067234504303072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_9
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1659
+        width: 141
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e248761feda2ba0800000000000000
+      internalID: -6112828415796826574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_10
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1659
+        width: 141
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac1692c76e5841b0800000000000000
+      internalID: -5672179930933879637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_11
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1659
+        width: 141
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf454f656d6938c0800000000000000
+      internalID: -4019060910025519181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_12
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1659
+        width: 142
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a13aa7ccdaf87170800000000000000
+      internalID: 8176560949640704417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_13
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1659
+        width: 142
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07971f40ab1dcf30800000000000000
+      internalID: 4597361169950807823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_14
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 1659
+        width: 142
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81aaefe2704056b0800000000000000
+      internalID: -5309673098274233974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_15
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 1659
+        width: 142
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1d9e1d3d27d22c0800000000000000
+      internalID: -4454778202314124843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_16
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1403
+        width: 142
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb29400cf68ab880800000000000000
+      internalID: -8594408521988494410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_17
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1403
+        width: 143
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6827a3e72ed6ef0800000000000000
+      internalID: -113185383840053570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_18
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1402
+        width: 143
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076adf2a55b6f0810800000000000000
+      internalID: 1733722397111854704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_19
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1402
+        width: 143
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4ae70380be1eea0800000000000000
+      internalID: -5845132420944321357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_20
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1402
+        width: 143
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6debea6792890070800000000000000
+      internalID: 8073127393883843951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_21
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1402
+        width: 143
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ba371dd77d5e4b0800000000000000
+      internalID: -5411682441830880373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_22
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 1402
+        width: 143
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8e84fa79baadac0800000000000000
+      internalID: -3829559865155983174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_23
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1402
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cb7a529369f8580800000000000000
+      internalID: -8822667972806460379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_24
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1146
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356e5663b9e013b60800000000000000
+      internalID: 7723970895712478803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_25
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1146
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5500073e1830210800000000000000
+      internalID: 1298023931449464255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_26
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1146
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab42b221b263d7680800000000000000
+      internalID: -8755782541922065222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_27
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1146
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ecfbcedef6d42b0800000000000000
+      internalID: -5598695694081733004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_28
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 1146
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41684b452f200c830800000000000000
+      internalID: 4089271701478868500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_29
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 1145
+        width: 146
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908bbd3e7092a4390800000000000000
+      internalID: -7833403487993219063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_30
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1145
+        width: 146
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f6b7e11b36145920800000000000000
+      internalID: 2978029696558020341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_31
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1145
+        width: 146
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a80488d1c755270800000000000000
+      internalID: 8238627559626017281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_32
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 889
+        width: 146
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642c800f8b6edc5a0800000000000000
+      internalID: -6499285005250280890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_33
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 889
+        width: 146
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227e9bfd24f965670800000000000000
+      internalID: 8527178054042773282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_34
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 889
+        width: 146
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdaf611e54e8d6420800000000000000
+      internalID: 2624910588607134431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_35
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 889
+        width: 147
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3043616a5abd01c90800000000000000
+      internalID: -7201014299662863357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_36
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 889
+        width: 147
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a6c31d992bd3b20800000000000000
+      internalID: 3115842890920389154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_37
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 889
+        width: 147
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eefbe3c1581c4be0800000000000000
+      internalID: -1491790637108035871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_38
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 889
+        width: 147
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd91fed79bcf3080800000000000000
+      internalID: -9205415260181127681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_39
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 889
+        width: 147
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e82f26eb62afd70800000000000000
+      internalID: 9077610598064361036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_40
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 633
+        width: 147
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70a023cd126da1d0800000000000000
+      internalID: -3337903868844400518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_41
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 633
+        width: 147
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47eb435850749b070800000000000000
+      internalID: 8122601491974635124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_42
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 633
+        width: 146
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b4a22b659ed6f30800000000000000
+      internalID: 4570565755416497033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_43
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 633
+        width: 146
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4818269bb204dc100800000000000000
+      internalID: 129830520801624452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_44
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 633
+        width: 146
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0385e4e2892f5750800000000000000
+      internalID: 6295796446249976588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_45
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 633
+        width: 146
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c2530c8a12d1140800000000000000
+      internalID: 4691943395452857401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_46
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 633
+        width: 146
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ed1cd74b3d6fb50800000000000000
+      internalID: 6626716673879694928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_47
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 633
+        width: 146
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf88c38fbdc440830800000000000000
+      internalID: 4036435673677072635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_48
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 377
+        width: 145
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769ad1432cbfddd90800000000000000
+      internalID: -7071219028385224345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_49
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 377
+        width: 145
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13537198b60da6750800000000000000
+      internalID: 6299076189111137585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_50
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 377
+        width: 145
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76217d70c33d9dbf0800000000000000
+      internalID: -298975645460393369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_51
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 377
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ba48e4f64fe14e0800000000000000
+      internalID: -2008899624864797843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_52
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 377
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56d034653dff4c20800000000000000
+      internalID: 3193049066584987231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_53
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 377
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f443beac5e5d59c0800000000000000
+      internalID: -3936886747090959116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_54
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 378
+        width: 145
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6129fdcb5f43079f0800000000000000
+      internalID: -472819730833501674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_55
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 378
+        width: 145
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aeb61d8091bbad90800000000000000
+      internalID: -7085374354336858463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_56
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 122
+        width: 144
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ec98d57c889c0b0800000000000000
+      internalID: -5707880662866211179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_57
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 122
+        width: 144
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de41a8e6aeaff7440800000000000000
+      internalID: 4935939601405187309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_58
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 122
+        width: 144
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e688f2c60100c20800000000000000
+      internalID: 3170552194508811850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_59
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 122
+        width: 144
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93350f67b1597c50800000000000000
+      internalID: 6663446971954836378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_60
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 122
+        width: 144
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b20347c3c9f8f6e0800000000000000
+      internalID: -1803417031504887120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_61
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 122
+        width: 143
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a738ff8246a9110800000000000000
+      internalID: 1268436372306491988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_62
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 122
+        width: 143
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c3846e6f7baf020800000000000000
+      internalID: 2376414024444689563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ilde_63
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 122
+        width: 142
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c84ee19ba6eb2020800000000000000
+      internalID: 2318200057774360777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ilde_0: 7882967547237600754
+      ilde_1: 8595589414596055125
+      ilde_10: -5672179930933879637
+      ilde_11: -4019060910025519181
+      ilde_12: 8176560949640704417
+      ilde_13: 4597361169950807823
+      ilde_14: -5309673098274233974
+      ilde_15: -4454778202314124843
+      ilde_16: -8594408521988494410
+      ilde_17: -113185383840053570
+      ilde_18: 1733722397111854704
+      ilde_19: -5845132420944321357
+      ilde_2: 8969809024767441344
+      ilde_20: 8073127393883843951
+      ilde_21: -5411682441830880373
+      ilde_22: -3829559865155983174
+      ilde_23: -8822667972806460379
+      ilde_24: 7723970895712478803
+      ilde_25: 1298023931449464255
+      ilde_26: -8755782541922065222
+      ilde_27: -5598695694081733004
+      ilde_28: 4089271701478868500
+      ilde_29: -7833403487993219063
+      ilde_3: 2317551176318694478
+      ilde_30: 2978029696558020341
+      ilde_31: 8238627559626017281
+      ilde_32: -6499285005250280890
+      ilde_33: 8527178054042773282
+      ilde_34: 2624910588607134431
+      ilde_35: -7201014299662863357
+      ilde_36: 3115842890920389154
+      ilde_37: -1491790637108035871
+      ilde_38: -9205415260181127681
+      ilde_39: 9077610598064361036
+      ilde_4: 9013479335195543278
+      ilde_40: -3337903868844400518
+      ilde_41: 8122601491974635124
+      ilde_42: 4570565755416497033
+      ilde_43: 129830520801624452
+      ilde_44: 6295796446249976588
+      ilde_45: 4691943395452857401
+      ilde_46: 6626716673879694928
+      ilde_47: 4036435673677072635
+      ilde_48: -7071219028385224345
+      ilde_49: 6299076189111137585
+      ilde_5: -6140530358361685777
+      ilde_50: -298975645460393369
+      ilde_51: -2008899624864797843
+      ilde_52: 3193049066584987231
+      ilde_53: -3936886747090959116
+      ilde_54: -472819730833501674
+      ilde_55: -7085374354336858463
+      ilde_56: -5707880662866211179
+      ilde_57: 4935939601405187309
+      ilde_58: 3170552194508811850
+      ilde_59: 6663446971954836378
+      ilde_6: -699236810116789243
+      ilde_60: -1803417031504887120
+      ilde_61: 1268436372306491988
+      ilde_62: 2376414024444689563
+      ilde_63: 2318200057774360777
+      ilde_7: -165791835936622352
+      ilde_8: -2975067234504303072
+      ilde_9: -6112828415796826574
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

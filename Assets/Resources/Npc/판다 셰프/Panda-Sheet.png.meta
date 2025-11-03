@@ -1,0 +1,1144 @@
+fileFormatVersion: 2
+guid: e747a0692adfb0d47b1f2c6f4cfdba95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5675673468809014075
+    second: Panda-Sheet_0
+  - first:
+      213: 5117610554102566003
+    second: Panda-Sheet_1
+  - first:
+      213: -8530691520138019273
+    second: Panda-Sheet_2
+  - first:
+      213: 1534556797627894997
+    second: Panda-Sheet_3
+  - first:
+      213: -4854262345317368069
+    second: Panda-Sheet_4
+  - first:
+      213: -2576967461813776466
+    second: Panda-Sheet_5
+  - first:
+      213: -3289538277466370192
+    second: Panda-Sheet_6
+  - first:
+      213: -4522393223279142736
+    second: Panda-Sheet_7
+  - first:
+      213: 1700841796825056545
+    second: Panda-Sheet_8
+  - first:
+      213: 1124517087550648774
+    second: Panda-Sheet_9
+  - first:
+      213: -5404259656122780239
+    second: Panda-Sheet_10
+  - first:
+      213: 5540690996760252095
+    second: Panda-Sheet_11
+  - first:
+      213: -2677145491498070522
+    second: Panda-Sheet_12
+  - first:
+      213: -7819359729935488429
+    second: Panda-Sheet_13
+  - first:
+      213: -2278278690987677715
+    second: Panda-Sheet_14
+  - first:
+      213: 5312551148927181263
+    second: Panda-Sheet_15
+  - first:
+      213: 2212724360190456087
+    second: Panda-Sheet_16
+  - first:
+      213: -9180202834789128080
+    second: Panda-Sheet_17
+  - first:
+      213: -3564264703681261245
+    second: Panda-Sheet_18
+  - first:
+      213: -1030215478234086700
+    second: Panda-Sheet_19
+  - first:
+      213: 5964521681747594362
+    second: Panda-Sheet_20
+  - first:
+      213: 6154986032719812175
+    second: Panda-Sheet_21
+  - first:
+      213: -3673827377488754743
+    second: Panda-Sheet_22
+  - first:
+      213: 2394863177461114237
+    second: Panda-Sheet_23
+  - first:
+      213: -598296388632902732
+    second: Panda-Sheet_24
+  - first:
+      213: 2929845481385995986
+    second: Panda-Sheet_25
+  - first:
+      213: -662414257597769084
+    second: Panda-Sheet_26
+  - first:
+      213: 4047932807487564304
+    second: Panda-Sheet_27
+  - first:
+      213: -2480272595481906716
+    second: Panda-Sheet_28
+  - first:
+      213: -1886079946362991901
+    second: Panda-Sheet_29
+  - first:
+      213: 371513810847463208
+    second: Panda-Sheet_30
+  - first:
+      213: -9130538184035054201
+    second: Panda-Sheet_31
+  - first:
+      213: -5387218682285895065
+    second: Panda-Sheet_32
+  - first:
+      213: -2471088263943332726
+    second: Panda-Sheet_33
+  - first:
+      213: -7422516718266350231
+    second: Panda-Sheet_34
+  - first:
+      213: 7515013383371632439
+    second: Panda-Sheet_35
+  - first:
+      213: 1774878435165167529
+    second: Panda-Sheet_36
+  - first:
+      213: 2518257879454888336
+    second: Panda-Sheet_37
+  - first:
+      213: -7320515454468791130
+    second: Panda-Sheet_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Panda-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1148
+        width: 101
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c497861d05fb31b0800000000000000
+      internalID: -5675673468809014075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1148
+        width: 101
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cc2184fa7650740800000000000000
+      internalID: 5117610554102566003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1148
+        width: 101
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e7cbd8245ec9980800000000000000
+      internalID: -8530691520138019273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 1148
+        width: 102
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc854ae647db4510800000000000000
+      internalID: 1534556797627894997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1148
+        width: 101
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfebdccad1232acb0800000000000000
+      internalID: -4854262345317368069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1148
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf89d03fb5cc3cd0800000000000000
+      internalID: -2576967461813776466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1148
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f01988d563952d0800000000000000
+      internalID: -3289538277466370192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 1148
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b810d7f25b3d31c0800000000000000
+      internalID: -4522393223279142736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 892
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12505ee4a9a9a9710800000000000000
+      internalID: 1700841796825056545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 892
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1305b45561b9f00800000000000000
+      internalID: 1124517087550648774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 892
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5b3dac9763005b0800000000000000
+      internalID: -5404259656122780239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 892
+        width: 102
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe89101b1d74ec40800000000000000
+      internalID: 5540690996760252095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 892
+        width: 102
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e083f0c5ed8dad0800000000000000
+      internalID: -2677145491498070522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 892
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a633e11cd0c7390800000000000000
+      internalID: -7819359729935488429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 892
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de76654f99de160e0800000000000000
+      internalID: -2278278690987677715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 892
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1e5e27f19f9b940800000000000000
+      internalID: 5312551148927181263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 636
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7117103051d25be10800000000000000
+      internalID: 2212724360190456087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 636
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0782c5a192e599080800000000000000
+      internalID: -9180202834789128080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 636
+        width: 101
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3419d93e220398ec0800000000000000
+      internalID: -3564264703681261245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 636
+        width: 101
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d28fb91b70f3b1f0800000000000000
+      internalID: -1030215478234086700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 636
+        width: 101
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c4eaf3edc36c250800000000000000
+      internalID: 5964521681747594362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 636
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4651cdaf27ea6550800000000000000
+      internalID: 6154986032719812175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 636
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c78da60771f30dc0800000000000000
+      internalID: -3673827377488754743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 636
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75ab321f534c3120800000000000000
+      internalID: 2394863177461114237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 380
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3032dba9c62b7f0800000000000000
+      internalID: -598296388632902732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 380
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2deabcc31f6e8a820800000000000000
+      internalID: 2929845481385995986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 380
+        width: 102
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a1bb90eb1aec6f0800000000000000
+      internalID: -662414257597769084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 380
+        width: 102
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a22f801752d2830800000000000000
+      internalID: 4047932807487564304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 380
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e13a28273d449dd0800000000000000
+      internalID: -2480272595481906716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 380
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eacb0b184c43d5e0800000000000000
+      internalID: -1886079946362991901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 380
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827f6b4b7d1e72500800000000000000
+      internalID: 371513810847463208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 380
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d4374b5efc94180800000000000000
+      internalID: -9130538184035054201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 124
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7625003b621cc35b0800000000000000
+      internalID: -5387218682285895065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 124
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c550bf05ee4bdd0800000000000000
+      internalID: -2471088263943332726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 124
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9650654fe5cedf890800000000000000
+      internalID: -7422516718266350231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 124
+        width: 101
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f2c2e1bd0ba4860800000000000000
+      internalID: 7515013383371632439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 124
+        width: 102
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af55877882a1a810800000000000000
+      internalID: 1774878435165167529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 124
+        width: 101
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 091bcb5f236a2f220800000000000000
+      internalID: 2518257879454888336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Panda-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 124
+        width: 101
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a461abdafd486a90800000000000000
+      internalID: -7320515454468791130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Panda-Sheet_0: -5675673468809014075
+      Panda-Sheet_1: 5117610554102566003
+      Panda-Sheet_10: -5404259656122780239
+      Panda-Sheet_11: 5540690996760252095
+      Panda-Sheet_12: -2677145491498070522
+      Panda-Sheet_13: -7819359729935488429
+      Panda-Sheet_14: -2278278690987677715
+      Panda-Sheet_15: 5312551148927181263
+      Panda-Sheet_16: 2212724360190456087
+      Panda-Sheet_17: -9180202834789128080
+      Panda-Sheet_18: -3564264703681261245
+      Panda-Sheet_19: -1030215478234086700
+      Panda-Sheet_2: -8530691520138019273
+      Panda-Sheet_20: 5964521681747594362
+      Panda-Sheet_21: 6154986032719812175
+      Panda-Sheet_22: -3673827377488754743
+      Panda-Sheet_23: 2394863177461114237
+      Panda-Sheet_24: -598296388632902732
+      Panda-Sheet_25: 2929845481385995986
+      Panda-Sheet_26: -662414257597769084
+      Panda-Sheet_27: 4047932807487564304
+      Panda-Sheet_28: -2480272595481906716
+      Panda-Sheet_29: -1886079946362991901
+      Panda-Sheet_3: 1534556797627894997
+      Panda-Sheet_30: 371513810847463208
+      Panda-Sheet_31: -9130538184035054201
+      Panda-Sheet_32: -5387218682285895065
+      Panda-Sheet_33: -2471088263943332726
+      Panda-Sheet_34: -7422516718266350231
+      Panda-Sheet_35: 7515013383371632439
+      Panda-Sheet_36: 1774878435165167529
+      Panda-Sheet_37: 2518257879454888336
+      Panda-Sheet_38: -7320515454468791130
+      Panda-Sheet_4: -4854262345317368069
+      Panda-Sheet_5: -2576967461813776466
+      Panda-Sheet_6: -3289538277466370192
+      Panda-Sheet_7: -4522393223279142736
+      Panda-Sheet_8: 1700841796825056545
+      Panda-Sheet_9: 1124517087550648774
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

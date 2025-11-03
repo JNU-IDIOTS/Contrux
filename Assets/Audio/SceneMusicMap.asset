@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3db4f72841c41a4d83b491b4980bc9e, type: 3}
+  m_Name: SceneMusicMap
+  m_EditorClassIdentifier: 
+  entries:
+  - sceneAsset: {fileID: 102900000, guid: 36acc08c0d3dcc341859620f11437a14, type: 3}
+    sceneName: Tutorial
+    clip: {fileID: 8300000, guid: bc7a0264c787e454982dd5ea3d23cbef, type: 3}
+    volume: 0.06
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: ec3150e0105ad5a4ebd6d06230fb10ce, type: 3}
+    sceneName: Chapter1-1
+    clip: {fileID: 8300000, guid: 27b9662bfee31ff4abde108222769fde, type: 3}
+    volume: 0.09
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: ea4fe8f139359d341b59d009dd54ea7b, type: 3}
+    sceneName: Chapter1-2
+    clip: {fileID: 8300000, guid: 27b9662bfee31ff4abde108222769fde, type: 3}
+    volume: 0.1
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: 1504003a6c520de44baca74d2820805d, type: 3}
+    sceneName: Chapter1-3
+    clip: {fileID: 8300000, guid: 27b9662bfee31ff4abde108222769fde, type: 3}
+    volume: 0.1
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: bd664c9b49e78c946adfe7c3dcec16b8, type: 3}
+    sceneName: MiddleBossScene
+    clip: {fileID: 8300000, guid: c68dd5602bdfa774ea7c121695bae585, type: 3}
+    volume: 0.1
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: ec3150e0105ad5a4ebd6d06230fb10ce, type: 3}
+    sceneName: Chapter1-1
+    clip: {fileID: 8300000, guid: 27b9662bfee31ff4abde108222769fde, type: 3}
+    volume: 0.1
+    loop: 0
+  - sceneAsset: {fileID: 102900000, guid: c304998e43ec48146936c2e385db371a, type: 3}
+    sceneName: Greed_Castle2
+    clip: {fileID: 8300000, guid: 27b9662bfee31ff4abde108222769fde, type: 3}
+    volume: 0.16
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: 9c79e57f0e8670e44afaab7d6806073b, type: 3}
+    sceneName: Greed_Castle3_1
+    clip: {fileID: 8300000, guid: 27b9662bfee31ff4abde108222769fde, type: 3}
+    volume: 0.16
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: 4ab366a6c28fed14687aa1b5f4184324, type: 3}
+    sceneName: Greed_Castle4
+    clip: {fileID: 8300000, guid: 27b9662bfee31ff4abde108222769fde, type: 3}
+    volume: 0.16
+    loop: 1
+  - sceneAsset: {fileID: 102900000, guid: ed234bb6ac1074848bcc143ec9d08734, type: 3}
+    sceneName: Chapter1-Boss
+    clip: {fileID: 8300000, guid: 741dc1be842586e43a0151682414454a, type: 3}
+    volume: 0
+    loop: 1

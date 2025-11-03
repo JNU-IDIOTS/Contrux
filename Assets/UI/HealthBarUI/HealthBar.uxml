@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/HealthBarUI/HealthBar.uss?fileID=7433441132597879392&amp;guid=55c21bc054c1be941b524d713a15e753&amp;type=3#HealthBar" />
+    <ui:VisualElement name="HealthBarRoot" class="healthbar-root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 25%; height: 5%;">
+        <ui:VisualElement name="HealthBarBackground" class="healthbar-bg" style="flex-grow: 1; background-image: resource(&apos;HealthUI/Hp_frame&apos;);">
+            <ui:VisualElement name="HealthBarFill" class="healthbar-fill" style="flex-grow: 1; background-image: resource(&apos;HealthUI/Hp_line&apos;); -unity-text-align: upper-left;" />
+        </ui:VisualElement>
+        <ui:Label text="Label" name="HealthBarLabel" class="healthbar-label" style="align-items: stretch; -unity-text-align: upper-center;" />
+    </ui:VisualElement>
+</ui:UXML>

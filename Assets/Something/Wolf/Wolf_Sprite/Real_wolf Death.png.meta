@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 558bf5a2bf4023343b4e8e0ceb7aca5d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8387292755997016893
+    second: Real_wolf Death_0
+  - first:
+      213: -7103852720311178285
+    second: Real_wolf Death_1
+  - first:
+      213: -5916857996119076815
+    second: Real_wolf Death_2
+  - first:
+      213: -1201217487445795366
+    second: Real_wolf Death_3
+  - first:
+      213: -5095963458058472797
+    second: Real_wolf Death_4
+  - first:
+      213: -7334434141748288805
+    second: Real_wolf Death_5
+  - first:
+      213: -6519712193401352647
+    second: Real_wolf Death_6
+  - first:
+      213: 8097431216920568267
+    second: Real_wolf Death_7
+  - first:
+      213: -6410000888996179973
+    second: Real_wolf Death_8
+  - first:
+      213: 9115416732677320068
+    second: Real_wolf Death_9
+  - first:
+      213: -2315023393450007089
+    second: Real_wolf Death_10
+  - first:
+      213: 6231516113256484799
+    second: Real_wolf Death_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Real_wolf Death_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1941
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc379b1da95a9b80800000000000000
+      internalID: -8387292755997016893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1940
+        width: 83
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbe825b69b0a6d90800000000000000
+      internalID: -7103852720311178285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1939
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13094ea500913eda0800000000000000
+      internalID: -5916857996119076815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1938
+        width: 82
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.524982}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add5eca3f0b645fe0800000000000000
+      internalID: -1201217487445795366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_4
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1938
+        width: 82
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.56337065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2bd060c308749b0800000000000000
+      internalID: -5095963458058472797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_5
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1935
+        width: 82
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6060674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd2a890f10bd63a90800000000000000
+      internalID: -7334434141748288805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_6
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 1932
+        width: 82
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6054331}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e87829d445585a0800000000000000
+      internalID: -6519712193401352647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_7
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1932
+        width: 81
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1a5bd2acadf5070800000000000000
+      internalID: 8097431216920568267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1672
+        width: 81
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.66}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffc171372a1b07a0800000000000000
+      internalID: -6410000888996179973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_9
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1674
+        width: 81
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d22ea0937708e70800000000000000
+      internalID: 9115416732677320068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_10
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 1669
+        width: 79
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.76}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc561ba3d726fdfd0800000000000000
+      internalID: -2315023393450007089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_wolf Death_11
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 1668
+        width: 79
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf86c693eaca7650800000000000000
+      internalID: 6231516113256484799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3b57cbd1ef3bea84087a18a7e01c88eb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Real_wolf Death_0: -8387292755997016893
+      Real_wolf Death_1: -7103852720311178285
+      Real_wolf Death_10: -2315023393450007089
+      Real_wolf Death_11: 6231516113256484799
+      Real_wolf Death_2: -5916857996119076815
+      Real_wolf Death_3: -1201217487445795366
+      Real_wolf Death_4: -5095963458058472797
+      Real_wolf Death_5: -7334434141748288805
+      Real_wolf Death_6: -6519712193401352647
+      Real_wolf Death_7: 8097431216920568267
+      Real_wolf Death_8: -6410000888996179973
+      Real_wolf Death_9: 9115416732677320068
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

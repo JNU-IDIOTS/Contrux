@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e966c0434c31bdc46896e3106b1e860e, type: 3}
+  m_Name: WeaponPrefabIndex
+  m_EditorClassIdentifier: 
+  entries:
+  - key: Common_GreatSword_10
+    prefabs:
+    - {fileID: 7564917092858899951, guid: 33a2c3b73c9a76f42ae7a1315d6718ce, type: 3}
+    - {fileID: 7564917092858899951, guid: 33a2c3b73c9a76f42ae7a1315d6718ce, type: 3}
+    - {fileID: 7564917092858899951, guid: 33a2c3b73c9a76f42ae7a1315d6718ce, type: 3}
+    - {fileID: 7564917092858899951, guid: 33a2c3b73c9a76f42ae7a1315d6718ce, type: 3}
+  - key: Epic_GreatSword_10
+    prefabs:
+    - {fileID: 4145145935201048408, guid: 185ed812250ac14419301f4635a32565, type: 3}
+    - {fileID: 4145145935201048408, guid: 185ed812250ac14419301f4635a32565, type: 3}
+    - {fileID: 4145145935201048408, guid: 185ed812250ac14419301f4635a32565, type: 3}
+    - {fileID: 4145145935201048408, guid: 185ed812250ac14419301f4635a32565, type: 3}
+  - key: Epic_Spear_10
+    prefabs:
+    - {fileID: 6028697977225406313, guid: efac97f2eb11f8a408b2bfb882297d51, type: 3}
+    - {fileID: 6028697977225406313, guid: efac97f2eb11f8a408b2bfb882297d51, type: 3}
+    - {fileID: 6028697977225406313, guid: efac97f2eb11f8a408b2bfb882297d51, type: 3}
+    - {fileID: 6028697977225406313, guid: efac97f2eb11f8a408b2bfb882297d51, type: 3}
+  - key: Rare_GreatSword_10
+    prefabs:
+    - {fileID: 3556919101924494250, guid: f83e3d6f082a359418203edab2586161, type: 3}
+    - {fileID: 3556919101924494250, guid: f83e3d6f082a359418203edab2586161, type: 3}
+    - {fileID: 3556919101924494250, guid: f83e3d6f082a359418203edab2586161, type: 3}
+    - {fileID: 3556919101924494250, guid: f83e3d6f082a359418203edab2586161, type: 3}

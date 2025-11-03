@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/ManaUI/ManaGauge.uss?fileID=7433441132597879392&amp;guid=121d1a43e4f12064099c7ee9ec123a54&amp;type=3#ManaGauge" />
+    <ui:VisualElement name="ManaRoot">
+        <ui:VisualElement name="ManaClipWrapper">
+            <ui:VisualElement name="ManaWave" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ManaBottle" style="background-image: resource(&apos;ManaUI/ManaBottle&apos;);" />
+        <ui:Label name="ManaLabel" text="100 / 100" style="-unity-text-align: middle-center; right: 40px; left: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

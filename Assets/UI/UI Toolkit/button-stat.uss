@@ -1,0 +1,55 @@
+:root {
+}
+
+.button-stat:hover {
+    scale: 1.1 1.1;
+    opacity: 1;
+}
+
+.button-stat:active {
+    background-color: rgb(43, 43, 43);
+}
+
+.Slot {
+    flex-grow: 0;
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.button-stat {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    text-overflow: clip;
+    -unity-text-align: middle-center;
+    justify-content: space-evenly;
+    align-self: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 20px;
+    -unity-font-style: bold;
+    width: 15%;
+    height: 30%;
+    padding-bottom: 16px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-elastic;
+}
+
+.slot-style {
+    flex-grow: 0;
+    background-size: 100% 100%;
+    width: 128px;
+    height: 150px;
+    background-image: url("project://database/Assets/GUI_Parts/Gui_parts/Mini_frame0.png?fileID=21300000&guid=4293f3f43e7a5524dbcb191b0ef09d9c&type=3#Mini_frame0");
+}
+
+.equipslot-style {
+    flex-grow: 0;
+    height: 128px;
+    width: 140px;
+    background-color: rgb(48, 45, 45);
+}

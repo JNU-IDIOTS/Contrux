@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Pause/PauseMenu.uss?fileID=7433441132597879392&amp;guid=79f9fd8b48599ca44a125cc73a549b05&amp;type=3#PauseMenu" />
+    <ui:VisualElement name="Root" focusable="true" class="root">
+        <ui:VisualElement name="Dim" class="dim" />
+        <ui:VisualElement name="Panel" class="panel" style="background-color: rgba(0, 0, 0, 0.95); background-image: resource(&apos;GUI_Parts/Gui_parts/Frame_mid_2&apos;);">
+            <ui:Label name="Title" text="일시정지" class="title" style="-unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+            <ui:Button name="BtnResume" text="돌아가기" class="menu-btn" style="background-color: rgb(55, 55, 55); background-image: resource(&apos;GUI_Parts/Gui_parts/Frame_mid&apos;); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+            <ui:Button name="BtnNew" text="새 게임" class="menu-btn" style="background-color: rgb(55, 55, 55); background-image: resource(&apos;GUI_Parts/Gui_parts/Frame_mid&apos;); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+            <ui:Button name="BtnControls" text="컨트롤" class="menu-btn" style="background-color: rgb(56, 56, 56); background-image: resource(&apos;GUI_Parts/Gui_parts/Frame_mid&apos;); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+            <ui:Button name="BtnSettings" text="설정" class="menu-btn" style="background-color: rgb(55, 55, 55); background-image: resource(&apos;GUI_Parts/Gui_parts/Frame_mid_2&apos;); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+            <ui:Button name="BtnQuit" text="게임종료" class="menu-btn" style="background-color: rgb(55, 55, 55); background-image: resource(&apos;GUI_Parts/Gui_parts/Frame_mid_2&apos;); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

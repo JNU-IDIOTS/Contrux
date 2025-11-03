@@ -1,0 +1,55 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="StoreRoot" style="flex-grow: 1; flex-direction: row;">
+        <engine:VisualElement name="Store" style="flex-grow: 1; width: 50%; flex-wrap: wrap-reverse; align-self: auto; justify-content: space-evenly; align-items: stretch; flex-direction: column;">
+            <engine:VisualElement name="1" style="flex-grow: 1; background-color: rgba(58, 58, 58, 0.93); flex-direction: row; height: 20%; border-bottom-width: 2px; border-bottom-color: rgb(0, 0, 0);">
+                <engine:VisualElement name="WeaponImage" style="flex-grow: 1; width: 25%; background-color: rgba(0, 0, 0, 0.35);" />
+                <engine:VisualElement name="Info" style="flex-grow: 1; width: 35%; font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(255, 255, 255); -unity-text-align: upper-left; white-space: normal; justify-content: space-around; margin-left: 10px; margin-right: 10px;">
+                    <engine:Label text="Label" name="WeaponName" />
+                    <engine:Label text="Label" name="ReqGold" />
+                </engine:VisualElement>
+                <engine:VisualElement name="decision" style="flex-grow: 1; width: 35%; flex-direction: row; align-self: flex-start; justify-content: space-evenly; height: 100%; align-items: center;">
+                    <engine:Button text="구입" name="Buy" style="height: 100px; width: 130px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); font-size: 30px;" />
+                    <engine:Button name="Re" icon-image="project://database/Assets/Resources/%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8.png?fileID=2800000&amp;guid=46f7ddebf1495e04b93960245ecab41d&amp;type=3#새로고침" style="height: 100px; width: 130px;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="2" style="flex-grow: 1; background-color: rgba(58, 58, 58, 0.93); flex-direction: row; height: 20%; border-bottom-width: 2px; border-bottom-color: rgb(0, 0, 0);">
+                <engine:VisualElement name="WeaponImage" style="flex-grow: 1; width: 25%; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.35);" />
+                <engine:VisualElement name="Info" style="flex-grow: 1; width: 35%; font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: space-around; margin-left: 10px; margin-right: 10px;">
+                    <engine:Label text="Label" name="WeaponName" />
+                    <engine:Label text="Label" name="ReqGold" />
+                </engine:VisualElement>
+                <engine:VisualElement name="decision" style="flex-grow: 1; width: 35%; flex-direction: row; align-self: flex-start; justify-content: space-evenly; height: 100%; align-items: center;">
+                    <engine:Button text="구입" name="Buy" style="height: 100px; width: 130px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); font-size: 30px;" />
+                    <engine:Button name="Re" icon-image="project://database/Assets/Resources/%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8.png?fileID=2800000&amp;guid=46f7ddebf1495e04b93960245ecab41d&amp;type=3#새로고침" style="height: 100px; width: 130px;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="3" style="flex-grow: 1; background-color: rgba(58, 58, 58, 0.93); flex-direction: row; height: 20%; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 2px;">
+                <engine:VisualElement name="WeaponImage" style="flex-grow: 1; width: 25%; background-color: rgba(0, 0, 0, 0.35);" />
+                <engine:VisualElement name="Info" style="flex-grow: 1; width: 35%; font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: space-around; margin-left: 10px; margin-right: 10px;">
+                    <engine:Label text="Label" name="WeaponName" />
+                    <engine:Label text="Label" name="ReqGold" />
+                </engine:VisualElement>
+                <engine:VisualElement name="decision" style="flex-grow: 1; width: 35%; flex-direction: row; align-self: flex-start; justify-content: space-evenly; height: 100%; align-items: center;">
+                    <engine:Button text="구입" name="Buy" style="height: 100px; width: 130px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); font-size: 30px;" />
+                    <engine:Button name="Re" icon-image="project://database/Assets/Resources/%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8.png?fileID=2800000&amp;guid=46f7ddebf1495e04b93960245ecab41d&amp;type=3#새로고침" style="height: 100px; width: 130px;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="4" style="flex-grow: 1; background-color: rgba(58, 58, 58, 0.93); flex-direction: row; height: 20%;">
+                <engine:VisualElement name="WeaponImage" style="flex-grow: 1; width: 25%; background-color: rgba(0, 0, 0, 0.35);" />
+                <engine:VisualElement name="Info" style="flex-grow: 1; width: 35%; font-size: 30px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: space-around; margin-left: 10px; margin-right: 10px;">
+                    <engine:Label text="Label" name="WeaponName" style="font-size: 40px;" />
+                    <engine:Label text="Label" name="ReqGold" style="font-size: 40px;" />
+                </engine:VisualElement>
+                <engine:VisualElement name="decision" style="flex-grow: 1; width: 35%; flex-direction: row; align-self: flex-start; justify-content: space-evenly; height: 100%; align-items: center;">
+                    <engine:Button text="구입" name="Buy" style="height: 100px; width: 130px; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); font-size: 30px;" />
+                    <engine:Button name="Re" icon-image="project://database/Assets/Resources/%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8.png?fileID=2800000&amp;guid=46f7ddebf1495e04b93960245ecab41d&amp;type=3#새로고침" style="height: 100px; width: 130px;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="GoldBox" style="flex-grow: 1; height: 5%; width: 60%; flex-direction: row; background-color: rgb(26, 26, 26);">
+                <engine:VisualElement name="dd" />
+                <engine:Label text="Label" name="GoldText" style="font-size: 40px; color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); -unity-text-align: middle-left; width: 364px;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="StoreOwner" style="flex-grow: 1; background-image: resource(&apos;Npc/엘프 대장장이/대기&apos;); background-color: rgba(118, 103, 103, 0.52); width: 40%; background-size: 80% 100%; background-position-x: left 0; -unity-background-scale-mode: scale-to-fit; background-position-y: center 0; transform-origin: center; background-repeat: no-repeat no-repeat; overflow: visible;" />
+    </engine:VisualElement>
+</engine:UXML>

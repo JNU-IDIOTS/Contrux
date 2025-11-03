@@ -1,0 +1,2080 @@
+fileFormatVersion: 2
+guid: c0c3149395d04ab46b6d05c5b6ccb0d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3775237212013101012
+    second: Attack_wolf_0
+  - first:
+      213: -4279798592227466070
+    second: Attack_wolf_1
+  - first:
+      213: -7469513885252527619
+    second: Attack_wolf_2
+  - first:
+      213: -7381120393075079899
+    second: Attack_wolf_3
+  - first:
+      213: 1812927077637586248
+    second: Attack_wolf_4
+  - first:
+      213: -417689506779728853
+    second: Attack_wolf_5
+  - first:
+      213: -5129288950485890434
+    second: Attack_wolf_6
+  - first:
+      213: -8530390921643538948
+    second: Attack_wolf_7
+  - first:
+      213: -681802793423116152
+    second: Attack_wolf_8
+  - first:
+      213: -3473016404127776350
+    second: Attack_wolf_9
+  - first:
+      213: -1801103973671880947
+    second: Attack_wolf_10
+  - first:
+      213: -3086195071202935524
+    second: Attack_wolf_11
+  - first:
+      213: -4904672973243813981
+    second: Attack_wolf_12
+  - first:
+      213: 1779274707833219774
+    second: Attack_wolf_13
+  - first:
+      213: 4474010601906241210
+    second: Attack_wolf_14
+  - first:
+      213: -6869026933912804404
+    second: Attack_wolf_15
+  - first:
+      213: -8849278717587800426
+    second: Attack_wolf_16
+  - first:
+      213: 599145117064244729
+    second: Attack_wolf_17
+  - first:
+      213: -8721252192233973144
+    second: Attack_wolf_18
+  - first:
+      213: 3958392789986849018
+    second: Attack_wolf_19
+  - first:
+      213: -7009108639039000280
+    second: Attack_wolf_20
+  - first:
+      213: 3225500102713544967
+    second: Attack_wolf_21
+  - first:
+      213: -7473733558877158179
+    second: Attack_wolf_22
+  - first:
+      213: 5318914846431748891
+    second: Attack_wolf_23
+  - first:
+      213: -7104270237935820702
+    second: Attack_wolf_24
+  - first:
+      213: 1322995779167088840
+    second: Attack_wolf_25
+  - first:
+      213: 761151492106541696
+    second: Attack_wolf_26
+  - first:
+      213: -389568110056577822
+    second: Attack_wolf_27
+  - first:
+      213: 3310590595911623767
+    second: Attack_wolf_28
+  - first:
+      213: -4816390722893530223
+    second: Attack_wolf_29
+  - first:
+      213: 425810094236774680
+    second: Attack_wolf_30
+  - first:
+      213: -1489183948851206876
+    second: Attack_wolf_31
+  - first:
+      213: 2720795572137544606
+    second: Attack_wolf_32
+  - first:
+      213: -6225134722142093997
+    second: Attack_wolf_33
+  - first:
+      213: -8721268689721125402
+    second: Attack_wolf_34
+  - first:
+      213: 8369218218740902312
+    second: Attack_wolf_35
+  - first:
+      213: 5099109709048949483
+    second: Attack_wolf_36
+  - first:
+      213: -495576856339653927
+    second: Attack_wolf_37
+  - first:
+      213: -7314611508100480742
+    second: Attack_wolf_38
+  - first:
+      213: 7986232979773292963
+    second: Attack_wolf_39
+  - first:
+      213: 2418078834067161705
+    second: Attack_wolf_40
+  - first:
+      213: -3059046906254523685
+    second: Attack_wolf_41
+  - first:
+      213: -6387580173423837039
+    second: Attack_wolf_42
+  - first:
+      213: -816268048054610571
+    second: Attack_wolf_43
+  - first:
+      213: 686856641796936490
+    second: Attack_wolf_44
+  - first:
+      213: 5941070092113848196
+    second: Attack_wolf_45
+  - first:
+      213: -4283985367513183922
+    second: Attack_wolf_46
+  - first:
+      213: 7324498592852588539
+    second: Attack_wolf_47
+  - first:
+      213: 6769707230939038869
+    second: Attack_wolf_48
+  - first:
+      213: -4249975878738383369
+    second: Attack_wolf_49
+  - first:
+      213: 8810707307032679505
+    second: Attack_wolf_50
+  - first:
+      213: 4271272730053019425
+    second: Attack_wolf_51
+  - first:
+      213: -2208907066113232797
+    second: Attack_wolf_52
+  - first:
+      213: -4192526345073998347
+    second: Attack_wolf_53
+  - first:
+      213: -1679207312233861884
+    second: Attack_wolf_54
+  - first:
+      213: -1000765547550854805
+    second: Attack_wolf_55
+  - first:
+      213: -6699490184462375345
+    second: Attack_wolf_56
+  - first:
+      213: -3000326208588428020
+    second: Attack_wolf_57
+  - first:
+      213: 8549713537675586296
+    second: Attack_wolf_58
+  - first:
+      213: -3724816296311155342
+    second: Attack_wolf_59
+  - first:
+      213: 8110277248166232401
+    second: Attack_wolf_60
+  - first:
+      213: 1160304582914675705
+    second: Attack_wolf_61
+  - first:
+      213: -2200545764989211382
+    second: Attack_wolf_62
+  - first:
+      213: 8443079517981118226
+    second: Attack_wolf_63
+  - first:
+      213: 6996226946836413472
+    second: Attack_wolf_64
+  - first:
+      213: 2423657359987334081
+    second: Attack_wolf_65
+  - first:
+      213: 4845931213003128788
+    second: Attack_wolf_66
+  - first:
+      213: 7181339257217042068
+    second: Attack_wolf_67
+  - first:
+      213: -6816568944387312227
+    second: Attack_wolf_68
+  - first:
+      213: -5842828633179754716
+    second: Attack_wolf_69
+  - first:
+      213: -6844009729152159254
+    second: Attack_wolf_70
+  - first:
+      213: 6809630488109538434
+    second: Attack_wolf_71
+  - first:
+      213: -445188241713795729
+    second: Attack_wolf_72
+  - first:
+      213: 9176745450528660272
+    second: Attack_wolf_73
+  - first:
+      213: -3168153998523343160
+    second: Attack_wolf_74
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_wolf_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 2453
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df70e40e36546430800000000000000
+      internalID: 3775237212013101012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2457
+        width: 82
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4a0101bd91b94c0800000000000000
+      internalID: -4279798592227466070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 2461
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9dca052b4f65890800000000000000
+      internalID: -7469513885252527619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 2465
+        width: 81
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5254e5efb1ef09990800000000000000
+      internalID: -7381120393075079899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_4
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 2467
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d7642629fc82910800000000000000
+      internalID: 1812927077637586248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_5
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 2468
+        width: 80
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b247cf94b91143af0800000000000000
+      internalID: -417689506779728853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_6
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 2467
+        width: 80
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ac3fb20ea11d8b0800000000000000
+      internalID: -5129288950485890434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_7
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 2467
+        width: 82
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5483817a6fd9980800000000000000
+      internalID: -8530390921643538948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_8
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 2467
+        width: 84
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8886523c8ffb986f0800000000000000
+      internalID: -681802793423116152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_9
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2467
+        width: 86
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a10cd43bfd5dcfc0800000000000000
+      internalID: -3473016404127776350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_10
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2212
+        width: 88
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d073eb58a713107e0800000000000000
+      internalID: -1801103973671880947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_11
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 2212
+        width: 90
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d33612fe1ab25d0800000000000000
+      internalID: -3086195071202935524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_12
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2213
+        width: 90
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afe75abae91febb0800000000000000
+      internalID: -4904672973243813981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_13
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 2213
+        width: 91
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba6c367be041b810800000000000000
+      internalID: 1779274707833219774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_14
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 2214
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abef3f720f0e61e30800000000000000
+      internalID: 4474010601906241210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_15
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 2214
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc36983b5605ca0a0800000000000000
+      internalID: -6869026933912804404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_16
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 2214
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e31cf44eb013580800000000000000
+      internalID: -8849278717587800426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_17
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 2214
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd268f3f47905800800000000000000
+      internalID: 599145117064244729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_18
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 2214
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a1c4d9653e7f680800000000000000
+      internalID: -8721252192233973144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_19
+      rect:
+        serializedVersion: 2
+        x: 2396
+        y: 2214
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af032a025490fe630800000000000000
+      internalID: 3958392789986849018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_20
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1958
+        width: 92
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82175f124d4aabe90800000000000000
+      internalID: -7009108639039000280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_21
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1957
+        width: 91
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7011a35014743cc20800000000000000
+      internalID: 3225500102713544967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_22
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1956
+        width: 90
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4063dfce6f74890800000000000000
+      internalID: -7473733558877158179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_23
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1955
+        width: 88
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13ad1c3fd490d940800000000000000
+      internalID: 5318914846431748891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_24
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1955
+        width: 87
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260a47fcbdf886d90800000000000000
+      internalID: -7104270237935820702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_25
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1954
+        width: 84
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c07890d6a93c5210800000000000000
+      internalID: 1322995779167088840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_26
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 1954
+        width: 81
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ad443df37209a00800000000000000
+      internalID: 761151492106541696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_27
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1954
+        width: 81
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4e1403ed9f79af0800000000000000
+      internalID: -389568110056577822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_28
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 1954
+        width: 80
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754af025b9491fd20800000000000000
+      internalID: 3310590595911623767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_29
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 1953
+        width: 81
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19bb176e72eb82db0800000000000000
+      internalID: -4816390722893530223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_30
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1696
+        width: 81
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81132c05608c8e500800000000000000
+      internalID: 425810094236774680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_31
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1695
+        width: 82
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425a28ba61b555be0800000000000000
+      internalID: -1489183948851206876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_32
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1694
+        width: 82
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bc6bf482532c520800000000000000
+      internalID: 2720795572137544606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_33
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1693
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d35cfc3f0eb99a0800000000000000
+      internalID: -6225134722142093997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_34
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1692
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e59f6e7554d7f680800000000000000
+      internalID: -8721268689721125402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_35
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 1691
+        width: 83
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a967cfb0af652470800000000000000
+      internalID: 8369218218740902312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_36
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1689
+        width: 84
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beaab9e934da3c640800000000000000
+      internalID: 5099109709048949483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_37
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1688
+        width: 83
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da58fe897b5f19f0800000000000000
+      internalID: -495576856339653927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_38
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1686
+        width: 83
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11cfad76974d7a90800000000000000
+      internalID: -7314611508100480742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_39
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1685
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a185ec059cc4de60800000000000000
+      internalID: 7986232979773292963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_40
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962c67753edbe8120800000000000000
+      internalID: 2418078834067161705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_41
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd20179db051c85d0800000000000000
+      internalID: -3059046906254523685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_42
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1908eb4dca1ca57a0800000000000000
+      internalID: -6387580173423837039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_43
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575143af8880ca4f0800000000000000
+      internalID: -816268048054610571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_44
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a239ce10a74388900800000000000000
+      internalID: 686856641796936490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_45
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487a42a85cbe27250800000000000000
+      internalID: 5941070092113848196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_46
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49c76a710a3c84c0800000000000000
+      internalID: -4283985367513183922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_47
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7b3d0d9a8d5a560800000000000000
+      internalID: 7324498592852588539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_48
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594c38debd4d2fd50800000000000000
+      internalID: 6769707230939038869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_49
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1429
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fde1d3a47d0505c0800000000000000
+      internalID: -4249975878738383369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_50
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1541f975d9be54a70800000000000000
+      internalID: 8810707307032679505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_51
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1278f95faeb964b30800000000000000
+      internalID: 4271272730053019425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_52
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36078760ab26851e0800000000000000
+      internalID: -2208907066113232797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_53
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5c56a808721d5c0800000000000000
+      internalID: -4192526345073998347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_54
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40def0aa8d142b8e0800000000000000
+      internalID: -1679207312233861884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_55
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6138ca69019c12f0800000000000000
+      internalID: -1000765547550854805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_56
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4667e23c21a603a0800000000000000
+      internalID: -6699490184462375345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_57
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0dcacea533bc56d0800000000000000
+      internalID: -3000326208588428020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_58
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa60880a2fa6a670800000000000000
+      internalID: 8549713537675586296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_59
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 1173
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27599cc305bce4cc0800000000000000
+      internalID: -3724816296311155342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_60
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15181e6ef2e7d8070800000000000000
+      internalID: 8110277248166232401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_61
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f313efdeda3a1010800000000000000
+      internalID: 1160304582914675705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_62
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0de3d529471671e0800000000000000
+      internalID: -2200545764989211382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_63
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f04a79618db2570800000000000000
+      internalID: 8443079517981118226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_64
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c333e2757971160800000000000000
+      internalID: 6996226946836413472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_65
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb5e4f178f82a120800000000000000
+      internalID: 2423657359987334081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_66
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df770d63c4304340800000000000000
+      internalID: 4845931213003128788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_67
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4964dfd810e39a360800000000000000
+      internalID: 7181339257217042068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_68
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95b5da29aea661a0800000000000000
+      internalID: -6816568944387312227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_69
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 917
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42fe6d3905a1aeea0800000000000000
+      internalID: -5842828633179754716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_70
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 661
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1719699613501a0800000000000000
+      internalID: -6844009729152159254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_71
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 661
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c507799daa08e50800000000000000
+      internalID: 6809630488109538434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_72
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 661
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6de77227af52d9f0800000000000000
+      internalID: -445188241713795729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_73
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 661
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b51f4ed595a5f70800000000000000
+      internalID: 9176745450528660272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_wolf_74
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 661
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce584459b47804d0800000000000000
+      internalID: -3168153998523343160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack_wolf_0: 3775237212013101012
+      Attack_wolf_1: -4279798592227466070
+      Attack_wolf_10: -1801103973671880947
+      Attack_wolf_11: -3086195071202935524
+      Attack_wolf_12: -4904672973243813981
+      Attack_wolf_13: 1779274707833219774
+      Attack_wolf_14: 4474010601906241210
+      Attack_wolf_15: -6869026933912804404
+      Attack_wolf_16: -8849278717587800426
+      Attack_wolf_17: 599145117064244729
+      Attack_wolf_18: -8721252192233973144
+      Attack_wolf_19: 3958392789986849018
+      Attack_wolf_2: -7469513885252527619
+      Attack_wolf_20: -7009108639039000280
+      Attack_wolf_21: 3225500102713544967
+      Attack_wolf_22: -7473733558877158179
+      Attack_wolf_23: 5318914846431748891
+      Attack_wolf_24: -7104270237935820702
+      Attack_wolf_25: 1322995779167088840
+      Attack_wolf_26: 761151492106541696
+      Attack_wolf_27: -389568110056577822
+      Attack_wolf_28: 3310590595911623767
+      Attack_wolf_29: -4816390722893530223
+      Attack_wolf_3: -7381120393075079899
+      Attack_wolf_30: 425810094236774680
+      Attack_wolf_31: -1489183948851206876
+      Attack_wolf_32: 2720795572137544606
+      Attack_wolf_33: -6225134722142093997
+      Attack_wolf_34: -8721268689721125402
+      Attack_wolf_35: 8369218218740902312
+      Attack_wolf_36: 5099109709048949483
+      Attack_wolf_37: -495576856339653927
+      Attack_wolf_38: -7314611508100480742
+      Attack_wolf_39: 7986232979773292963
+      Attack_wolf_4: 1812927077637586248
+      Attack_wolf_40: 2418078834067161705
+      Attack_wolf_41: -3059046906254523685
+      Attack_wolf_42: -6387580173423837039
+      Attack_wolf_43: -816268048054610571
+      Attack_wolf_44: 686856641796936490
+      Attack_wolf_45: 5941070092113848196
+      Attack_wolf_46: -4283985367513183922
+      Attack_wolf_47: 7324498592852588539
+      Attack_wolf_48: 6769707230939038869
+      Attack_wolf_49: -4249975878738383369
+      Attack_wolf_5: -417689506779728853
+      Attack_wolf_50: 8810707307032679505
+      Attack_wolf_51: 4271272730053019425
+      Attack_wolf_52: -2208907066113232797
+      Attack_wolf_53: -4192526345073998347
+      Attack_wolf_54: -1679207312233861884
+      Attack_wolf_55: -1000765547550854805
+      Attack_wolf_56: -6699490184462375345
+      Attack_wolf_57: -3000326208588428020
+      Attack_wolf_58: 8549713537675586296
+      Attack_wolf_59: -3724816296311155342
+      Attack_wolf_6: -5129288950485890434
+      Attack_wolf_60: 8110277248166232401
+      Attack_wolf_61: 1160304582914675705
+      Attack_wolf_62: -2200545764989211382
+      Attack_wolf_63: 8443079517981118226
+      Attack_wolf_64: 6996226946836413472
+      Attack_wolf_65: 2423657359987334081
+      Attack_wolf_66: 4845931213003128788
+      Attack_wolf_67: 7181339257217042068
+      Attack_wolf_68: -6816568944387312227
+      Attack_wolf_69: -5842828633179754716
+      Attack_wolf_7: -8530390921643538948
+      Attack_wolf_70: -6844009729152159254
+      Attack_wolf_71: 6809630488109538434
+      Attack_wolf_72: -445188241713795729
+      Attack_wolf_73: 9176745450528660272
+      Attack_wolf_74: -3168153998523343160
+      Attack_wolf_8: -681802793423116152
+      Attack_wolf_9: -3473016404127776350
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

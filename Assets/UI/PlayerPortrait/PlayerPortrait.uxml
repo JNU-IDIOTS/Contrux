@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/PlayerPortrait/PlayerPortrait.uss?fileID=7433441132597879392&amp;guid=a821b9c483c24af44b40dc9adb184619&amp;type=3#PlayerPortrait" />
+    <ui:VisualElement name="PortraitRoot" class="portrait-root" style="flex-grow: 1;">
+        <ui:VisualElement name="PortraitClip" class="portrait-clip" style="flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); background-image: resource(&apos;Portraits/lil_roundbackground&apos;);">
+            <ui:VisualElement name="PortraitImage" class="portrait-image" style="flex-grow: 1; background-image: resource(&apos;Portraits/warrior_silhouette_man&apos;); background-color: rgba(255, 255, 255, 0);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="PortraitFrame" class="portrait-frame" style="flex-grow: 1; background-image: resource(&apos;Portraits/lil_roundframe&apos;); background-color: rgba(0, 0, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>

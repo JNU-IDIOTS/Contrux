@@ -1,0 +1,31 @@
+/* 루트 중앙 정렬 */
+#Root, .root {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  display: flex; justify-content: center; align-items: center;
+}
+
+/* 딤 더 진하게 */
+#Dim, .dim {
+  position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.72);
+  z-index: 0;
+}
+
+/* 세로로 길고 두꺼운 패널 */
+#Panel, .panel {
+  width: 520px;
+  min-height: 620px;
+  padding: 40px 48px;
+  display: flex; flex-direction: column; justify-content: center; align-items: stretch;
+  background-color: rgba(26, 16, 48, 0.95);
+  border-radius: 12px;
+  border-left: 2px solid #6c4b2a; border-right: 2px solid #6c4b2a;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+/* 제목/버튼 */
+.title { -unity-text-align: middle-center; font-size: 32px; margin-bottom: 28px; color: #FFD700; }
+.menu-btn { height: 56px; margin-top: 16px; font-size: 22px; color:#fff; background: rgba(40,40,40,0.85); border-radius: 6px; }
+.menu-btn:hover { background: rgba(100,100,100,0.92); }

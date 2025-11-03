@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: bf91c528e7ce96d4683a9a3d2e09ec4a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4461570553264324292
+    second: Throwcatch_0
+  - first:
+      213: -3344158652251866448
+    second: Throwcatch_1
+  - first:
+      213: 2208432085929615158
+    second: Throwcatch_2
+  - first:
+      213: -6285873791431991537
+    second: Throwcatch_3
+  - first:
+      213: -5878087665907461530
+    second: Throwcatch_4
+  - first:
+      213: 2474180082726502112
+    second: Throwcatch_5
+  - first:
+      213: -3785100085284976738
+    second: Throwcatch_6
+  - first:
+      213: 3313533242516610160
+    second: Throwcatch_7
+  - first:
+      213: 4263511792682509089
+    second: Throwcatch_8
+  - first:
+      213: -2700216918967340818
+    second: Throwcatch_9
+  - first:
+      213: 164312567199483310
+    second: Throwcatch_10
+  - first:
+      213: -7556120027525637114
+    second: Throwcatch_11
+  - first:
+      213: 94767578643872314
+    second: Throwcatch_12
+  - first:
+      213: -8664223467125591259
+    second: Throwcatch_13
+  - first:
+      213: 5768539171031787493
+    second: Throwcatch_14
+  - first:
+      213: -3241412966123805013
+    second: Throwcatch_15
+  - first:
+      213: 5148483179090139851
+    second: Throwcatch_16
+  - first:
+      213: -7424233695940121072
+    second: Throwcatch_17
+  - first:
+      213: -8992359325109448718
+    second: Throwcatch_18
+  - first:
+      213: -5898209870817025130
+    second: Throwcatch_19
+  - first:
+      213: 8419461390350875724
+    second: Throwcatch_20
+  - first:
+      213: 2109963855164803311
+    second: Throwcatch_21
+  - first:
+      213: 8588034361059591817
+    second: Throwcatch_22
+  - first:
+      213: 6596575149341884528
+    second: Throwcatch_23
+  - first:
+      213: -1432511015487438547
+    second: Throwcatch_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Throwcatch_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1912
+        width: 179
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ceb9af97ceaaed30800000000000000
+      internalID: 4461570553264324292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1891
+        width: 177
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba7af38c692791d0800000000000000
+      internalID: -3344158652251866448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1875
+        width: 181
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63fd868084de5ae10800000000000000
+      internalID: 2208432085929615158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_3
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 1887
+        width: 186
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f12c6371714c8a0800000000000000
+      internalID: -6285873791431991537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_4
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1891
+        width: 160
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6621bfa4966dc6ea0800000000000000
+      internalID: -5878087665907461530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_5
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1880
+        width: 202
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee724d2dad065220800000000000000
+      internalID: 2474180082726502112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_6
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 1810
+        width: 155
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97c949d68f987bc0800000000000000
+      internalID: -3785100085284976738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_7
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 1819
+        width: 226
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c96af9de80cfd20800000000000000
+      internalID: 3313533242516610160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1563
+        width: 146
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123a78ae2690b2b30800000000000000
+      internalID: 4263511792682509089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_9
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1555
+        width: 144
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0b370c407e68ad0800000000000000
+      internalID: -2700216918967340818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_10
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1549
+        width: 133
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5ce08c861c74200800000000000000
+      internalID: 164312567199483310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_11
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1544
+        width: 132
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c9e177ed4432790800000000000000
+      internalID: -7556120027525637114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_12
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 1544
+        width: 132
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3aba455c9ea05100800000000000000
+      internalID: 94767578643872314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_13
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1544
+        width: 132
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523306369ae72c780800000000000000
+      internalID: -8664223467125591259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_14
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1544
+        width: 132
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7a64220d7fd0050800000000000000
+      internalID: 5768539171031787493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_15
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1287
+        width: 132
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba668dfb4103403d0800000000000000
+      internalID: -3241412966123805013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1293
+        width: 133
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcaddbd6c26137740800000000000000
+      internalID: 5148483179090139851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_17
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1299
+        width: 144
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ee000f9c2d7f890800000000000000
+      internalID: -7424233695940121072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_18
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1278
+        width: 169
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff0e2e56d8b43380800000000000000
+      internalID: -8992359325109448718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_19
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 1278
+        width: 168
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693af3f5f59552ea0800000000000000
+      internalID: -5898209870817025130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_20
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 1278
+        width: 165
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cfafbb68fe7d470800000000000000
+      internalID: 8419461390350875724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_21
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 1377
+        width: 175
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8030c72f8184d10800000000000000
+      internalID: 2109963855164803311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_22
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 1400
+        width: 179
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9864ec100c3de2770800000000000000
+      internalID: 8588034361059591817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_23
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1144
+        width: 179
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07041bee52ebb8b50800000000000000
+      internalID: 6596575149341884528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throwcatch_24
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1144
+        width: 179
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21890932d2be1ce0800000000000000
+      internalID: -1432511015487438547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Throwcatch_0: 4461570553264324292
+      Throwcatch_1: -3344158652251866448
+      Throwcatch_10: 164312567199483310
+      Throwcatch_11: -7556120027525637114
+      Throwcatch_12: 94767578643872314
+      Throwcatch_13: -8664223467125591259
+      Throwcatch_14: 5768539171031787493
+      Throwcatch_15: -3241412966123805013
+      Throwcatch_16: 5148483179090139851
+      Throwcatch_17: -7424233695940121072
+      Throwcatch_18: -8992359325109448718
+      Throwcatch_19: -5898209870817025130
+      Throwcatch_2: 2208432085929615158
+      Throwcatch_20: 8419461390350875724
+      Throwcatch_21: 2109963855164803311
+      Throwcatch_22: 8588034361059591817
+      Throwcatch_23: 6596575149341884528
+      Throwcatch_24: -1432511015487438547
+      Throwcatch_3: -6285873791431991537
+      Throwcatch_4: -5878087665907461530
+      Throwcatch_5: 2474180082726502112
+      Throwcatch_6: -3785100085284976738
+      Throwcatch_7: 3313533242516610160
+      Throwcatch_8: 4263511792682509089
+      Throwcatch_9: -2700216918967340818
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

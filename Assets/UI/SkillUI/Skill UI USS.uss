@@ -1,0 +1,33 @@
+#DashUI {
+    width: 64px;
+    height: 64px;
+    position: relative;
+}
+
+#DashIcon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('Assets/UI/Icons/skill_fire.png'); */
+    background-size: cover;
+    z-index: 0;
+}
+
+#DashCooldownMask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transform-origin: center;
+}
+
+#DashFrame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('Assets/UI/Icons/square_frame.png');  /* 네모 액자 이미지 */ */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}

@@ -1,0 +1,106 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI%20Toolkit/button-stat.uss?fileID=7433441132597879392&amp;guid=8648d28c05ea6eb4580d6848a0f30898&amp;type=3#button-stat" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.7); opacity: 1; -unity-background-image-tint-color: rgb(255, 255, 255); width: 100%; height: 100%; -unity-text-align: upper-left; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-self: flex-end; align-content: flex-start; align-items: flex-start;">
+        <ui:VisualElement name="status" style="flex-grow: 0; flex-direction: row; align-items: flex-start; align-self: flex-start; background-size: 100% 100%; width: 50%; height: 100%; background-color: rgba(46, 24, 11, 0.82); -unity-text-align: upper-left; justify-content: space-between; background-image: url(&quot;project://database/Assets/Resources/GUI_Parts/Gui_parts/Frame_big.png?fileID=2800000&amp;guid=c430351465fe1fc42a6bef5878a08253&amp;type=3#Frame_big&quot;); align-content: auto; flex-wrap: wrap; -unity-font-definition: initial;">
+            <ui:VisualElement name="statbar" style="flex-grow: 0; width: 100%; height: 50%; justify-content: center; flex-wrap: wrap-reverse; flex-direction: row; align-items: flex-start; align-self: stretch; align-content: stretch; margin-top: 15px; margin-right: 17px; margin-bottom: 0; margin-left: 17px; border-bottom-width: 1px; border-bottom-color: rgb(255, 255, 255); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                <ui:VisualElement name="profile" style="flex-grow: 1; width: 50%; height: 100%; border-right-width: 1px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); flex-wrap: nowrap; align-content: flex-start; align-self: flex-start; justify-content: flex-start;">
+                    <ui:VisualElement style="flex-grow: 1; width: 100%; height: 70%;" />
+                    <ui:VisualElement style="flex-grow: 0; width: 100%; height: 30%; flex-direction: row;">
+                        <ui:Label text="Level" enable-rich-text="true" style="width: 50%; height: 100%; font-size: 35px; color: rgb(255, 255, 255); -unity-text-align: middle-center; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                        <ui:Label text="1&#10;" name="Level" enable-rich-text="true" style="width: 50%; height: 100%; font-size: 35px; color: rgb(255, 255, 255); -unity-text-align: middle-center; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="stat" style="flex-grow: 1; width: 50%; height: 100%; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);">
+                    <ui:Label text="스탯포인트" name="stat-point" enable-rich-text="true" style="width: 100%; height: 10%; color: rgb(255, 255, 255); font-size: 35px; -unity-text-align: middle-center; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                    <ui:Label text="0&#10;" name="remainingPoint" enable-rich-text="true" style="width: 100%; height: 10%; -unity-text-align: middle-center; font-size: 30px; color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                    <ui:VisualElement name="stat-hp" style="flex-grow: 0; width: 100%; height: 20%; flex-direction: row; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);">
+                        <ui:Label text="체력" enable-rich-text="true" name="Label" style="width: 30%; height: 75px; font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255); transform-origin: center; translate: 0 0; white-space: nowrap; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                        <ui:VisualElement style="flex-grow: 1; width: 70%; height: 100%; flex-direction: row; justify-content: space-around;">
+                            <ui:Button text="+" name="hpPlus" class="button-stat" />
+                            <ui:Label text="0" name="hpLabel" style="font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="stat-str" style="flex-grow: 0; width: 100%; height: 20%; flex-direction: row;">
+                        <ui:Label text="힘" enable-rich-text="true" style="width: 30%; height: 75px; font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255); translate: 0 0; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                        <ui:VisualElement style="flex-grow: 1; width: 70%; height: 100%; flex-direction: row; justify-content: space-around;">
+                            <ui:Button text="+" name="strPlus" class="button-stat" />
+                            <ui:Label text="0" name="strLabel" style="font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="stat-dex" style="flex-grow: 0; width: 100%; height: 20%; flex-direction: row;">
+                        <ui:Label text="민첩" enable-rich-text="true" style="width: 30%; height: 75px; font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255); translate: 0 0; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                        <ui:VisualElement style="flex-grow: 1; width: 70%; height: 100%; flex-direction: row; justify-content: space-around;">
+                            <ui:Button text="+" name="dexPlus" class="button-stat" />
+                            <ui:Label text="0" name="dexLabel" style="font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="stat-int" style="flex-grow: 0; width: 100%; height: 20%; flex-direction: row;">
+                        <ui:Label text="지력" enable-rich-text="true" style="width: 30%; height: 75px; font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255); translate: 0 0; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                        <ui:VisualElement style="flex-grow: 1; width: 70%; height: 100%; flex-direction: row; justify-content: space-around;">
+                            <ui:Button text="+" name="intPlus" class="button-stat" />
+                            <ui:Label text="0" parse-escape-sequences="true" name="intLabel" style="font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="stat-luk" style="flex-grow: 0; width: 100%; height: 20%; flex-direction: row;">
+                        <ui:Label text="운" enable-rich-text="true" style="width: 30%; height: 75px; font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255); translate: 0 0; -unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;);" />
+                        <ui:VisualElement style="flex-grow: 1; width: 70%; height: 100%; flex-direction: row; justify-content: space-around;">
+                            <ui:Button text="+" name="lukPlus" class="button-stat" />
+                            <ui:Label text="0" parse-escape-sequences="true" name="lukLabel" style="font-size: 30px; -unity-text-align: middle-center; color: rgb(255, 255, 255);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="stat-specific" style="flex-grow: 1; width: 100%; height: 50%; padding-bottom: 50px; padding-left: 30px; padding-right: 30px; padding-top: 20px;">
+                <ui:Label text="Label" name="text" style="-unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); color: rgb(255, 255, 255); font-size: 25px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Inventory" style="flex-grow: 0; width: 40%; height: 100%; background-image: url(&quot;project://database/Assets/Resources/GUI_Parts/Gui_parts/Mini_background.png?fileID=2800000&amp;guid=4f033cdd2b09f9a43b139729d09d002c&amp;type=3#Mini_background&quot;); padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+            <ui:VisualElement name="equipslot" style="flex-grow: 0; flex-direction: row; height: 20%; min-height: auto; max-height: none; padding-top: 0; padding-bottom: 0; padding-right: 0; border-bottom-width: 1px; border-bottom-color: rgb(255, 255, 255); padding-left: 0; align-items: center; justify-content: space-around; margin-top: 30px; margin-right: 30px; margin-bottom: 30px; margin-left: 30px;">
+                <ui:VisualElement name="equipslot-1" class="equipslot-style" />
+                <ui:VisualElement name="equipslot-2" class="equipslot-style" />
+                <ui:VisualElement name="equipslot-3" class="equipslot-style" />
+            </ui:VisualElement>
+            <ui:VisualElement name="itemslot" style="flex-grow: 0; margin-top: 30px; margin-right: 30px; margin-bottom: 30px; margin-left: 30px; justify-content: center; height: 80%; border-top-width: 0; border-top-color: rgb(255, 255, 255); align-self: center;">
+                <ui:VisualElement name="slot-row1" class="Slot" style="flex-grow: 0; height: 20%;">
+                    <ui:VisualElement name="slot-0-0" class="slot-style" />
+                    <ui:VisualElement name="slot-1-0" class="slot-style" />
+                    <ui:VisualElement name="slot-2-0" class="slot-style" />
+                    <ui:VisualElement name="slot-3-0" class="slot-style" />
+                    <ui:VisualElement name="slot-4-0" class="slot-style" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-row2" class="Slot" style="flex-grow: 0; height: 20%;">
+                    <ui:VisualElement name="slot-0-1" class="slot-style" />
+                    <ui:VisualElement name="slot-1-1" class="slot-style" />
+                    <ui:VisualElement name="slot-2-1" class="slot-style" />
+                    <ui:VisualElement name="slot-3-1" class="slot-style" />
+                    <ui:VisualElement name="slot-4-1" class="slot-style" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-row3" class="Slot" style="flex-grow: 0; height: 20%;">
+                    <ui:VisualElement name="slot-0-2" class="slot-style" />
+                    <ui:VisualElement name="slot-1-2" class="slot-style" />
+                    <ui:VisualElement name="slot-2-2" class="slot-style" />
+                    <ui:VisualElement name="slot-3-2" class="slot-style" />
+                    <ui:VisualElement name="slot-4-2" class="slot-style" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-row4" class="Slot" style="flex-grow: 0;">
+                    <ui:VisualElement name="slot-0-3" class="slot-style" />
+                    <ui:VisualElement name="slot-1-3" class="slot-style" />
+                    <ui:VisualElement name="slot-2-3" class="slot-style" />
+                    <ui:VisualElement name="slot-3-3" class="slot-style" />
+                    <ui:VisualElement name="slot-4-3" class="slot-style" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-row5" class="Slot" style="flex-grow: 0;">
+                    <ui:VisualElement name="slot-0-4" class="slot-style" />
+                    <ui:VisualElement name="slot-1-4" class="slot-style" />
+                    <ui:VisualElement name="slot-2-4" class="slot-style" />
+                    <ui:VisualElement name="slot-3-4" class="slot-style" />
+                    <ui:VisualElement name="slot-4-4" class="slot-style" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Gold" style="flex-grow: 1; width: 10%; height: 20%; translate: 0 350%; background-color: rgba(29, 29, 29, 0.65); align-items: center; justify-content: center;">
+            <ui:VisualElement name="GoldImage" style="flex-grow: 0; background-image: resource(&apos;돈주머니&apos;); width: 100px; height: 100px;" />
+            <ui:Label text="Label" name="GoldText" style="-unity-font-definition: url(&quot;project://database/Assets/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); color: rgb(255, 255, 255); font-size: 30px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

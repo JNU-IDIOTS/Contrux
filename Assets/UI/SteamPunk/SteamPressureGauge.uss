@@ -1,0 +1,30 @@
+﻿.gauge-root {
+    position: absolute;
+    width: 9.375%;             /* 180 / 1920 × 100 */
+    height: 16.6667%;          /* 180 / 1080 × 100 */
+    left: 6.25%;               /* 120 / 1920 × 100 */
+    bottom: 1.8519%;           /* 20 / 1080 × 100 */
+}
+
+.gauge-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+.needle-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: 50% 50%;
+}
+
+.needle-arrow {
+    width: 11.1111%;           /* 20 / 180 × 100 */
+    height: 44.4444%;          /* 80 / 180 × 100 */
+    position: absolute;
+    left: 44.4444%;            /* 80 / 180 × 100 */
+    bottom: 22.2222%;          /* 40 / 180 × 100 */
+    background-size: cover;
+}

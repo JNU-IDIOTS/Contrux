@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Ground
+  - EnemyWall
+  - Portal
+  - PlayerAttack
+  - Trap
+  - Ring
+  - RING
+  - Enemy
+  - Character
+  - Dwarf
+  - Wolf
+  - DwarfBuster
+  - Goblin
+  - MagicGoblin
+  - Weapon
+  - NPC
+  - Object
+  - shop
+  - Store
+  - SandWorm
+  - room
+  - Dwarf_Hammer
+  - Pillar
+  - Boss1
+  - Tag
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - enemy
+  - Water
+  - UI
+  - GroundSensor
+  - Player
+  - invisibleWall
+  - Ground
+  - Attackable
+  - Detection
+  - enemyGround
+  - roomLayer
+  - Enemy
+  - FloatGround
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  m_RenderingLayers:
+  - Default

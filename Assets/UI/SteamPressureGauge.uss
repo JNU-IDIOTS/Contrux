@@ -1,0 +1,41 @@
+﻿.gauge-root {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+
+    /* 위치 조정: 왼쪽에서 20px → 120px로 이동 */
+    left: 120px; /* ← 이 값을 키워서 오른쪽으로 이동시킴 */
+    bottom: 20px;
+}
+
+
+.gauge-background {
+    width: 100%;
+    height: 100%;
+    background-image: resource("GaugeBackground");
+    background-size: cover;
+    position: absolute;
+}
+
+.needle-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: 50% 50%;
+}
+
+.needle-arrow {
+    width: 20px;
+    height: 80px;
+    position: absolute;
+    left: 80px; /* 중심에 가까운 위치로 조정 */
+    bottom: 40px;
+    background-image: resource("NeedleArrow");
+    background-size: cover;
+}
+
+
+
+
+
+

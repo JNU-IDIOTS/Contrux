@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 6b8aa5e7cdffdea4495b7a90df0fc540
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3957214708834375088
+    second: WindStorm_0
+  - first:
+      213: -7285293256558213997
+    second: WindStorm_1
+  - first:
+      213: 2987869573016005296
+    second: WindStorm_2
+  - first:
+      213: 6132898314180262970
+    second: WindStorm_3
+  - first:
+      213: -4179412353174562827
+    second: WindStorm_4
+  - first:
+      213: 4528737244977228212
+    second: WindStorm_5
+  - first:
+      213: -7890960002890624659
+    second: WindStorm_6
+  - first:
+      213: 1861329026788898398
+    second: WindStorm_7
+  - first:
+      213: -4658065185613728488
+    second: WindStorm_8
+  - first:
+      213: -1890458714638538950
+    second: WindStorm_9
+  - first:
+      213: -8826752124951586304
+    second: WindStorm_10
+  - first:
+      213: 8647871453794017337
+    second: WindStorm_11
+  - first:
+      213: -4308439177706159252
+    second: WindStorm_12
+  - first:
+      213: 3773273193420780669
+    second: WindStorm_13
+  - first:
+      213: -5844958619244955425
+    second: WindStorm_14
+  - first:
+      213: 278468899367974267
+    second: WindStorm_15
+  - first:
+      213: -141968729190348258
+    second: WindStorm_16
+  - first:
+      213: 883621005052408293
+    second: WindStorm_17
+  - first:
+      213: -2202878780165996152
+    second: WindStorm_18
+  - first:
+      213: -2754318015904150495
+    second: WindStorm_19
+  - first:
+      213: -4361851715996328852
+    second: WindStorm_20
+  - first:
+      213: 1187368873910657633
+    second: WindStorm_21
+  - first:
+      213: 5315770751389532713
+    second: WindStorm_22
+  - first:
+      213: -5885252325033247479
+    second: WindStorm_23
+  - first:
+      213: 3339705718244567304
+    second: WindStorm_24
+  - first:
+      213: 9220139052201538748
+    second: WindStorm_25
+  - first:
+      213: -2555985905586672463
+    second: WindStorm_26
+  - first:
+      213: 5716593213235104490
+    second: WindStorm_27
+  - first:
+      213: -242395563178182390
+    second: WindStorm_28
+  - first:
+      213: -3045420144948195818
+    second: WindStorm_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WindStorm_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1814
+        width: 206
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5160cbfc9dae630800000000000000
+      internalID: 3957214708834375088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1813
+        width: 226
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3948c4ed16075ea90800000000000000
+      internalID: -7285293256558213997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_2
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1815
+        width: 203
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba21d6db8b077920800000000000000
+      internalID: 2987869573016005296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_3
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1805
+        width: 223
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c7e44f58e6c1550800000000000000
+      internalID: 6132898314180262970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_4
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1790
+        width: 127
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f79627bb9ebff5c0800000000000000
+      internalID: -4179412353174562827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_5
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1792
+        width: 139
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9e2ffa78e49de30800000000000000
+      internalID: 4528737244977228212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_6
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1858
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6193ea7fadad7290800000000000000
+      internalID: -7890960002890624659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_7
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1793
+        width: 188
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5630eb53e4c4d910800000000000000
+      internalID: 1861329026788898398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_8
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 1810
+        width: 228
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81531e6a46a3b5fb0800000000000000
+      internalID: -4658065185613728488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1545
+        width: 202
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37ad6ba0ddb3c5e0800000000000000
+      internalID: -1890458714638538950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_10
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1554
+        width: 207
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a16df55b3118580800000000000000
+      internalID: -8826752124951586304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_11
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1559
+        width: 203
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93022a2d449630870800000000000000
+      internalID: 8647871453794017337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_12
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1549
+        width: 223
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c63c27c15695534c0800000000000000
+      internalID: -4308439177706159252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_13
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1534
+        width: 127
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74795e4afb5d5430800000000000000
+      internalID: 3773273193420780669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_14
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1536
+        width: 139
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8fb0d8a1982eea0800000000000000
+      internalID: -5844958619244955425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_15
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1602
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7572d31df15dd300800000000000000
+      internalID: 278468899367974267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_16
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1537
+        width: 188
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a45676130a70ef0800000000000000
+      internalID: -141968729190348258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_17
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 1554
+        width: 228
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1f83a5f90434c00800000000000000
+      internalID: 883621005052408293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_18
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1289
+        width: 202
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881c5f8bb6dcd61e0800000000000000
+      internalID: -2202878780165996152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_19
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1298
+        width: 207
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c03978b52b6c9d0800000000000000
+      internalID: -2754318015904150495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_20
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1303
+        width: 203
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c5c1179f69773c0800000000000000
+      internalID: -4361851715996328852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_21
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1278
+        width: 223
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162ecca23b16a7010800000000000000
+      internalID: 1187368873910657633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_22
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1278
+        width: 127
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9220cff855965c940800000000000000
+      internalID: 5315770751389532713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_23
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1278
+        width: 139
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90df9d81132635ea0800000000000000
+      internalID: -5885252325033247479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_24
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1346
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809ee4ef7a4095e20800000000000000
+      internalID: 3339705718244567304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_25
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1281
+        width: 188
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4fd2a1e9384ff70800000000000000
+      internalID: 9220139052201538748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_26
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 1298
+        width: 228
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bce99e6c50578cd0800000000000000
+      internalID: -2555985905586672463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_27
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1033
+        width: 202
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea89485d3b655f40800000000000000
+      internalID: 5716593213235104490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_28
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1042
+        width: 207
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0932a10586d2acf0800000000000000
+      internalID: -242395563178182390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm_29
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1046
+        width: 206
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e4b84738e7cb5d0800000000000000
+      internalID: -3045420144948195818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WindStorm_0: 3957214708834375088
+      WindStorm_1: -7285293256558213997
+      WindStorm_10: -8826752124951586304
+      WindStorm_11: 8647871453794017337
+      WindStorm_12: -4308439177706159252
+      WindStorm_13: 3773273193420780669
+      WindStorm_14: -5844958619244955425
+      WindStorm_15: 278468899367974267
+      WindStorm_16: -141968729190348258
+      WindStorm_17: 883621005052408293
+      WindStorm_18: -2202878780165996152
+      WindStorm_19: -2754318015904150495
+      WindStorm_2: 2987869573016005296
+      WindStorm_20: -4361851715996328852
+      WindStorm_21: 1187368873910657633
+      WindStorm_22: 5315770751389532713
+      WindStorm_23: -5885252325033247479
+      WindStorm_24: 3339705718244567304
+      WindStorm_25: 9220139052201538748
+      WindStorm_26: -2555985905586672463
+      WindStorm_27: 5716593213235104490
+      WindStorm_28: -242395563178182390
+      WindStorm_29: -3045420144948195818
+      WindStorm_3: 6132898314180262970
+      WindStorm_4: -4179412353174562827
+      WindStorm_5: 4528737244977228212
+      WindStorm_6: -7890960002890624659
+      WindStorm_7: 1861329026788898398
+      WindStorm_8: -4658065185613728488
+      WindStorm_9: -1890458714638538950
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

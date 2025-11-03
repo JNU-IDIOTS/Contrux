@@ -1,0 +1,123 @@
+[
+    {
+        "stageName": "TestScenes",
+        "weaponDropRate": 100,
+        "commonRate": 44,
+        "rareRate": 35,
+        "epicRate": 30,
+        "uniqueRate": 1,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Tutorial",
+        "weaponDropRate": 100,
+        "commonRate": 64,
+        "rareRate": 35,
+        "epicRate": 1,
+        "uniqueRate": 0,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Chapter1-1",
+        "weaponDropRate": 20,
+        "commonRate": 60,
+        "rareRate": 35,
+        "epicRate": 0,
+        "uniqueRate": 0,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Chapter1-2",
+        "weaponDropRate": 20,
+        "commonRate": 60,
+        "rareRate": 35,
+        "epicRate": 4,
+        "uniqueRate": 1,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Chapter1-3",
+        "weaponDropRate": 20,
+        "commonRate": 60,
+        "rareRate": 35,
+        "epicRate": 4,
+        "uniqueRate": 1,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "MiddleBossScene",
+        "weaponDropRate": 70,
+        "commonRate": 58,
+        "rareRate": 33,
+        "epicRate": 6,
+        "uniqueRate": 3,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Greed_Castle1",
+        "weaponDropRate": 30,
+        "commonRate": 58,
+        "rareRate": 37,
+        "epicRate": 4,
+        "uniqueRate": 1,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Greed_Castle2",
+        "weaponDropRate": 30,
+        "commonRate": 58,
+        "rareRate": 37,
+        "epicRate": 4,
+        "uniqueRate": 1,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Greed_Castle3",
+        "weaponDropRate": 30,
+        "commonRate": 58,
+        "rareRate": 37,
+        "epicRate": 4,
+        "uniqueRate": 1,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Greed_Castle4",
+        "weaponDropRate": 30,
+        "commonRate": 58,
+        "rareRate": 37,
+        "epicRate": 4,
+        "uniqueRate": 1,
+        "legendaryRate": 0,
+        "allowedLevels": [ 10 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    },
+    {
+        "stageName": "Greed_Castle_final",
+        "weaponDropRate": 100,
+        "commonRate": 40,
+        "rareRate": 35,
+        "epicRate": 15,
+        "uniqueRate": 5,
+        "legendaryRate": 5,
+        "allowedLevels": [ 10, 20 ],
+        "allowedTypeStrings": [ "GreatSword" ]
+    }
+]

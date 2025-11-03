@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: 4ab037387fa34fa408e002b6e14eb832
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1322135149140974665
+    second: WindStorm-Sheet_0
+  - first:
+      213: -9116719774884166638
+    second: WindStorm-Sheet_1
+  - first:
+      213: 4880286449264871347
+    second: WindStorm-Sheet_2
+  - first:
+      213: 9143150260729043261
+    second: WindStorm-Sheet_3
+  - first:
+      213: -8088505617470472761
+    second: WindStorm-Sheet_4
+  - first:
+      213: -7469670619539491194
+    second: WindStorm-Sheet_5
+  - first:
+      213: 8220405848140504506
+    second: WindStorm-Sheet_6
+  - first:
+      213: -1224935368549111986
+    second: WindStorm-Sheet_7
+  - first:
+      213: -4808079443360496587
+    second: WindStorm-Sheet_8
+  - first:
+      213: 3202834436018129750
+    second: WindStorm-Sheet_9
+  - first:
+      213: 9039085181774824335
+    second: WindStorm-Sheet_10
+  - first:
+      213: -6033047217685320677
+    second: WindStorm-Sheet_11
+  - first:
+      213: -8514869283800392759
+    second: WindStorm-Sheet_12
+  - first:
+      213: -2692307405010842900
+    second: WindStorm-Sheet_13
+  - first:
+      213: -5805792153808680459
+    second: WindStorm-Sheet_14
+  - first:
+      213: -4529543004314642092
+    second: WindStorm-Sheet_15
+  - first:
+      213: 257264386753049261
+    second: WindStorm-Sheet_16
+  - first:
+      213: 889502811430839827
+    second: WindStorm-Sheet_17
+  - first:
+      213: -6292456020159944879
+    second: WindStorm-Sheet_18
+  - first:
+      213: 6297782396953837483
+    second: WindStorm-Sheet_19
+  - first:
+      213: -7348648937355321287
+    second: WindStorm-Sheet_20
+  - first:
+      213: 4330325305881200404
+    second: WindStorm-Sheet_21
+  - first:
+      213: -3780620739119777561
+    second: WindStorm-Sheet_22
+  - first:
+      213: 8704702923875582278
+    second: WindStorm-Sheet_23
+  - first:
+      213: -7104206810707888920
+    second: WindStorm-Sheet_24
+  - first:
+      213: 8386001196150329290
+    second: WindStorm-Sheet_25
+  - first:
+      213: -4337616147109226342
+    second: WindStorm-Sheet_26
+  - first:
+      213: -7172849945445813702
+    second: WindStorm-Sheet_27
+  - first:
+      213: -8372278569421183454
+    second: WindStorm-Sheet_28
+  - first:
+      213: -2577986472866036969
+    second: WindStorm-Sheet_29
+  - first:
+      213: -14027462291732169
+    second: WindStorm-Sheet_30
+  - first:
+      213: 7523451793435968365
+    second: WindStorm-Sheet_31
+  - first:
+      213: 2696084312035012591
+    second: WindStorm-Sheet_32
+  - first:
+      213: -1344392627496673600
+    second: WindStorm-Sheet_33
+  - first:
+      213: 2255753469366721668
+    second: WindStorm-Sheet_34
+  - first:
+      213: 3277540674334882326
+    second: WindStorm-Sheet_35
+  - first:
+      213: 5622883190476352210
+    second: WindStorm-Sheet_36
+  - first:
+      213: -2960089985233104872
+    second: WindStorm-Sheet_37
+  - first:
+      213: 760140258669233806
+    second: WindStorm-Sheet_38
+  - first:
+      213: 6066850128478702664
+    second: WindStorm-Sheet_39
+  - first:
+      213: -3294824844225299169
+    second: WindStorm-Sheet_40
+  - first:
+      213: -467931873085373482
+    second: WindStorm-Sheet_41
+  - first:
+      213: 9125233216792723610
+    second: WindStorm-Sheet_42
+  - first:
+      213: -8617700731360994430
+    second: WindStorm-Sheet_43
+  - first:
+      213: 2286596218341336160
+    second: WindStorm-Sheet_44
+  - first:
+      213: -8386254221051218954
+    second: WindStorm-Sheet_45
+  - first:
+      213: -7853813702582212288
+    second: WindStorm-Sheet_46
+  - first:
+      213: -8782792570208445006
+    second: WindStorm-Sheet_47
+  - first:
+      213: 2554669467359726940
+    second: WindStorm-Sheet_48
+  - first:
+      213: -6506061362513380975
+    second: WindStorm-Sheet_49
+  - first:
+      213: 7812748236707068448
+    second: WindStorm-Sheet_50
+  - first:
+      213: -311915095049371283
+    second: WindStorm-Sheet_51
+  - first:
+      213: 5444258838800966332
+    second: WindStorm-Sheet_52
+  - first:
+      213: -6721706009038043889
+    second: WindStorm-Sheet_53
+  - first:
+      213: 4904183372061501846
+    second: WindStorm-Sheet_54
+  - first:
+      213: -1128892353458561947
+    second: WindStorm-Sheet_55
+  - first:
+      213: -9213901288613798533
+    second: WindStorm-Sheet_56
+  - first:
+      213: -1964777975896493604
+    second: WindStorm-Sheet_57
+  - first:
+      213: 433217503468311580
+    second: WindStorm-Sheet_58
+  - first:
+      213: 8399705375275854218
+    second: WindStorm-Sheet_59
+  - first:
+      213: -3821902971359063460
+    second: WindStorm-Sheet_60
+  - first:
+      213: 5821447229886728007
+    second: WindStorm-Sheet_61
+  - first:
+      213: 8181962561779931043
+    second: WindStorm-Sheet_62
+  - first:
+      213: -3581324551378579984
+    second: WindStorm-Sheet_63
+  - first:
+      213: -7089168203978998145
+    second: WindStorm-Sheet_64
+  - first:
+      213: -1964273885917647703
+    second: WindStorm-Sheet_65
+  - first:
+      213: 2688583361143846726
+    second: WindStorm-Sheet_66
+  - first:
+      213: 427054641702628381
+    second: WindStorm-Sheet_67
+  - first:
+      213: -8369259333590562356
+    second: WindStorm-Sheet_68
+  - first:
+      213: -179551371928302920
+    second: WindStorm-Sheet_69
+  - first:
+      213: 5764535040609619221
+    second: WindStorm-Sheet_70
+  - first:
+      213: 7914034916126138326
+    second: WindStorm-Sheet_71
+  - first:
+      213: 304655979235976440
+    second: WindStorm-Sheet_72
+  - first:
+      213: 1382326561347594012
+    second: WindStorm-Sheet_73
+  - first:
+      213: 4751029969778705137
+    second: WindStorm-Sheet_74
+  - first:
+      213: -7366527622716365243
+    second: WindStorm-Sheet_75
+  - first:
+      213: 5635594276181965191
+    second: WindStorm-Sheet_76
+  - first:
+      213: -6288040183792257575
+    second: WindStorm-Sheet_77
+  - first:
+      213: -1064141012136459443
+    second: WindStorm-Sheet_78
+  - first:
+      213: -3722724353542241708
+    second: WindStorm-Sheet_79
+  - first:
+      213: 9185147758995152823
+    second: WindStorm-Sheet_80
+  - first:
+      213: 2918428198203692298
+    second: WindStorm-Sheet_81
+  - first:
+      213: -4410526772188678612
+    second: WindStorm-Sheet_82
+  - first:
+      213: 1883539387974317893
+    second: WindStorm-Sheet_83
+  - first:
+      213: 732246723821110931
+    second: WindStorm-Sheet_84
+  - first:
+      213: 2301404083354292874
+    second: WindStorm-Sheet_85
+  - first:
+      213: 2045980174111402982
+    second: WindStorm-Sheet_86
+  - first:
+      213: 8254015617379930761
+    second: WindStorm-Sheet_87
+  - first:
+      213: 8526275676844612883
+    second: WindStorm-Sheet_88
+  - first:
+      213: 2507415449191374648
+    second: WindStorm-Sheet_89
+  - first:
+      213: -4158672735045427772
+    second: WindStorm-Sheet_90
+  - first:
+      213: -8634130877184099748
+    second: WindStorm-Sheet_91
+  - first:
+      213: 5040691581737519384
+    second: WindStorm-Sheet_92
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WindStorm-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7832028de7573854f8d341085efecafd
+      internalID: 927435763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40eed08260ce73a42881c0672f557007
+      internalID: 958331034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ab5964e9773204ea1c119de74934d4
+      internalID: 1875989119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5d525c8f7e0aa45b9e004894101fca
+      internalID: 205863073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b11b8ea1bb670744b0553304a20074e
+      internalID: 349632384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc05bcb2acd33a34b9aa2715dc4ece28
+      internalID: 1004940812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afcd5ce6dc7fcd48bdd5f3aac469fa3
+      internalID: 1006635180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5609e48c96addeb4780826d52b10049a
+      internalID: 619377361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fc9c0859b9f6a4bbc94a33cfd4bc82
+      internalID: -1982295455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb7ab6be716833429e6050c2e3beb84
+      internalID: -1024303588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fe3f627bcafca4bbad68bd14b02c1d
+      internalID: 2143575956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c0901da083201489a5d0889735c303
+      internalID: -560578968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ce3424321a68d45b182e200475c0f2
+      internalID: 541899228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindStorm-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 6656
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699a14dffa4b3e64cb33de687e6bf0cf
+      internalID: -608285398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d1f82ea2022d81d43bc2f6b983efc24a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WindStorm-Sheet_0: 927435763
+      WindStorm-Sheet_1: 958331034
+      WindStorm-Sheet_10: 2143575956
+      WindStorm-Sheet_11: -560578968
+      WindStorm-Sheet_12: 541899228
+      WindStorm-Sheet_13: -608285398
+      WindStorm-Sheet_2: 1875989119
+      WindStorm-Sheet_3: 205863073
+      WindStorm-Sheet_4: 349632384
+      WindStorm-Sheet_5: 1004940812
+      WindStorm-Sheet_6: 1006635180
+      WindStorm-Sheet_7: 619377361
+      WindStorm-Sheet_8: -1982295455
+      WindStorm-Sheet_9: -1024303588
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
