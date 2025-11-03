@@ -6,6 +6,7 @@
 !/Assets/
 !/ProjectSettings/
 !/Packages/
+!/.gitattributes
 
 # --- also keep their contents ---
 !/Assets/**
