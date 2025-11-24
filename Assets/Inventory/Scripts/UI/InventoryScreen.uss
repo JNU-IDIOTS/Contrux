@@ -1,0 +1,246 @@
+/* InventoryScreen.uss - 강제 3x3 그리드, VisualElement 자식도 슬롯 크기로 강제 적용 */
+
+.root-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 16px;
+    height: 100%;
+}
+
+/* 패널 공통 */
+.panel {
+    border-width: 4px;
+    border-color: #2B3338;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: #E7E4DD;
+}
+
+.panel-left { width: 22%; margin : 42 0px; margin-left : 42px; margin-background-color: #E6E6E6; }
+.panel-middle { width: 42%; margin: 42 42px; background-color: #E96A2F; padding: 18px; }
+.panel-right { width: 36%; margin : 42 0px; margin-right: 42px; background-color: #C14A21; padding: 18px; }
+
+.panel-title { -unity-font-style: bold; font-size: 32px; margin-bottom: 10px; color: #222; }
+.panel-subtitle { -unity-font-style: bold; font-size: 24px; color: #222; }
+
+/* 상단 장비 영역 */
+.top-equipment-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    gap: 12px; /* UI Builder에 따라 지원 여부 확인 */
+    background-color: rgba(87, 25, 145, 1); /* 필요하면 색 지정 */
+}
+
+/* 예: 시각적으로 구분하고 싶으면 배경 추가 */
+.top-equipment-row.highlighted {
+    background-color: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* stat 컬럼 (세로 4칸 보장) */
+.stat-slot-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px; /* 세로 4칸 여유 */
+    width: 120px;
+}
+
+/* 슬롯 기본 스타일 */
+.item-slot {
+    width: 80px;
+    height: 80px;
+    background-color: #5A5A5A;
+    border-width: 3px;
+    border-color: #2B2B2B;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* InventoryGrid: 3x3 크기 및 padding/slot 사이즈 증가 */
+.slot-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 450px;        /* 3*100 + 2*16(간격) + 2*16(padding) = 364 */
+    height: 450px;       /* 정사각 박스 유지 */
+    flex-shrink: 0;
+    padding: 16px;
+    border-width: 3px;
+    border-color: #873C20;
+    border-radius: 6px;
+    background-color: #D96B34;
+    justify-content: center;
+    align-content: center;
+    align-items: center; /* 추가: 각 행 내 아이템 수직 중앙 정렬 보장 */
+    align-self: center; /* 그리드 자체도 부모 내 중앙 정렬 */
+    overflow: hidden;
+    position: relative; /* 절대위치 자식 기준 */
+}
+
+/* 하이라이트 박스 (슬롯 크기와 동일하게 확장) */
+.grid-highlight {
+    position: absolute;
+    right: 16px;      /* InventoryGrid padding과 동일 */
+    bottom: 16px;
+    width: 100px;     /* 슬롯 크기와 일치 */
+    height: 100px;
+    background-color: #3B82F6;
+    border-radius: 6px;
+    border-width: 3px;
+    border-color: #134EAC;
+    pointer-events: none;
+    opacity: 0.95;
+    z-index: 100;
+}
+
+/* 모든 자식 VisualElement를 슬롯 크기로 강제 (정확한 3x3 배치) */
+.slot-grid > .item-slot,
+ slot-grid > .placeholder-slot,
+ slot-grid > VisualElement {
+    width: 100px;
+    height: 100px;
+    margin-right: 16px;
+    margin-top : 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    flex: 0 0 auto;
+    align-self: center; /* 각 아이템도 중앙으로 고정 */
+}
+
+/* 마지막 열의 오른쪽 여유를 보장하기 위해 padding-right 유지 (nth-child 사용 금지) */
+/* placeholder(보여주기용) */
+.placeholder-slot {
+    background-color: #7A7A7A;
+    border-width: 2px;
+    border-color: #2B2B2B;
+    border-radius: 6px;
+}
+
+/* zone 표시 */
+.zone-box { border-width: 2px; border-color: #3A3A3A; border-radius: 6px; padding: 8px; background-color: #EFE7DA; }
+.zone-label { font-size: 24px; color: #111; margin-bottom: 6px; -unity-font-style: bold; }
+
+/* 정보 패널 */
+.info-scroll-view { background-color: #2F2F2F; padding: 32px; display: flex; flex-direction: column; flex-grow: 1; }
+
+.info-text {
+    font-size: 24px;
+    color: rgb(210, 210, 210);
+    white-space: normal;
+    margin-bottom: 8px;
+}
+
+.sub-info {
+    font-size: 24px;
+    color: rgb(255, 215, 0);
+    -unity-font-style: bold;
+    margin-top: 4px;
+}
+
+.info-sub-box {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top-width: 1px;
+    border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.info-item-icon{
+    width: 200px;
+    height: 200px;
+    margin: 12px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-color: #555555;
+    background-color: #AAAAAA;
+    align-self: center;
+}
+
+/* 캐릭터 프리뷰 스타일 추가(명확히 보이도록) */
+.character-preview-container {
+    display: flex;
+    flex-direction: column;
+    info-item-name-items: center;
+    justify-content: center;
+    margin: 12 12px;
+}
+
+.character-preview {
+    width: 180px;
+    height: 240px;
+    background-color: #3A241E; /* 눈에 띄는 배경 */
+    border-width: 4px;
+    border-color: #C86A3E;
+    border-radius: 6px;
+}
+
+/* LEFT / RIGHT stat column 강조 색상 추가 */
+#LeftStatColumn.stat-slot-column {
+    background-color: #FFF4E6; /* 연한 베이지 - 좌측 눈에 띄게 */
+    border-width: 6px;
+    border-color: #B86B3E;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+#RightStatColumn.stat-slot-column {
+    background-color: #FFF0F0; /* 연한 핑크/살구 계열 - 우측 눈에 띄게 */
+    border-width: 3px;
+    border-color: #9C4328;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+/* stat 컬럼 내부 슬롯 정렬/간격 보정 */
+#LeftStatColumn.stat-slot-column .item-slot,
+#RightStatColumn.stat-slot-column .item-slot {
+    margin : 16 16px;
+    align-self: center; /* 컬럼 중앙 정렬 */
+    flex-shrink: 0;
+}
+
+/* 호버/선택 강조 (선택 시 테두리 색상) */
+#LeftStatColumn.stat-slot-column .item-slot:hover,
+#RightStatColumn.stat-slot-column .item-slot:hover {
+    border-color: #FFD800;
+}
+
+/* (선택된 슬롯에 클래스 'highlight'가 붙는다면) */
+#LeftStatColumn.stat-slot-column .item-slot.highlight,
+#RightStatColumn.stat-slot-column .item-slot.highlight {
+    border-color: #FFD800;
+    background-color: rgba(255,216,0,0.08); /* 필요시 눈에띄게 */
+}
+
+/* 플레이어 스탯 컨테이너 스타일 */
+.stats-container {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.stat-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    padding-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: rgb(180, 180, 180);
+}
+
+.stat-value {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}
