@@ -17,12 +17,222 @@
     background-color: #E7E4DD;
 }
 
-.panel-left { width: 22%; margin : 42 0px; margin-left : 42px; margin-background-color: #E6E6E6; }
-.panel-middle { width: 42%; margin: 42 42px; background-color: #E96A2F; padding: 18px; }
-.panel-right { width: 36%; margin : 42 0px; margin-right: 42px; background-color: #C14A21; padding: 18px; }
+.panel-left { width: 22%; margin: 42px 0px; margin-left: 42px; background-color: #E6E6E6; }
+.panel-middle { width: 42%; margin: 42px 42px; background-color: #E96A2F; padding: 18px; }
+.panel-right { width: 36%; margin: 42px 0px; margin-right: 42px; background-color: #C14A21; padding: 18px; }
 
 .panel-title { -unity-font-style: bold; font-size: 32px; margin-bottom: 10px; color: #222; }
 .panel-subtitle { -unity-font-style: bold; font-size: 24px; color: #222; }
+
+/* =========================== 시너지 UI 스타일 =========================== */
+
+/* 시너지 카운트 텍스트 */
+.synergy-count-text {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 12px;
+    -unity-font-style: bold;
+}
+
+/* 시너지 스크롤 뷰 */
+.synergy-scroll-view {
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+
+/* 시너지 컨테이너 */
+.synergy-container {
+    flex-direction: column;
+    padding: 8px;
+}
+
+/* 시너지 아이템 카드 - 기본 (비활성화 상태) */
+.synergy-item {
+    background-color: #F0F0F0;
+    border-width: 2px;
+    border-color: #AAA;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 6px;
+    flex-direction: column;
+    opacity: 0.6; /* 비활성화 상태는 흐리게 */
+}
+
+/* 활성화된 시너지 카드 */
+.synergy-item.active {
+    opacity: 1.0; /* 완전 불투명 */
+    border-width: 3px;
+}
+
+/* 새로 활성화된 시너지 강조 */
+.synergy-item.highlight {
+    border-width: 4px;
+}
+
+/* 시너지 헤더 (아이콘 + 이름 + 레벨) */
+.synergy-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+/* 시너지 아이콘 */
+.synergy-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border-radius: 4px;
+    background-color: #DDD;
+}
+
+/* 시너지 이름 */
+.synergy-name {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: #888; /* 기본적으로 비활성화 색상 */
+    flex-grow: 1;
+}
+
+/* 활성화된 시너지 이름 */
+.synergy-item.active .synergy-name {
+    color: #333;
+}
+
+/* 시너지 레벨 - 기본 (비활성화) */
+.synergy-level {
+    font-size: 12px;
+    color: #888;
+    background-color: #E0E0E0;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+/* 활성화된 시너지 레벨 */
+.synergy-level.active {
+    color: white;
+    -unity-font-style: bold;
+    background-color: #666; /* 기본 활성 배경색 */
+}
+
+/* 시너지 진행도 컨테이너 */
+.synergy-progress-container {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* 진행도 텍스트 */
+.synergy-progress-text {
+    font-size: 11px;
+    color: #AAA; /* 기본적으로 비활성화 색상 */
+    margin-bottom: 2px;
+}
+
+/* 활성화된 진행도 텍스트 */
+.synergy-item.active .synergy-progress-text {
+    color: #666;
+}
+
+/* 진행도 바 배경 */
+.synergy-progress-bar {
+    height: 6px;
+    background-color: #E0E0E0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* 진행도 바 채움 - 기본 */
+.synergy-progress-fill {
+    height: 100%;
+    background-color: #CCC; /* 비활성화 시 회색 */
+    border-radius: 3px;
+}
+
+/* 시너지 효과 텍스트 */
+.synergy-effect-text {
+    font-size: 11px;
+    color: #888; /* 비활성화 시 회색 */
+    margin-top: 2px;
+    white-space: normal;
+}
+
+/* 활성화된 시너지 효과 */
+.synergy-effect-text.active {
+    color: #2E7D32;
+    -unity-font-style: bold;
+}
+
+/* 시너지가 없을 때 메시지 */
+.no-synergy-message {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.no-synergy-text {
+    font-size: 16px;
+    color: #888;
+    -unity-text-align: middle-center;
+    margin-bottom: 8px;
+}
+
+.no-synergy-hint {
+    font-size: 12px;
+    color: #AAA;
+    -unity-text-align: middle-center;
+    -unity-font-style: italic;
+}
+
+/* 다음 레벨까지 필요한 아이템 수 표시 */
+.synergy-next-level {
+    font-size: 10px;
+    color: #AAA; /* 기본적으로 비활성화 색상 */
+    margin-top: 2px;
+}
+
+/* 활성화된 다음 레벨 텍스트 */
+.synergy-item.active .synergy-next-level {
+    color: #777;
+}
+
+/* 텍스트 색상 클래스 */
+.light-text {
+    color: #333;
+}
+
+/* 시너지 태그 표시 */
+.synergy-tags {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.synergy-tag {
+    font-size: 9px;
+    background-color: #DDD;
+    color: #555;
+    padding: 1px 4px;
+    border-radius: 8px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+.synergy-tag.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 비활성화 상태 표시 텍스트 */
+.synergy-inactive-label {
+    font-size: 10px;
+    color: #999;
+    -unity-font-style: italic;
+    margin-top: 2px;
+    -unity-text-align: middle-center;
+}
+
+/* =========================== 기존 스타일 계속 =========================== */
 
 /* 상단 장비 영역 */
 .top-equipment-row {
@@ -31,8 +241,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 8px;
-    gap: 12px; /* UI Builder에 따라 지원 여부 확인 */
-    background-color: rgba(87, 25, 145, 1); /* 필요하면 색 지정 */
+    background-color: rgba(87, 25, 145, 1);
 }
 
 /* 예: 시각적으로 구분하고 싶으면 배경 추가 */
@@ -103,8 +312,8 @@
 
 /* 모든 자식 VisualElement를 슬롯 크기로 강제 (정확한 3x3 배치) */
 .slot-grid > .item-slot,
- slot-grid > .placeholder-slot,
- slot-grid > VisualElement {
+.slot-grid > .placeholder-slot,
+.slot-grid > VisualElement {
     width: 100px;
     height: 100px;
     margin-right: 16px;
@@ -167,9 +376,9 @@
 .character-preview-container {
     display: flex;
     flex-direction: column;
-    info-item-name-items: center;
+    align-items: center;
     justify-content: center;
-    margin: 12 12px;
+    margin: 12px 12px;
 }
 
 .character-preview {
@@ -201,7 +410,7 @@
 /* stat 컬럼 내부 슬롯 정렬/간격 보정 */
 #LeftStatColumn.stat-slot-column .item-slot,
 #RightStatColumn.stat-slot-column .item-slot {
-    margin : 16 16px;
+    margin: 16px 16px;
     align-self: center; /* 컬럼 중앙 정렬 */
     flex-shrink: 0;
 }

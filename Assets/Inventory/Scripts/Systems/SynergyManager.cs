@@ -242,6 +242,14 @@ public class SynergyManager : MonoBehaviour
     }
     
     /// <summary>
+    /// 시너지 데이터 찾기 (태그로)
+    /// </summary>
+    public SynergyData GetSynergyDataByTag(string tag)
+    {
+        return allSynergies.FirstOrDefault(s => s.requiredTag == tag);
+    }
+    
+    /// <summary>
     /// 특정 태그의 현재 레벨과 다음 레벨 정보 반환
     /// </summary>
     public (int currentLevel, int nextThreshold, string synergyName) GetSynergyInfo(string tag)

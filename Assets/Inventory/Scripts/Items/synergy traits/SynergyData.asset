@@ -12,12 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be054d20d1bf94b1789a339206975c87, type: 3}
   m_Name: SynergyData
   m_EditorClassIdentifier: 
-  synergyId: 
-  displayName: 
-  icon: {fileID: 0}
+  synergyId: 1
+  displayName: "\uC5ED\uC2DC \uC774\uC0C1\uD638"
+  icon: {fileID: -2413806693520163455, guid: 70f9cddbcad285e4d9ef1d3fd9e1b939, type: 3}
   description: 
   requiredTag: 
-  thresholds: 020000000400000006000000
-  effects: []
+  thresholds: 010000000200000006000000
+  effects:
+  - level: 2
+    hpBonus: 10
+    physicalAttackBonus: 0
+    magicalAttackBonus: 0
+    defenseBonus: 0
+    criticalChanceBonus: 0
+    attackSpeedBonus: 0
+    moveSpeedBonus: 0
+    effectDescription: 
+  - level: 4
+    hpBonus: 10
+    physicalAttackBonus: 0
+    magicalAttackBonus: 0
+    defenseBonus: 0
+    criticalChanceBonus: 0
+    attackSpeedBonus: 0
+    moveSpeedBonus: 0
+    effectDescription: 
+  - level: 6
+    hpBonus: 10
+    physicalAttackBonus: 0
+    magicalAttackBonus: 0
+    defenseBonus: 0
+    criticalChanceBonus: 0
+    attackSpeedBonus: 0
+    moveSpeedBonus: 0
+    effectDescription: 
   synergyType: 0
   incompatibleSynergyIds: []

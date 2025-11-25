@@ -24,3 +24,6 @@ MonoBehaviour:
   Defense: 0
   description: "\uB300\uAC00\uB9AC\uB2E4\t"
   performance: 
+  synergyTags: []
+  synergyTier: 1
+  synergyWeight: 1

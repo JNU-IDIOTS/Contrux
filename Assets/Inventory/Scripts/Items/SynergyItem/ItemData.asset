@@ -20,8 +20,12 @@ MonoBehaviour:
   InhanceLevel: 0
   HP: 0
   MagicDeal: 0
-  PhysicalDeal: 0
+  PhysicalDeal: 14
   Defense: 0
   description: Test Test
   performance: "\uBB3C\uB9AC \uD53C\uD574 + 14\n\n\uCD94\uAC00 \uD3C9\uD0C0 \uD655\uB960
     + 10%"
+  synergyTags:
+  - 1
+  synergyTier: 1
+  synergyWeight: 1

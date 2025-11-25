@@ -311,7 +311,7 @@ MonoBehaviour:
   columns: 3
   rows: 3
   initialItems:
-  - {fileID: 11400000, guid: 107c89adc85c1404d97bad1ded9443e9, type: 2}
+  - {fileID: 11400000, guid: 9975c40cf72336a4da6de211aa770663, type: 2}
   - {fileID: 11400000, guid: 107c89adc85c1404d97bad1ded9443e9, type: 2}
   - {fileID: 11400000, guid: 107c89adc85c1404d97bad1ded9443e9, type: 2}
 --- !u!1660057539 &9223372036854775807

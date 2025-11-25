@@ -24,3 +24,7 @@ MonoBehaviour:
   Defense: 0
   description: 
   performance: 
+  synergyTags:
+  - 1
+  synergyTier: 1
+  synergyWeight: 1

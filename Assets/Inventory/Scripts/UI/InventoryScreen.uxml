@@ -2,32 +2,17 @@
     <Style src="project://database/Assets/Scripts/UI/InventoryScreen.uss?fileID=7433441132597879392&amp;guid=2ae106cbf207e1c43a34e9fecbd8ff66&amp;type=3#InventoryScreen" />
     <ui:VisualElement name="InventoryRoot" class="root-container skul-theme-root">
         <ui:VisualElement name="SynergyPanel_Left" class="panel panel-left">
-            <ui:Label text="시너지" class="panel-title light-text" />
-            <ui:VisualElement name="SynergyContainer" class="synergy-container">
-                <ui:VisualElement class="synergy-row">
-                    <ui:VisualElement class="synergy-icon-box">
-                        <ui:Label text="1" class="synergy-label light-text" />
-                    </ui:VisualElement>
-                    <ui:VisualElement class="synergy-desc-box">
-                        <ui:Label text="1 -&gt; 2 조합 규칙" class="synergy-desc-text light-text" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
-                <ui:VisualElement class="synergy-row">
-                    <ui:VisualElement class="synergy-icon-box">
-                        <ui:Label text="2" class="synergy-label light-text" />
-                    </ui:VisualElement>
-                    <ui:VisualElement class="synergy-desc-box">
-                        <ui:Label text="2 -&gt; 4 조합 규칙" class="synergy-desc-text light-text" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
-                <ui:VisualElement class="synergy-row">
-                    <ui:VisualElement class="synergy-icon-box synergy-active">
-                        <ui:Label text="4" class="synergy-label light-text" />
-                    </ui:VisualElement>
-                    <ui:VisualElement class="synergy-desc-box">
-                        <ui:Label text="활성화된 4 시너지 효과" class="synergy-desc-text light-text" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
+            <ui:Label text="시너지 현황" class="panel-title light-text" />
+            <ui:Label name="SynergyCountText" text="활성 시너지: 0개" class="synergy-count-text light-text" />
+            
+            <!-- 동적으로 생성될 시너지 아이템들을 담을 컨테이너 -->
+            <ui:ScrollView name="SynergyScrollView" class="synergy-scroll-view">
+                <ui:VisualElement name="SynergyContainer" class="synergy-container" />
+            </ui:ScrollView>
+            
+            <!-- 시너지가 없을 때 표시할 메시지 -->
+            <ui:VisualElement name="NoSynergyMessage" class="no-synergy-message">
+                <ui:Label text="활성화된 시너지가 없습니다." class="no-synergy-hint light-text" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="EquipmentPanel_Middle" class="panel panel-middle">

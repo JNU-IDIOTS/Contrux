@@ -111,6 +111,10 @@ public class SynergyEffect
     [Header("레벨 정보")]
     public int level; // 이 효과의 레벨 (1, 2, 3...)
     
+    [Header("UI 색상")]
+    [Tooltip("이 레벨에서 시너지 카드의 테두리 색상")]
+    public Color borderColor = Color.white; // 기본값은 흰색
+    
     [Header("스탯 보너스")]
     public int hpBonus;
     public int physicalAttackBonus;
@@ -122,11 +126,11 @@ public class SynergyEffect
     public float attackSpeedBonus;    // 공격속도 증가 (%)
     public float moveSpeedBonus;      // 이동속도 증가 (%)
     
-    [Header("고급 효과")]
-    public bool enablesSpecialAbility; // 특수 능력 활성화
-    public string specialAbilityId;    // 특수 능력 ID
+    // [Header("고급 효과")]
+    // public bool enablesSpecialAbility; // 특수 능력 활성화
+    // public string specialAbilityId;    // 특수 능력 ID
     
-    [TextArea(2, 3)]
+    // [TextArea(2, 3)]
     public string effectDescription; // 이 레벨 효과의 설명
     
     /// <summary>
@@ -140,8 +144,7 @@ public class SynergyEffect
                defenseBonus == 0 &&
                criticalChanceBonus == 0f &&
                attackSpeedBonus == 0f &&
-               moveSpeedBonus == 0f &&
-               !enablesSpecialAbility;
+               moveSpeedBonus == 0f;
     }
 }
 
