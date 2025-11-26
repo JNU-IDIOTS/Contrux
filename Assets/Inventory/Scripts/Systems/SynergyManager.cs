@@ -30,7 +30,26 @@ public class SynergyManager : MonoBehaviour
     public SynergyData[] AllSynergies => allSynergies;
 
     void Start()
-    {
+    {   
+        Debug.Log("=== SynergyManager 등록된 시너지 목록 ===");
+        if (allSynergies != null)
+        {
+            for (int i = 0; i < allSynergies.Length; i++)
+            {
+                if (allSynergies[i] != null)
+                {
+                    Debug.Log($"[{i}] ID: {allSynergies[i].synergyId}, Tag: '{allSynergies[i].requiredTag}', Name: {allSynergies[i].displayName}");
+                }
+                else
+                {
+                    Debug.Log($"[{i}] NULL");
+                }
+            }
+        }
+        else
+        {
+            Debug.LogError("allSynergies 배열이 null입니다!");
+        }
         LoadAllSynergies();
         ConnectToInventory();
         

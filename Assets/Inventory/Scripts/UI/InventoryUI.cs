@@ -161,7 +161,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    // [수정] 모든 시너지 UI 요소들 업데이트 - 시너지 ID 매칭 문제 해결
+    // [수정] 모든 시너지 UI 요소들 업데이트 - 레벨 높은 순으로 정렬
     private void UpdateAllSynergyElements(HashSet<string> allSynergyTags, Dictionary<string, int> activeSynergies, Dictionary<string, int> tagCounts, List<ItemData> allItems)
     {
         // 기존에 없는 시너지는 제거
@@ -171,7 +171,10 @@ public class InventoryUI : MonoBehaviour
             RemoveSynergyElement(key);
         }
 
-        // 모든 보유 시너지에 대해 UI 요소 생성 또는 업데이트
+        // [새로 추가] 시너지를 레벨순으로 정렬하기 위한 리스트 생성
+        List<SynergyDisplayInfo> synergyDisplayList = new List<SynergyDisplayInfo>();
+
+        // 모든 보유 시너지에 대해 정보 수집
         foreach (var synergyTag in allSynergyTags)
         {
             // 해당 태그의 SynergyData 찾기
@@ -183,12 +186,39 @@ public class InventoryUI : MonoBehaviour
             int level = isActive ? activeSynergies[synergyData.synergyId] : 0;
             int currentCount = tagCounts.ContainsKey(synergyTag) ? tagCounts[synergyTag] : 0;
             
-            if (!_synergyUIElements.ContainsKey(synergyTag))
+            synergyDisplayList.Add(new SynergyDisplayInfo
             {
-                CreateSynergyElement(synergyTag);
+                synergyTag = synergyTag,
+                level = level,
+                currentCount = currentCount,
+                isActive = isActive
+            });
+        }
+
+        // [새로 추가] 레벨 높은 순으로 정렬 (활성화 상태 우선, 그 다음 레벨 순)
+        synergyDisplayList.Sort((a, b) => 
+        {
+            // 1순위: 활성화된 시너지가 먼저
+            if (a.isActive != b.isActive)
+                return b.isActive.CompareTo(a.isActive);
+            
+            // 2순위: 레벨이 높은 순
+            if (a.level != b.level)
+                return b.level.CompareTo(a.level);
+                
+            // 3순위: 아이템 개수가 많은 순
+            return b.currentCount.CompareTo(a.currentCount);
+        });
+
+        // [수정] 정렬된 순서대로 UI 생성 및 업데이트
+        foreach (var info in synergyDisplayList)
+        {
+            if (!_synergyUIElements.ContainsKey(info.synergyTag))
+            {
+                CreateSynergyElement(info.synergyTag);
             }
             
-            UpdateSynergyElement(synergyTag, level, currentCount, allItems, isActive);
+            UpdateSynergyElement(info.synergyTag, info.level, info.currentCount, allItems, info.isActive);
         }
 
         // [추가] 새로 활성화된 시너지 강조 효과 (시너지 ID를 태그로 변환)
@@ -202,6 +232,15 @@ public class InventoryUI : MonoBehaviour
             }
         }
         CheckAndHighlightNewActiveSynergies(activeTagsList);
+    }
+
+    // [새로 추가] 시너지 표시 정보를 담는 클래스
+    private class SynergyDisplayInfo
+    {
+        public string synergyTag;
+        public int level;
+        public int currentCount;
+        public bool isActive;
     }
 
     // [새로 추가] 시너지 ID로 SynergyData 찾기
@@ -264,14 +303,12 @@ public class InventoryUI : MonoBehaviour
         nextLevelText.AddToClassList("synergy-next-level");
 
         // [추가] 비활성화 상태 라벨
-        var inactiveLabel = new Label("발동 대기 중");
-        inactiveLabel.AddToClassList("synergy-inactive-label");
+
 
         synergyItem.Add(header);
         synergyItem.Add(progressContainer);
         synergyItem.Add(effectText);
         synergyItem.Add(nextLevelText);
-        synergyItem.Add(inactiveLabel);
 
         _synergyContainer.Add(synergyItem);
         _synergyUIElements[synergyTag] = synergyItem;
@@ -385,42 +422,6 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
-        // [수정] SynergyData 기반 다음 레벨 정보
-        var nextLevelText = synergyItem.Q<Label>(className: "synergy-next-level");
-        if (nextLevelText != null)
-        {
-            var synergyData = GetSynergyDataByTag(synergyTag);
-            if (synergyData != null)
-            {
-                int itemsNeeded = synergyData.GetItemsNeededForNextLevel(currentCount);
-                
-                if (itemsNeeded > 0)
-                {
-                    if (isActive)
-                    {
-                        nextLevelText.text = $"다음 레벨까지 {itemsNeeded}개 더 필요";
-                    }
-                    else
-                    {
-                        nextLevelText.text = $"발동까지 {itemsNeeded}개 더 필요";
-                    }
-                    nextLevelText.style.display = DisplayStyle.Flex;
-                }
-                else if (isActive)
-                {
-                    nextLevelText.text = "최고 레벨 달성";
-                    nextLevelText.style.display = DisplayStyle.Flex;
-                }
-                else
-                {
-                    nextLevelText.style.display = DisplayStyle.None;
-                }
-            }
-            else
-            {
-                nextLevelText.style.display = DisplayStyle.None;
-            }
-        }
 
         // [추가] 비활성화 라벨 표시/숨김
         var inactiveLabel = synergyItem.Q<Label>(className: "synergy-inactive-label");
@@ -463,11 +464,6 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    // [새로 추가] 활성화 임계값 반환 (최초 발동 조건)
-    private int GetActivationThreshold()
-    {
-        return 2; // 기본적으로 2개부터 시너지 발동
-    }
 
     // [새로 추가] 새로 활성화된 시너지 강조 효과
     private void CheckAndHighlightNewActiveSynergies(List<string> currentActiveSynergies)
@@ -628,31 +624,50 @@ public class InventoryUI : MonoBehaviour
     // [수정] 시너지 효과 설명 가져오기 - SynergyData에서 색상도 함께 관리하도록 확장 가능
     private string GetSynergyEffectDescription(string tag, int level)
     {
-        // TODO: 실제로는 SynergyData.cs의 SynergyEffect에서 색상과 효과를 가져와야 함
-        // SynergyData에서 effectDescription과 함께 색상 정보도 관리할 수 있음
+        // 태그로 SynergyData 찾기
+        var synergyData = GetSynergyDataByTag(tag);
+        if (synergyData == null || level <= 0) return "효과 없음";
         
-        string baseName = GetSynergyDisplayName(tag);
-        switch (level)
-        {
-            case 1: return $"{baseName} 공격력 +10";
-            case 2: return $"{baseName} 공격력 +25, 치명타 +5%";
-            case 3: return $"{baseName} 공격력 +50, 치명타 +15%, 특수능력 활성화";
-            default: return "효과 없음";
-        }
+        // 해당 레벨의 SynergyEffect 가져오기
+        var effect = synergyData.GetEffect(level);
+        if (effect == null) return "효과 없음";
+        
+        List<string> effectParts = new List<string>();
+        
+        // 각 보너스 값이 0이 아니면 텍스트에 추가
+        if (effect.hpBonus != 0)
+            effectParts.Add($"체력 {(effect.hpBonus > 0 ? "+" : "")}{effect.hpBonus}");
+    
+        if (effect.physicalAttackBonus != 0)
+            effectParts.Add($"물리 공격력 {(effect.physicalAttackBonus > 0 ? "+" : "")}{effect.physicalAttackBonus}");
+    
+        if (effect.magicalAttackBonus != 0)
+            effectParts.Add($"마법 공격력 {(effect.magicalAttackBonus > 0 ? "+" : "")}{effect.magicalAttackBonus}");
+    
+        if (effect.defenseBonus != 0)
+            effectParts.Add($"방어력 {(effect.defenseBonus > 0 ? "+" : "")}{effect.defenseBonus}");
+    
+        if (effect.criticalChanceBonus != 0)
+            effectParts.Add($"치명타 확률 {(effect.criticalChanceBonus > 0 ? "+" : "")}{effect.criticalChanceBonus}%");
+    
+        if (effect.attackSpeedBonus != 0)
+            effectParts.Add($"공격 속도 {(effect.attackSpeedBonus > 0 ? "+" : "")}{effect.attackSpeedBonus}%");
+    
+        if (effect.moveSpeedBonus != 0)
+            effectParts.Add($"이동 속도 {(effect.moveSpeedBonus > 0 ? "+" : "")}{effect.moveSpeedBonus}%");
+    
+        // Effect Description이 있으면 추가
+        if (!string.IsNullOrEmpty(effect.effectDescription))
+            effectParts.Add(effect.effectDescription);
+    
+        // 효과가 하나도 없으면
+        if (effectParts.Count == 0)
+            return "효과 없음";
+    
+        // 쉼표로 연결해서 반환
+        return string.Join(", ", effectParts);
     }
 
-    // [추가] 다음 임계값 계산
-    private int GetNextThreshold(int currentLevel)
-    {
-        // 임시 구현: 2, 4, 6, 8, 10...
-        switch (currentLevel)
-        {
-            case 1: return 4;
-            case 2: return 6;
-            case 3: return 8;
-            default: return 0; // 최고 레벨
-        }
-    }
 
     // [개선] 더 안전한 SynergyManager 참조 관리
     private SynergyData GetSynergyDataByTag(string tag)

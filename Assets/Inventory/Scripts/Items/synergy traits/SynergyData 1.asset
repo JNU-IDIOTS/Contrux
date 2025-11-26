@@ -20,7 +20,7 @@ MonoBehaviour:
   thresholds: 010000000200000006000000
   effects:
   - level: 1
-    borderColor: {r: 0, g: 0.9716981, b: 0.013138056, a: 1}
+    borderColor: {r: 0.5764706, g: 0.29803923, b: 0.18823531, a: 1}
     hpBonus: 10
     physicalAttackBonus: 0
     magicalAttackBonus: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     moveSpeedBonus: 0
     effectDescription: 
   - level: 2
-    borderColor: {r: 0.4716981, g: 0.12237452, b: 0.12237452, a: 1}
+    borderColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
     hpBonus: 10
     physicalAttackBonus: 0
     magicalAttackBonus: 0
@@ -39,8 +39,8 @@ MonoBehaviour:
     attackSpeedBonus: 0
     moveSpeedBonus: 0
     effectDescription: 
-  - level: 6
-    borderColor: {r: 1, g: 1, b: 1, a: 1}
+  - level: 4
+    borderColor: {r: 1, g: 0.84313726, b: 0, a: 1}
     hpBonus: 10
     physicalAttackBonus: 0
     magicalAttackBonus: 0

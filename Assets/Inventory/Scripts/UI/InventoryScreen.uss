@@ -49,13 +49,13 @@
 /* 시너지 아이템 카드 - 기본 (비활성화 상태) */
 .synergy-item {
     background-color: #F0F0F0;
-    border-width: 2px;
+    border-width: 4px;
     border-color: #AAA;
     border-radius: 8px;
     padding: 8px;
     margin-bottom: 6px;
     flex-direction: column;
-    opacity: 0.6; /* 비활성화 상태는 흐리게 */
+    opacity: 1.0; /* 비활성화 상태는 흐리게 */
 }
 
 /* 활성화된 시너지 카드 */
@@ -87,7 +87,7 @@
 
 /* 시너지 이름 */
 .synergy-name {
-    font-size: 14px;
+    font-size: 24px;
     -unity-font-style: bold;
     color: #888; /* 기본적으로 비활성화 색상 */
     flex-grow: 1;
@@ -100,7 +100,7 @@
 
 /* 시너지 레벨 - 기본 (비활성화) */
 .synergy-level {
-    font-size: 12px;
+    font-size: 18px;
     color: #888;
     background-color: #E0E0E0;
     padding: 2px 6px;
@@ -123,7 +123,7 @@
 
 /* 진행도 텍스트 */
 .synergy-progress-text {
-    font-size: 11px;
+    font-size: 18px;
     color: #AAA; /* 기본적으로 비활성화 색상 */
     margin-bottom: 2px;
 }
@@ -133,20 +133,20 @@
     color: #666;
 }
 
-/* 진행도 바 배경 */
+/* 진행도 바 배경
 .synergy-progress-bar {
     height: 6px;
     background-color: #E0E0E0;
     border-radius: 3px;
     overflow: hidden;
-}
+} */
 
-/* 진행도 바 채움 - 기본 */
+/* 진행도 바 채움 - 기본
 .synergy-progress-fill {
     height: 100%;
-    background-color: #CCC; /* 비활성화 시 회색 */
+    background-color: #CCC; /* 비활성화 시 회색 
     border-radius: 3px;
-}
+} */
 
 /* 시너지 효과 텍스트 */
 .synergy-effect-text {
@@ -184,12 +184,12 @@
     -unity-font-style: italic;
 }
 
-/* 다음 레벨까지 필요한 아이템 수 표시 */
+/* 다음 레벨까지 필요한 아이템 수 표시
 .synergy-next-level {
     font-size: 10px;
-    color: #AAA; /* 기본적으로 비활성화 색상 */
+    color: #AAA; /* 기본적으로 비활성화 색상
     margin-top: 2px;
-}
+} */
 
 /* 활성화된 다음 레벨 텍스트 */
 .synergy-item.active .synergy-next-level {
