@@ -24,7 +24,7 @@ public class ItemData : ScriptableObject
     public string performance;
 
     [Header("시너지 시스템")]
-    [Tooltip("이 아이템이 가진 시너지 태그들. 예: fire, magic, warrior")]
+    [Tooltip("이 아이템이 가진 시너지 태그들. Resources/Synergies 폴더의 SynergyData에서 선택")]
     public List<string> synergyTags = new List<string>();
     
     [Tooltip("시너지 티어 (1성, 2성, 3성 등). 높을수록 더 강력한 시너지 효과")]

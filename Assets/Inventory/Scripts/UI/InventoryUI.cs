@@ -161,7 +161,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    // [새로 추가] 모든 시너지 UI 요소들 업데이트 (활성+비활성)
+    // [수정] 모든 시너지 UI 요소들 업데이트 - 시너지 ID 매칭 문제 해결
     private void UpdateAllSynergyElements(HashSet<string> allSynergyTags, Dictionary<string, int> activeSynergies, Dictionary<string, int> tagCounts, List<ItemData> allItems)
     {
         // 기존에 없는 시너지는 제거
@@ -174,8 +174,13 @@ public class InventoryUI : MonoBehaviour
         // 모든 보유 시너지에 대해 UI 요소 생성 또는 업데이트
         foreach (var synergyTag in allSynergyTags)
         {
-            bool isActive = activeSynergies.ContainsKey(synergyTag);
-            int level = isActive ? activeSynergies[synergyTag] : 0;
+            // 해당 태그의 SynergyData 찾기
+            var synergyData = GetSynergyDataByTag(synergyTag);
+            if (synergyData == null) continue;
+            
+            // activeSynergies에서 해당 시너지 ID로 레벨 찾기
+            bool isActive = activeSynergies.ContainsKey(synergyData.synergyId);
+            int level = isActive ? activeSynergies[synergyData.synergyId] : 0;
             int currentCount = tagCounts.ContainsKey(synergyTag) ? tagCounts[synergyTag] : 0;
             
             if (!_synergyUIElements.ContainsKey(synergyTag))
@@ -186,8 +191,24 @@ public class InventoryUI : MonoBehaviour
             UpdateSynergyElement(synergyTag, level, currentCount, allItems, isActive);
         }
 
-        // [추가] 새로 활성화된 시너지 강조 효과
-        CheckAndHighlightNewActiveSynergies(activeSynergies.Keys.ToList());
+        // [추가] 새로 활성화된 시너지 강조 효과 (시너지 ID를 태그로 변환)
+        var activeTagsList = new List<string>();
+        foreach (var kvp in activeSynergies)
+        {
+            var synergyData = GetSynergyDataById(kvp.Key);
+            if (synergyData != null)
+            {
+                activeTagsList.Add(synergyData.requiredTag);
+            }
+        }
+        CheckAndHighlightNewActiveSynergies(activeTagsList);
+    }
+
+    // [새로 추가] 시너지 ID로 SynergyData 찾기
+    private SynergyData GetSynergyDataById(string synergyId)
+    {
+        if (_synergyManager == null) return null;
+        return _synergyManager.GetSynergyData(synergyId);
     }
 
     // [수정] 시너지 UI 요소 생성 - 시너지별 색상 클래스 추가
@@ -292,29 +313,69 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
-        // 진행도 업데이트
+        // [수정] SynergyData의 실제 thresholds를 사용한 진행도 업데이트
         var progressText = synergyItem.Q<Label>(className: "synergy-progress-text");
         var progressFill = synergyItem.Q<VisualElement>(className: "synergy-progress-fill");
         
         if (progressText != null && progressFill != null)
         {
-            // 다음 레벨까지 필요한 개수 계산
-            int nextThreshold = GetNextThreshold(level);
-            if (!isActive) nextThreshold = GetActivationThreshold(); // 비활성 상태면 최초 활성화 임계값
-            
-            float progress = nextThreshold > 0 ? Mathf.Clamp01((float)currentCount / nextThreshold) : 1f;
-            
-            progressText.text = nextThreshold > 0 ? $"{currentCount} / {nextThreshold}" : $"{currentCount}";
-            progressFill.style.width = Length.Percent(progress * 100);
+            var synergyData = GetSynergyDataByTag(synergyTag);
+            if (synergyData != null)
+            {
+                int nextThreshold;
+                
+                if (isActive && level < synergyData.thresholds.Length)
+                {
+                    // 활성화된 상태: 다음 레벨까지
+                    nextThreshold = synergyData.thresholds[level]; // level은 0부터 시작하므로 다음 레벨 임계값
+                }
+                else if (!isActive && synergyData.thresholds.Length > 0)
+                {
+                    // 비활성화 상태: 첫 번째 레벨까지
+                    nextThreshold = synergyData.thresholds[0];
+                }
+                else
+                {
+                    nextThreshold = 0; // 최고 레벨이거나 thresholds가 없음
+                }
+                
+                if (nextThreshold > 0)
+                {
+                    float progress = Mathf.Clamp01((float)currentCount / nextThreshold);
+                    progressText.text = $"{currentCount} / {nextThreshold}";
+                    progressFill.style.width = Length.Percent(progress * 100);
+                }
+                else
+                {
+                    progressText.text = $"{currentCount}";
+                    progressFill.style.width = Length.Percent(100);
+                }
+            }
         }
 
-        // 효과 텍스트 업데이트
+        // [수정] SynergyData의 effectDescription 사용
         var effectText = synergyItem.Q<Label>(className: "synergy-effect-text");
         if (effectText != null)
         {
             if (isActive)
             {
-                effectText.text = GetSynergyEffectDescription(synergyTag, level);
+                var synergyData = GetSynergyDataByTag(synergyTag);
+                if (synergyData != null)
+                {
+                    var effect = synergyData.GetEffect(level);
+                    if (effect != null && !string.IsNullOrEmpty(effect.effectDescription))
+                    {
+                        effectText.text = effect.effectDescription;
+                    }
+                    else
+                    {
+                        effectText.text = GetSynergyEffectDescription(synergyTag, level); // 기본값
+                    }
+                }
+                else
+                {
+                    effectText.text = GetSynergyEffectDescription(synergyTag, level); // 기본값
+                }
                 effectText.AddToClassList("active");
             }
             else
@@ -324,23 +385,36 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
-        // 다음 레벨 정보 업데이트
+        // [수정] SynergyData 기반 다음 레벨 정보
         var nextLevelText = synergyItem.Q<Label>(className: "synergy-next-level");
         if (nextLevelText != null)
         {
-            int nextThreshold = isActive ? GetNextThreshold(level) : GetActivationThreshold();
-            
-            if (nextThreshold > 0 && currentCount < nextThreshold)
+            var synergyData = GetSynergyDataByTag(synergyTag);
+            if (synergyData != null)
             {
-                int needed = nextThreshold - currentCount;
-                string message = isActive ? $"다음 레벨까지 {needed}개 더 필요" : $"발동까지 {needed}개 더 필요";
-                nextLevelText.text = message;
-                nextLevelText.style.display = DisplayStyle.Flex;
-            }
-            else if (isActive && nextThreshold <= 0)
-            {
-                nextLevelText.text = "최고 레벨 달성";
-                nextLevelText.style.display = DisplayStyle.Flex;
+                int itemsNeeded = synergyData.GetItemsNeededForNextLevel(currentCount);
+                
+                if (itemsNeeded > 0)
+                {
+                    if (isActive)
+                    {
+                        nextLevelText.text = $"다음 레벨까지 {itemsNeeded}개 더 필요";
+                    }
+                    else
+                    {
+                        nextLevelText.text = $"발동까지 {itemsNeeded}개 더 필요";
+                    }
+                    nextLevelText.style.display = DisplayStyle.Flex;
+                }
+                else if (isActive)
+                {
+                    nextLevelText.text = "최고 레벨 달성";
+                    nextLevelText.style.display = DisplayStyle.Flex;
+                }
+                else
+                {
+                    nextLevelText.style.display = DisplayStyle.None;
+                }
             }
             else
             {
@@ -474,22 +548,37 @@ public class InventoryUI : MonoBehaviour
         return tagCounts;
     }
 
-    // [추가] 활성화된 시너지 계산 (임시 구현 - SynergyManager 연동 필요)
+    // [수정] SynergyManager를 사용한 정확한 시너지 계산
     private Dictionary<string, int> GetActiveSynergies(Dictionary<string, int> tagCounts)
     {
         Dictionary<string, int> activeSynergies = new Dictionary<string, int>();
         
-        // 임시: 2개 이상이면 1레벨, 4개 이상이면 2레벨, 6개 이상이면 3레벨
+        if (_synergyManager == null) return activeSynergies;
+        
+        // SynergyManager를 통해 정확한 계산
         foreach (var kvp in tagCounts)
         {
-            int level = 0;
-            if (kvp.Value >= 6) level = 3;
-            else if (kvp.Value >= 4) level = 2;
-            else if (kvp.Value >= 2) level = 1;
+            string tag = kvp.Key;
+            int itemCount = kvp.Value;
             
-            if (level > 0)
+            // SynergyData에서 해당 태그의 시너지 찾기
+            var synergyData = _synergyManager.GetSynergyDataByTag(tag);
+            if (synergyData != null)
             {
-                activeSynergies[kvp.Key] = level;
+                // SynergyData의 실제 thresholds를 사용하여 레벨 계산
+                int level = synergyData.GetMaxLevel(itemCount);
+                
+                if (level > 0)
+                {
+                    activeSynergies[synergyData.synergyId] = level; // 시너지 ID를 키로 사용
+                    
+                    Debug.Log($"[GetActiveSynergies] {synergyData.displayName}: {itemCount}개 아이템으로 레벨 {level} 활성화 " +
+                             $"(thresholds: [{string.Join(", ", synergyData.thresholds)}])");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"[GetActiveSynergies] 태그 '{tag}'에 대한 SynergyData를 찾을 수 없습니다.");
             }
         }
         

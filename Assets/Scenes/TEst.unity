@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 2056473683}
   - component: {fileID: 2056473684}
   - component: {fileID: 2056473685}
+  - component: {fileID: 2056473686}
   m_Layer: 0
   m_Name: UIDocument
   m_TagString: Untagged
@@ -313,7 +314,24 @@ MonoBehaviour:
   initialItems:
   - {fileID: 11400000, guid: 9975c40cf72336a4da6de211aa770663, type: 2}
   - {fileID: 11400000, guid: 107c89adc85c1404d97bad1ded9443e9, type: 2}
-  - {fileID: 11400000, guid: 107c89adc85c1404d97bad1ded9443e9, type: 2}
+  - {fileID: 11400000, guid: dddc85115b11de541b11f11c49c7f0c8, type: 2}
+  - {fileID: 11400000, guid: 0dbc47150b3d944d4a64043cdc12eb95, type: 2}
+  - {fileID: 11400000, guid: 2195a2bbe5a584fb78adcf8eb2ac8487, type: 2}
+--- !u!114 &2056473686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056473682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa663aa7369104e1282fdcd19fa9c569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allSynergies: []
+  inventoryUI: {fileID: 2056473685}
+  showDebugLogs: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

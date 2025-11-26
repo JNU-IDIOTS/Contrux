@@ -12,7 +12,7 @@ public class SynergyData : ScriptableObject
     public string description;
     
     [Header("활성화 조건")]
-    public string requiredTag; // 예: "fire", "magic", "warrior"
+    public string requiredTag; 
     
     [Space]
     [Tooltip("시너지 레벨별 필요한 아이템 개수. 예: [2, 4, 6] 또는 [1, 4] 또는 [3, 5, 7, 9]")]

@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be054d20d1bf94b1789a339206975c87, type: 3}
   m_Name: SynergyData 1
   m_EditorClassIdentifier: 
-  synergyId: 1
-  displayName: "\uC5ED\uC2DC \uC774\uC0C1\uD638"
+  synergyId: 2
+  displayName: lets get it
   icon: {fileID: -2413806693520163455, guid: 70f9cddbcad285e4d9ef1d3fd9e1b939, type: 3}
   description: 
-  requiredTag: 
+  requiredTag: lets get it
   thresholds: 010000000200000006000000
   effects:
-  - level: 2
+  - level: 1
+    borderColor: {r: 0, g: 0.9716981, b: 0.013138056, a: 1}
     hpBonus: 10
     physicalAttackBonus: 0
     magicalAttackBonus: 0
@@ -28,7 +29,8 @@ MonoBehaviour:
     attackSpeedBonus: 0
     moveSpeedBonus: 0
     effectDescription: 
-  - level: 4
+  - level: 2
+    borderColor: {r: 0.4716981, g: 0.12237452, b: 0.12237452, a: 1}
     hpBonus: 10
     physicalAttackBonus: 0
     magicalAttackBonus: 0
@@ -38,6 +40,7 @@ MonoBehaviour:
     moveSpeedBonus: 0
     effectDescription: 
   - level: 6
+    borderColor: {r: 1, g: 1, b: 1, a: 1}
     hpBonus: 10
     physicalAttackBonus: 0
     magicalAttackBonus: 0

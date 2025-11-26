@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40064d7374f60434d999cd4c54581d8d, type: 3}
   m_Name: ItemData 2
   m_EditorClassIdentifier: 
-  id: 0
+  id: 2
   itemName: "\uB3D9\uADF8\uB77C\uBBF8"
   itemType: 0
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
@@ -26,6 +26,6 @@ MonoBehaviour:
   performance: "\uBB3C\uB9AC \uD53C\uD574 + 14\n\n\uCD94\uAC00 \uD3C9\uD0C0 \uD655\uB960
     + 10%"
   synergyTags:
-  - 2
+  - lets get it
   synergyTier: 1
   synergyWeight: 1
