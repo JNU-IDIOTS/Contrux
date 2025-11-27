@@ -22,7 +22,7 @@ MonoBehaviour:
   - level: 1
     borderColor: {r: 0.5764706, g: 0.29803923, b: 0.18823531, a: 1}
     hpBonus: 10
-    physicalAttackBonus: 0
+    physicalAttackBonus: 5
     magicalAttackBonus: 0
     defenseBonus: 0
     criticalChanceBonus: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
   - level: 2
     borderColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
     hpBonus: 10
-    physicalAttackBonus: 0
+    physicalAttackBonus: 10
     magicalAttackBonus: 0
     defenseBonus: 0
     criticalChanceBonus: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   - level: 4
     borderColor: {r: 1, g: 0.84313726, b: 0, a: 1}
     hpBonus: 10
-    physicalAttackBonus: 0
+    physicalAttackBonus: 15
     magicalAttackBonus: 0
     defenseBonus: 0
     criticalChanceBonus: 0

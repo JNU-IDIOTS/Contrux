@@ -103,6 +103,9 @@ public class InventoryUI : MonoBehaviour
 
         // [추가] 시너지 UI 업데이트
         UpdateSynergyUI();
+        
+        // [추가] Initial Items 스냅샷 초기화
+        UpdateInitialItemsSnapshot();
     }
 
     // [추가] 시너지 시스템 초기화
@@ -162,13 +165,23 @@ public class InventoryUI : MonoBehaviour
     }
 
     // [수정] 모든 시너지 UI 요소들 업데이트 - 레벨 높은 순으로 정렬
+    // [수정] UpdateAllSynergyElements 함수에 디버깅 추가
     private void UpdateAllSynergyElements(HashSet<string> allSynergyTags, Dictionary<string, int> activeSynergies, Dictionary<string, int> tagCounts, List<ItemData> allItems)
     {
+        // if (enableSynergyOrderDebug)
+        // {
+        //     Debug.Log($"=== UpdateAllSynergyElements 호출됨 ===");
+        //     Debug.Log($"전체 시너지 태그 수: {allSynergyTags.Count}");
+        //     Debug.Log($"활성 시너지 수: {activeSynergies.Count}");
+        // }
+        
         // 기존에 없는 시너지는 제거
         var toRemove = _synergyUIElements.Keys.Where(key => !allSynergyTags.Contains(key)).ToList();
         foreach (var key in toRemove)
         {
             RemoveSynergyElement(key);
+            if (enableSynergyOrderDebug)
+                Debug.Log($"[제거] 시너지 태그: {key}");
         }
 
         // [새로 추가] 시너지를 레벨순으로 정렬하기 위한 리스트 생성
@@ -177,11 +190,9 @@ public class InventoryUI : MonoBehaviour
         // 모든 보유 시너지에 대해 정보 수집
         foreach (var synergyTag in allSynergyTags)
         {
-            // 해당 태그의 SynergyData 찾기
             var synergyData = GetSynergyDataByTag(synergyTag);
             if (synergyData == null) continue;
             
-            // activeSynergies에서 해당 시너지 ID로 레벨 찾기
             bool isActive = activeSynergies.ContainsKey(synergyData.synergyId);
             int level = isActive ? activeSynergies[synergyData.synergyId] : 0;
             int currentCount = tagCounts.ContainsKey(synergyTag) ? tagCounts[synergyTag] : 0;
@@ -195,43 +206,40 @@ public class InventoryUI : MonoBehaviour
             });
         }
 
-        // [새로 추가] 레벨 높은 순으로 정렬 (활성화 상태 우선, 그 다음 레벨 순)
+        // [디버깅] 정렬 전 상태 백업
+        var beforeSort = new List<SynergyDisplayInfo>(synergyDisplayList);
+
+        // [새로 추가] 레벨 높은 순으로 정렬
         synergyDisplayList.Sort((a, b) => 
         {
-            // 1순위: 활성화된 시너지가 먼저
             if (a.isActive != b.isActive)
                 return b.isActive.CompareTo(a.isActive);
-            
-            // 2순위: 레벨이 높은 순
             if (a.level != b.level)
                 return b.level.CompareTo(a.level);
-                
-            // 3순위: 아이템 개수가 많은 순
             return b.currentCount.CompareTo(a.currentCount);
         });
 
-        // [수정] 정렬된 순서대로 UI 생성 및 업데이트
+        // [디버깅] 정렬 전후 비교
+        DebugSynergySort(beforeSort, synergyDisplayList);
+
+        // [새로 추가] 정렬된 순서대로 UI 컨테이너 재정렬
+        RearrangeSynergyContainer(synergyDisplayList);
+        
+        // 정렬된 순서대로 UI 생성 및 업데이트
         foreach (var info in synergyDisplayList)
         {
             if (!_synergyUIElements.ContainsKey(info.synergyTag))
             {
                 CreateSynergyElement(info.synergyTag);
+                if (enableSynergyOrderDebug)
+                    Debug.Log($"[생성] 새 시너지 UI: {info.synergyTag}");
             }
             
             UpdateSynergyElement(info.synergyTag, info.level, info.currentCount, allItems, info.isActive);
         }
-
-        // [추가] 새로 활성화된 시너지 강조 효과 (시너지 ID를 태그로 변환)
-        var activeTagsList = new List<string>();
-        foreach (var kvp in activeSynergies)
-        {
-            var synergyData = GetSynergyDataById(kvp.Key);
-            if (synergyData != null)
-            {
-                activeTagsList.Add(synergyData.requiredTag);
-            }
-        }
-        CheckAndHighlightNewActiveSynergies(activeTagsList);
+        
+        // [디버깅] 최종 컨테이너 순서 출력
+        DebugSynergyOrder();
     }
 
     // [새로 추가] 시너지 표시 정보를 담는 클래스
@@ -241,13 +249,6 @@ public class InventoryUI : MonoBehaviour
         public int level;
         public int currentCount;
         public bool isActive;
-    }
-
-    // [새로 추가] 시너지 ID로 SynergyData 찾기
-    private SynergyData GetSynergyDataById(string synergyId)
-    {
-        if (_synergyManager == null) return null;
-        return _synergyManager.GetSynergyData(synergyId);
     }
 
     // [수정] 시너지 UI 요소 생성 - 시너지별 색상 클래스 추가
@@ -461,30 +462,6 @@ public class InventoryUI : MonoBehaviour
             synergyItem.style.borderRightColor = inactiveColor;
             synergyItem.style.borderTopColor = inactiveColor;
             synergyItem.style.borderBottomColor = inactiveColor;
-        }
-    }
-
-
-    // [새로 추가] 새로 활성화된 시너지 강조 효과
-    private void CheckAndHighlightNewActiveSynergies(List<string> currentActiveSynergies)
-    {
-        foreach (var synergyTag in currentActiveSynergies)
-        {
-            if (_synergyUIElements.ContainsKey(synergyTag))
-            {
-                var synergyItem = _synergyUIElements[synergyTag];
-                
-                // 이전에 활성화되지 않았던 시너지라면 강조 효과 적용
-                if (!synergyItem.ClassListContains("highlight"))
-                {
-                    synergyItem.AddToClassList("highlight");
-                    
-                    // 2초 후 강조 효과 제거
-                    synergyItem.schedule.Execute(() => {
-                        synergyItem.RemoveFromClassList("highlight");
-                    }).StartingIn(2000);
-                }
-            }
         }
     }
 
@@ -917,7 +894,7 @@ public class InventoryUI : MonoBehaviour
         {
             _isMovingItem = true;
             _sourceSlotInfo = _selectedSlotInfo;
-            Debug.Log("이동할 곳을 선택하세요.");
+            //Debug.Log("이동할 곳을 선택하세요.");
         }
         CloseContextMenu();
     }
@@ -1001,4 +978,238 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+
+    // InventoryUI.cs에 추가할 디버깅 함수들
+
+    [Header("디버그 설정")]
+    [SerializeField] private bool enableSynergyOrderDebug = true; // Inspector에서 토글 가능
+
+    /// <summary>
+    /// 현재 시너지 컨테이너의 순서를 로그로 출력
+    /// </summary>
+    private void DebugSynergyOrder()
+    {
+        if (!enableSynergyOrderDebug) return;
+        
+        Debug.Log("=== 시너지 컨테이너 현재 순서 ===");
+        
+        if (_synergyContainer != null)
+        {
+            int index = 0;
+            foreach (VisualElement child in _synergyContainer.Children())
+            {
+                var nameLabel = child.Q<Label>(className: "synergy-name");
+                var levelLabel = child.Q<Label>(className: "synergy-level");
+                
+                string synergyName = nameLabel?.text ?? "알 수 없음";
+                string levelText = levelLabel?.text ?? "레벨 없음";
+                bool isActive = child.ClassListContains("active");
+                
+                Debug.Log($"[{index}] {synergyName} - {levelText} {(isActive ? "(활성화)" : "(비활성화)")}");
+                index++;
+            }
+        }
+        
+        Debug.Log("=== 시너지 딕셔너리 정보 ===");
+        foreach (var kvp in _synergyUIElements)
+        {
+            var element = kvp.Value;
+            var nameLabel = element.Q<Label>(className: "synergy-name");
+            var levelLabel = element.Q<Label>(className: "synergy-level");
+            
+            string synergyName = nameLabel?.text ?? "알 수 없음";
+            string levelText = levelLabel?.text ?? "레벨 없음";
+            bool isActive = element.ClassListContains("active");
+            
+            Debug.Log($"[Dict] {kvp.Key} -> {synergyName} - {levelText} {(isActive ? "(활성화)" : "(비활성화)")}");
+        }
+    }
+
+    /// <summary>
+    /// 시너지 정렬 전후 상태를 비교해서 로그 출력
+    /// </summary>
+    private void DebugSynergySort(List<SynergyDisplayInfo> beforeSort, List<SynergyDisplayInfo> afterSort)
+    {
+        if (!enableSynergyOrderDebug) return;
+        
+        Debug.Log("=== 시너지 정렬 전후 비교 ===");
+        
+        Debug.Log("-- 정렬 전 --");
+        for (int i = 0; i < beforeSort.Count; i++)
+        {
+            var info = beforeSort[i];
+            Debug.Log($"[{i}] {info.synergyTag} - Lv.{info.level} ({info.currentCount}개) {(info.isActive ? "활성" : "비활성")}");
+        }
+        
+        Debug.Log("-- 정렬 후 --");
+        for (int i = 0; i < afterSort.Count; i++)
+        {
+            var info = afterSort[i];
+            Debug.Log($"[{i}] {info.synergyTag} - Lv.{info.level} ({info.currentCount}개) {(info.isActive ? "활성" : "비활성")}");
+        }
+    }
+
+    // [수정] 아이템 관련 함수들에 디버깅 호출 추가
+
+    public void AddItem(ItemData item, int slotIndex = -1)
+    {
+        // ... 기존 코드 ...
+        
+        if (enableSynergyOrderDebug)
+            Debug.Log($"[아이템 추가] {item.itemName} -> 시너지 UI 업데이트 시작");
+        
+        UpdateSynergyUI();
+    }
+
+    public void RemoveItem(int slotIndex)
+    {
+        // ... 기존 코드 ...
+        
+        if (enableSynergyOrderDebug)
+            Debug.Log($"[아이템 제거] 슬롯 {slotIndex} -> 시너지 UI 업데이트 시작");
+        
+        UpdateSynergyUI();
+    }
+
+    // [새로 추가] 시너지 컨테이너를 정렬된 순서대로 재배치
+    private void RearrangeSynergyContainer(List<SynergyDisplayInfo> sortedList)
+    {
+        if (_synergyContainer == null) return;
+        
+        if (enableSynergyOrderDebug)
+            Debug.Log("=== UI 컨테이너 순서 재정렬 시작 ===");
+        
+        // 1. 기존 UI 요소들을 모두 컨테이너에서 제거 (딕셔너리는 유지)
+        foreach (var kvp in _synergyUIElements)
+        {
+            if (kvp.Value.parent != null)
+            {
+                kvp.Value.RemoveFromHierarchy();
+            }
+        }
+        
+        // 2. 정렬된 순서대로 다시 컨테이너에 추가
+        foreach (var info in sortedList)
+        {
+            if (_synergyUIElements.ContainsKey(info.synergyTag))
+            {
+                var synergyElement = _synergyUIElements[info.synergyTag];
+                _synergyContainer.Add(synergyElement);
+                
+                if (enableSynergyOrderDebug)
+                    Debug.Log($"[재배치] {info.synergyTag} -> {(info.isActive ? "활성" : "비활성")} Lv.{info.level}");
+            }
+        }
+        
+        if (enableSynergyOrderDebug)
+            Debug.Log("=== UI 컨테이너 순서 재정렬 완료 ===");
+    }
+
+    // [추가] Inspector 변경사항 실시간 반영
+#if UNITY_EDITOR
+void OnValidate()
+{
+    // Editor 모드에서만 실행
+    if (!Application.isPlaying) return;
+    
+    // UI가 초기화되지 않았으면 실행하지 않음
+    if (_root == null || _gridItems == null) return;
+    
+    if (enableSynergyOrderDebug)
+        Debug.Log("[OnValidate] Inspector에서 Initial Items 변경 감지됨");
+    
+    // 변경사항을 게임에 반영
+    StartCoroutine(RefreshUINextFrame());
+}
+
+// [추가] 다음 프레임에 UI 갱신 (OnValidate가 여러 번 호출되는 것을 방지)
+private System.Collections.IEnumerator RefreshUINextFrame()
+{
+    yield return null; // 한 프레임 대기
+    
+    if (enableSynergyOrderDebug)
+        Debug.Log("[RefreshUINextFrame] UI 갱신 실행");
+        
+    RefreshInventoryFromInspector();
+}
+#endif
+
+// [새로 추가] Inspector의 Initial Items를 게임 상태에 반영
+private void RefreshInventoryFromInspector()
+{
+    if (_gridItems == null) return;
+    
+    if (enableSynergyOrderDebug)
+    {
+        Debug.Log($"[RefreshInventoryFromInspector] Initial Items 개수: {initialItems.Count}");
+        foreach (var item in initialItems)
+        {
+            if (item != null)
+                Debug.Log($"  - {item.itemName} (Type: {item.itemType})");
+        }
+    }
+    
+    // 기존 그리드 초기화
+    for (int i = 0; i < _gridItems.Length; i++)
+        _gridItems[i] = null;
+    
+    // Inspector의 Initial Items를 다시 그리드에 배치
+    LoadInitialItemsToGrid();
+    
+    // UI 갱신
+    DistributeItems();
+    
+    if (enableSynergyOrderDebug)
+        Debug.Log("[RefreshInventoryFromInspector] UI 갱신 완료");
+}
+
+// [추가] 런타임 Inspector 변경 감지용 변수들
+[Header("런타임 Inspector 감지")]
+[SerializeField] private bool enableRuntimeInspectorWatch = true;
+private int _lastInitialItemsCount = 0;
+private List<ItemData> _lastInitialItemsSnapshot = new List<ItemData>();
+
+void Update()
+{
+    // Inspector 변경 감지가 활성화되어 있고, 게임이 실행 중일 때만
+    if (!enableRuntimeInspectorWatch || !Application.isPlaying) return;
+    
+    // Initial Items 배열에 변화가 있는지 확인
+    if (HasInitialItemsChanged())
+    {
+        if (enableSynergyOrderDebug)
+            Debug.Log("[Update] Runtime에서 Initial Items 변경 감지됨");
+            
+        RefreshInventoryFromInspector();
+        UpdateInitialItemsSnapshot();
+    }
+}
+
+// [추가] Initial Items 배열이 변경되었는지 확인
+private bool HasInitialItemsChanged()
+{
+    // 1. 배열 크기가 다르면 변경됨
+    if (initialItems.Count != _lastInitialItemsCount)
+        return true;
+    
+    // 2. 각 요소를 비교
+    for (int i = 0; i < initialItems.Count; i++)
+    {
+        if (i >= _lastInitialItemsSnapshot.Count)
+            return true;
+            
+        if (initialItems[i] != _lastInitialItemsSnapshot[i])
+            return true;
+    }
+    
+    return false;
+}
+
+// [추가] 현재 Initial Items 상태를 스냅샷으로 저장
+private void UpdateInitialItemsSnapshot()
+{
+    _lastInitialItemsCount = initialItems.Count;
+    _lastInitialItemsSnapshot.Clear();
+    _lastInitialItemsSnapshot.AddRange(initialItems);
+}
 }
