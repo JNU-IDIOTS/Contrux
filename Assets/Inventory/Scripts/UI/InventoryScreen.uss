@@ -16,26 +16,65 @@
     padding: 12px;
     background-color: #E7E4DD;
 }
+.panel-left { 
+    width: 22%; margin: 42px 0px; margin-left: 42px;
+    background-color: rgb(15, 11, 20); /* soul.uxml의 tree-board 색상 */
+    border-color: rgb(105, 64, 163); /* 보라색 테두리 */
+}
 
-.panel-left { width: 22%; margin: 42px 0px; margin-left: 42px; background-color: #E6E6E6; }
-.panel-middle { width: 42%; margin: 42px 42px; background-color: #E96A2F; padding: 18px; }
-.panel-right { width: 36%; margin: 42px 0px; margin-right: 42px; background-color: #C14A21; padding: 18px; }
+/* 가운데 패널 (인벤토리) - 메인 컨테이너 테마 */
+.panel-middle { 
+    width: 42%; margin: 42px 42px;
+    background-color: rgb(33, 29, 36); /* soul.uxml의 메인 컨테이너 */
+    border-top-color: rgb(105, 64, 163); /* 기존과 동일 */
+    border-bottom-color: rgb(46, 27, 72); /* 어두운 보라 */
+    border-left-color: rgb(46, 27, 72);
+    border-right-color: rgb(105, 64, 163);
+}
 
-.panel-title { -unity-font-style: bold; font-size: 32px; margin-bottom: 10px; color: #222; }
-.panel-subtitle { -unity-font-style: bold; font-size: 24px; color: #222; }
+/* 오른쪽 패널 (아이템 정보) - 정보 패널 테마 */
+.panel-right { 
+    width: 36%; margin: 42px 0px; margin-right: 42px;
+    background-color: rgb(26, 20, 33); /* soul.uxml의 정보 패널 색상 */
+    border-color: rgb(59, 40, 79); /* 중간 보라색 테두리 */
+}
 
+/* .panel-left { width: 22%; margin: 42px 0px; margin-left: 42px; background-color: #E6E6E6; }
+.panel-middle { width: 42%; margin: 42px 42px; background-color: #0f0b14; border-top-color: #6940a3;padding: 18px; }
+.panel-right { width: 36%; margin: 42px 0px; margin-right: 42px; background-color: #C14A21; padding: 18px; } */
+
+/* .panel-title { -unity-font-style: bold; font-size: 32px; margin-bottom: 10px; color: #222; }
+.panel-subtitle { -unity-font-style: bold; font-size: 24px; color: #222; } */
+
+
+/* =========================== 시너지 UI 스타일 =========================== */
+
+.panel-title { 
+    -unity-font-style: bold; font-size: 32px; margin-bottom: 10px;
+    color: rgb(231, 215, 255); /* 밝은 라벤더 */
+}
+
+.panel-subtitle { 
+    -unity-font-style: bold; font-size: 24px;
+    color: rgb(197, 183, 255); /* 중간 라벤더 */
+}
+
+.synergy-count-text {
+    color: rgb(197, 183, 255); /* 중간 라벤더 */
+}
 /* =========================== 시너지 UI 스타일 =========================== */
 
 /* 시너지 카운트 텍스트 */
 .synergy-count-text {
     font-size: 18px;
-    color: #444;
+    color: rgb(197, 183, 255); /* 중간 라벤더 */
     margin-bottom: 12px;
     -unity-font-style: bold;
 }
 
 /* 시너지 스크롤 뷰 */
 .synergy-scroll-view {
+    background-color: rgb(59, 40, 79); /* 정보 본문 배경 */
     flex-grow: 1;
     margin-bottom: 12px;
 }
@@ -48,8 +87,8 @@
 
 /* 시너지 아이템 카드 - 기본 (비활성화 상태) */
 .synergy-item {
-    background-color: #F0F0F0;
-    border-width: 4px;
+    background-color: rgb(197, 183, 255);
+    border-width: 6px;
     border-color: #AAA;
     border-radius: 8px;
     padding: 8px;
@@ -133,21 +172,6 @@
     color: #666;
 }
 
-/* 진행도 바 배경
-.synergy-progress-bar {
-    height: 6px;
-    background-color: #E0E0E0;
-    border-radius: 3px;
-    overflow: hidden;
-} */
-
-/* 진행도 바 채움 - 기본
-.synergy-progress-fill {
-    height: 100%;
-    background-color: #CCC; /* 비활성화 시 회색 
-    border-radius: 3px;
-} */
-
 /* 시너지 효과 텍스트 */
 .synergy-effect-text {
     font-size: 11px;
@@ -184,13 +208,6 @@
     -unity-font-style: italic;
 }
 
-/* 다음 레벨까지 필요한 아이템 수 표시
-.synergy-next-level {
-    font-size: 10px;
-    color: #AAA; /* 기본적으로 비활성화 색상
-    margin-top: 2px;
-} */
-
 /* 활성화된 다음 레벨 텍스트 */
 .synergy-item.active .synergy-next-level {
     color: #777;
@@ -218,11 +235,6 @@
     margin-bottom: 2px;
 }
 
-.synergy-tag.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
 /* 비활성화 상태 표시 텍스트 */
 .synergy-inactive-label {
     font-size: 10px;
@@ -240,7 +252,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 8px;
+    padding: 120px 8px;
     background-color: rgba(87, 25, 145, 1);
 }
 
@@ -256,17 +268,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 360px; /* 세로 4칸 여유 */
+    padding : 0px;
+    /* margin : 4px 4px; */
+    height: 460px; /* 세로 4칸 여유 */
     width: 120px;
+    background-color: rgb(197, 183, 255);  
+    border-width: 6px;
+    border-color: rgb(59, 40, 79);
+    border-radius: 6px;
 }
 
 /* 슬롯 기본 스타일 */
 .item-slot {
     width: 80px;
     height: 80px;
-    background-color: #5A5A5A;
+    background-color: rgb(36, 28, 46); /* 정보 본문 배경 */
     border-width: 3px;
-    border-color: #2B2B2B;
+    border-color: rgb(59, 40, 79); /* 중간 보라 테두리 */
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -283,9 +301,9 @@
     flex-shrink: 0;
     padding: 16px;
     border-width: 3px;
-    border-color: #873C20;
+    background-color: rgb(43, 35, 64);
+    border-color : rgb(231, 215, 255);
     border-radius: 6px;
-    background-color: #D96B34;
     justify-content: center;
     align-content: center;
     align-items: center; /* 추가: 각 행 내 아이템 수직 중앙 정렬 보장 */
@@ -382,29 +400,12 @@
 }
 
 .character-preview {
-    width: 180px;
-    height: 240px;
-    background-color: #3A241E; /* 눈에 띄는 배경 */
+    width: 240px;
+    height: 320px;
+    background-color: rgb(59, 40, 79); /* 눈에 띄는 배경 */
     border-width: 4px;
-    border-color: #C86A3E;
+    border-color: rgb(231, 215, 255);
     border-radius: 6px;
-}
-
-/* LEFT / RIGHT stat column 강조 색상 추가 */
-#LeftStatColumn.stat-slot-column {
-    background-color: #FFF4E6; /* 연한 베이지 - 좌측 눈에 띄게 */
-    border-width: 6px;
-    border-color: #B86B3E;
-    border-radius: 6px;
-    padding: 12px;
-}
-
-#RightStatColumn.stat-slot-column {
-    background-color: #FFF0F0; /* 연한 핑크/살구 계열 - 우측 눈에 띄게 */
-    border-width: 3px;
-    border-color: #9C4328;
-    border-radius: 6px;
-    padding: 12px;
 }
 
 /* stat 컬럼 내부 슬롯 정렬/간격 보정 */
@@ -434,9 +435,16 @@
     padding: 10px;
 }
 
+.stats-container-panel{
+    background-color: #2b2340;
+    padding: 16px;
+    margin-top: 16px;
+}
+
 .stat-row {
     flex-direction: row;
     justify-content: space-between;
+    background-color: rgb(43, 35, 64);
     margin-bottom: 12px;
     border-bottom-width: 1px;
     border-bottom-color: rgba(255, 255, 255, 0.1);
@@ -452,4 +460,116 @@
     font-size: 16px;
     color: rgb(255, 255, 255);
     -unity-font-style: bold;
+}
+
+/* 새로운 컴팩트 시너지 카드 */
+.synergy-card-compact {
+    padding: 8px;
+    margin-bottom: 4px;
+    border-width: 2px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 가로 헤더 */
+.synergy-header-horizontal {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+/* 육각형 아이콘 */
+.synergy-hex-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #666;
+    /* 육각형 모양을 위한 CSS - 또는 이미지 사용 */
+}
+
+/* 컴팩트한 시너지 이름 */
+.synergy-name-compact {
+    font-size: 14px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* 컴팩트한 레벨 표시 */
+.synergy-level-compact {
+    font-size: 12px;
+    background-color: #333;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #AAA;
+}
+
+.synergy-level-compact.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 단계별 진행 바 */
+.synergy-progress-steps {
+    flex-direction: column;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.synergy-steps-text {
+    font-size: 11px;
+    color: #CCC;
+    margin-bottom: 2px;
+}
+
+/* 점 컨테이너 */
+.synergy-dots-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* 개별 점 */
+.synergy-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.synergy-dot-active {
+    background-color: #4CAF50;
+}
+
+.synergy-dot-current {
+    background-color: #FFC107;
+    animation: pulse 1s infinite;
+}
+
+.synergy-dot-inactive {
+    background-color: #555;
+}
+
+/* 아이템 개수 표시 */
+.synergy-count-small {
+    font-size: 9px;
+    color: #888;
+}
+
+/* 컴팩트한 효과 텍스트 */
+.synergy-effect-compact {
+    font-size: 10px;
+    text-align: center;
+    color: #BBB;
+    margin-top: 2px;
+}
+
+.synergy-effect-compact.active {
+    color: #4CAF50;
+}
+
+/* 펄스 애니메이션 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }

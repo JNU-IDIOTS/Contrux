@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/Scripts/UI/InventoryScreen.uss?fileID=7433441132597879392&amp;guid=2ae106cbf207e1c43a34e9fecbd8ff66&amp;type=3#InventoryScreen" />
     <ui:VisualElement name="InventoryRoot" class="root-container skul-theme-root">
         <ui:VisualElement name="SynergyPanel_Left" class="panel panel-left">
-            <ui:Label text="시너지 현황" class="panel-title light-text" />
-            <ui:Label name="SynergyCountText" text="활성 시너지: 0개" class="synergy-count-text light-text" />
+            <ui:Label text="시너지 현황" class="panel-title" />
+            <ui:Label name="SynergyCountText" text="활성 시너지: 0개" class="synergy-count-text" />
             
             <!-- 동적으로 생성될 시너지 아이템들을 담을 컨테이너 -->
             <ui:ScrollView name="SynergyScrollView" class="synergy-scroll-view">
@@ -12,7 +12,7 @@
             
             <!-- 시너지가 없을 때 표시할 메시지 -->
             <ui:VisualElement name="NoSynergyMessage" class="no-synergy-message">
-                <ui:Label text="활성화된 시너지가 없습니다." class="no-synergy-hint light-text" />
+                <ui:Label text="활성화된 시너지가 없습니다." class="no-synergy-hint" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="EquipmentPanel_Middle" class="panel panel-middle">
@@ -34,34 +34,35 @@
                     <ui:VisualElement name = "장비 7" class="item-slot" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:Label text="아이템 보관함" name="InventoryLabelText" class="panel-subtitle" />
             <ui:VisualElement name="InventoryGrid" class="slot-grid" />
         </ui:VisualElement>
         <ui:VisualElement name="ItemInfoPanel_Right" class="panel panel-right">
             
             <!-- 1. 플레이어 스탯 컨테이너 (변경 예정) -->
             <ui:VisualElement name="PlayerStatsContainer" class="stats-container">
-                <ui:Label text="플레이어 정보" class="panel-title light-text" style="margin-bottom: 20px;" />
-                
-                <!-- 스탯 줄 1 -->
-                <ui:VisualElement class="stat-row">
-                    <ui:Label text="물리 공격력" class="stat-label" />
-                    <ui:Label name="Stat_PhysAtk" text="150" class="stat-value" />
-                </ui:VisualElement>
-                <!-- 스탯 줄 2 -->
-                <ui:VisualElement class="stat-row">
-                    <ui:Label text="마법 공격력" class="stat-label" />
-                    <ui:Label name="Stat_MagAtk" text="30" class="stat-value" />
-                </ui:VisualElement>
-                <!-- 스탯 줄 3 -->
-                <ui:VisualElement class="stat-row">
-                    <ui:Label text="최대 체력" class="stat-label" />
-                    <ui:Label name="Stat_MaxHp" text="1000" class="stat-value" />
-                </ui:VisualElement>
-                 <!-- 스탯 줄 4 -->
-                <ui:VisualElement class="stat-row">
-                    <ui:Label text="치명타 확률" class="stat-label" />
-                    <ui:Label name="Stat_Crit" text="5%" class="stat-value" />
+                <ui:VisualElement class="stats-container-panel">
+                    <ui:Label name="PlayerInfoLabel" text="플레이어 정보" class="panel-title" style="margin-bottom: 20px;" />
+                    
+                    <!-- 스탯 줄 1 -->
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="물리 공격력" class="stat-label" />
+                        <ui:Label name="Stat_PhysAtk" text="150" class="stat-value" />
+                    </ui:VisualElement>
+                    <!-- 스탯 줄 2 -->
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="마법 공격력" class="stat-label" />
+                        <ui:Label name="Stat_MagAtk" text="30" class="stat-value" />
+                    </ui:VisualElement>
+                    <!-- 스탯 줄 3 -->
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="최대 체력" class="stat-label" />
+                        <ui:Label name="Stat_MaxHp" text="1000" class="stat-value" />
+                    </ui:VisualElement>
+                    <!-- 스탯 줄 4 -->
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="치명타 확률" class="stat-label" />
+                        <ui:Label name="Stat_Crit" text="5%" class="stat-value" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
 

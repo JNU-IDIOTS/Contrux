@@ -316,6 +316,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dddc85115b11de541b11f11c49c7f0c8, type: 2}
   - {fileID: 11400000, guid: 0dbc47150b3d944d4a64043cdc12eb95, type: 2}
   - {fileID: 11400000, guid: 2195a2bbe5a584fb78adcf8eb2ac8487, type: 2}
+  - {fileID: 11400000, guid: b0f89fc4b3fa19a45a681a8be39e2658, type: 2}
+  - {fileID: 11400000, guid: e7f6b8aadf62fb6419e798082c98b4cc, type: 2}
+  - {fileID: 11400000, guid: e7f6b8aadf62fb6419e798082c98b4cc, type: 2}
+  enableSynergyOrderDebug: 1
+  enableRuntimeInspectorWatch: 1
 --- !u!114 &2056473686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +336,7 @@ MonoBehaviour:
   allSynergies:
   - {fileID: 11400000, guid: 4ad218ae8ac0646cc8c40d1485c1dc98, type: 2}
   - {fileID: 11400000, guid: 9573276c0596f4ffd84c6562c4d919c5, type: 2}
+  - {fileID: 11400000, guid: be840cf00b53f8c4c9449a796cef99e9, type: 2}
   inventoryUI: {fileID: 2056473685}
   showDebugLogs: 1
 --- !u!1660057539 &9223372036854775807
