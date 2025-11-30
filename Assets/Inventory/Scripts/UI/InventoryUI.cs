@@ -35,6 +35,10 @@ public class InventoryUI : MonoBehaviour
     private Button _btnDiscard;
     private SlotInfo _selectedSlotInfo; 
     
+    // [추가] 시너지 컨텍스트 메뉴 관련
+    private VisualElement _synergyContextMenu;
+    private string _selectedSynergyTag;
+    
     // 아이템 이동 관련
     private bool _isMovingItem = false;
     private SlotInfo _sourceSlotInfo;
@@ -251,7 +255,7 @@ public class InventoryUI : MonoBehaviour
         public bool isActive;
     }
 
-    // [수정] 시너지 UI 요소 생성 - 시너지별 색상 클래스 추가
+    // [수정] 시너지 UI 요소 생성 - 클릭 이벤트와 시너지별 색상 클래스 추가
     private void CreateSynergyElement(string synergyTag)
     {
         if (_synergyContainer == null) return;
@@ -259,6 +263,12 @@ public class InventoryUI : MonoBehaviour
         var synergyItem = new VisualElement();
         synergyItem.AddToClassList("synergy-item");
         synergyItem.AddToClassList(synergyTag.ToLower()); // 시너지별 색상을 위한 클래스
+
+        // [추가] 시너지 태그를 userData에 저장 (클릭 시 식별용)
+        synergyItem.userData = synergyTag;
+
+        // [추가] 시너지 컨테이너 클릭 이벤트 등록
+        synergyItem.RegisterCallback<PointerDownEvent>(OnSynergyItemClicked);
 
         // 헤더 (아이콘 + 이름 + 레벨)
         var header = new VisualElement();
@@ -315,154 +325,403 @@ public class InventoryUI : MonoBehaviour
         _synergyUIElements[synergyTag] = synergyItem;
     }
 
-    // [수정] 시너지 UI 요소 업데이트 - SynergyData의 borderColor 적용
-    private void UpdateSynergyElement(string synergyTag, int level, int currentCount, List<ItemData> allItems, bool isActive)
+    // [새로 추가] 시너지 컨테이너 클릭 이벤트 핸들러
+    private void OnSynergyItemClicked(PointerDownEvent evt)
     {
-        if (!_synergyUIElements.ContainsKey(synergyTag)) return;
-
-        var synergyItem = _synergyUIElements[synergyTag];
+        evt.StopPropagation();
         
-        // [중요] 활성화 상태에 따른 클래스 추가/제거
-        if (isActive)
+        var synergyElement = evt.currentTarget as VisualElement;
+        if (synergyElement == null || synergyElement.userData == null) return;
+
+        string synergyTag = synergyElement.userData as string;
+        if (string.IsNullOrEmpty(synergyTag)) return;
+
+        // 기존 컨텍스트 메뉴 닫기
+        CloseContextMenu();
+        CloseSynergyContextMenu();
+
+        // 시너지 컨텍스트 메뉴 표시
+        ShowSynergyContextMenu(synergyTag, evt.position);
+    }
+
+    // [새로 추가] 시너지 컨텍스트 메뉴 생성
+    private void CreateSynergyContextMenu()
+    {
+        if (_synergyContextMenu != null) return; // 이미 생성됨
+
+        _synergyContextMenu = new VisualElement();
+        _synergyContextMenu.AddToClassList("synergy-context-menu");
+        _synergyContextMenu.style.position = Position.Absolute;
+        _synergyContextMenu.style.display = DisplayStyle.None;
+        // zIndex는 UI Toolkit에서 직접 지원하지 않으므로 제거
+
+        // 클릭 이벤트가 부모로 전파되지 않도록 차단
+        _synergyContextMenu.RegisterCallback<PointerDownEvent>(evt => evt.StopPropagation());
+
+        _root.Add(_synergyContextMenu);
+    }
+
+    // [새로 추가] 시너지 컨텍스트 메뉴 표시
+    private void ShowSynergyContextMenu(string synergyTag, Vector2 position)
+    {
+        _selectedSynergyTag = synergyTag;
+
+        // 컨텍스트 메뉴가 없으면 생성
+        CreateSynergyContextMenu();
+
+        // 내용 업데이트
+        UpdateSynergyContextMenuContent();
+
+        // 위치 설정
+        _synergyContextMenu.style.left = position.x;
+        _synergyContextMenu.style.top = position.y;
+
+        // 화면 경계 체크 및 조정
+        AdjustSynergyContextMenuPosition();
+
+        // 표시
+        _synergyContextMenu.style.display = DisplayStyle.Flex;
+
+        Debug.Log($"[시너지 컨텍스트 메뉴] {synergyTag} 메뉴 표시");
+    }
+
+    // [새로 추가] 시너지 컨텍스트 메뉴 내용 업데이트
+    private void UpdateSynergyContextMenuContent()
+    {
+        if (_synergyContextMenu == null || string.IsNullOrEmpty(_selectedSynergyTag)) return;
+
+        // 기존 내용 제거
+        _synergyContextMenu.Clear();
+
+        var synergyData = GetSynergyDataByTag(_selectedSynergyTag);
+        if (synergyData == null) return;
+
+        // === 헤더 섹션 ===
+        var header = new VisualElement();
+        header.AddToClassList("synergy-context-header");
+
+        // 시너지 아이콘
+        var icon = new VisualElement();
+        icon.AddToClassList("synergy-context-icon");
+        if (synergyData.icon != null)
         {
-            synergyItem.AddToClassList("active");
+            icon.style.backgroundImage = new StyleBackground(synergyData.icon);
+        }
+
+        // 시너지 이름 및 현재 레벨
+        var nameContainer = new VisualElement();
+        nameContainer.AddToClassList("synergy-context-name-container");
+
+        var nameLabel = new Label(synergyData.displayName);
+        nameLabel.AddToClassList("synergy-context-name");
+
+        // 현재 레벨 정보
+        var currentLevelInfo = GetCurrentSynergyLevelInfo(_selectedSynergyTag);
+        var currentLevelLabel = new Label($"현재: {currentLevelInfo}");
+        currentLevelLabel.AddToClassList("synergy-context-current-level");
+
+        nameContainer.Add(nameLabel);
+        nameContainer.Add(currentLevelLabel);
+
+        header.Add(icon);
+        header.Add(nameContainer);
+
+        // === 레벨별 효과 섹션 ===
+        var levelsContainer = new VisualElement();
+        levelsContainer.AddToClassList("synergy-levels-container");
+
+        // 각 레벨의 효과 표시
+        for (int level = 1; level <= synergyData.effects.Length; level++)
+        {
+            var effect = synergyData.GetEffect(level);
+            if (effect == null) continue;
+
+            var levelInfo = new VisualElement();
+            levelInfo.AddToClassList("synergy-level-info");
+
+            // 레벨 헤더
+            var levelHeader = new Label($"Lv.{level} ({synergyData.thresholds[level - 1]}개)");
+            levelHeader.AddToClassList("synergy-level-header");
+
+            // 현재 활성화된 레벨 강조
+            int currentLevel = GetCurrentSynergyLevel(_selectedSynergyTag);
+            if (level == currentLevel)
+            {
+                levelInfo.AddToClassList("current-level");
+            }
+
+            // 효과 설명
+            var effectDesc = new Label(GetLevelEffectDescription(effect));
+            effectDesc.AddToClassList("synergy-level-effect");
+
+            levelInfo.Add(levelHeader);
+            levelInfo.Add(effectDesc);
+            levelsContainer.Add(levelInfo);
+        }
+
+        // === 보유 아이템 섹션 ===
+        var itemsSection = CreateSynergyItemsSection(_selectedSynergyTag);
+
+        // 모든 섹션을 컨텍스트 메뉴에 추가
+        _synergyContextMenu.Add(header);
+        _synergyContextMenu.Add(levelsContainer);
+        _synergyContextMenu.Add(itemsSection);
+    }
+
+    // [새로 추가] 현재 시너지 레벨 정보 문자열 반환
+    private string GetCurrentSynergyLevelInfo(string synergyTag)
+    {
+        var synergyData = GetSynergyDataByTag(synergyTag);
+        if (synergyData == null) return "정보 없음";
+
+        var allItems = GetAllItems();
+        var tagCounts = CalculateTagCounts(allItems);
+        int itemCount = tagCounts.GetValueOrDefault(synergyTag, 0);
+        int level = synergyData.GetMaxLevel(itemCount);
+
+        if (level > 0)
+        {
+            return $"Lv.{level} ({itemCount}개)";
         }
         else
         {
-            synergyItem.RemoveFromClassList("active");
-        }
-
-        // [새로 추가] SynergyData에서 색상 정보 가져와서 적용
-        ApplySynergyBorderColor(synergyItem, synergyTag, level, isActive);
-
-        // 레벨 업데이트
-        var levelLabel = synergyItem.Q<Label>(className: "synergy-level");
-        if (levelLabel != null)
-        {
-            if (isActive)
-            {
-                levelLabel.text = $"LV.{level}";
-                levelLabel.AddToClassList("active");
-            }
-            else
-            {
-                levelLabel.text = "대기";
-                levelLabel.RemoveFromClassList("active");
-            }
-        }
-
-        // [수정] SynergyData의 실제 thresholds를 사용한 진행도 업데이트
-        var progressText = synergyItem.Q<Label>(className: "synergy-progress-text");
-        var progressFill = synergyItem.Q<VisualElement>(className: "synergy-progress-fill");
-        
-        if (progressText != null && progressFill != null)
-        {
-            var synergyData = GetSynergyDataByTag(synergyTag);
-            if (synergyData != null)
-            {
-                int nextThreshold;
-                
-                if (isActive && level < synergyData.thresholds.Length)
-                {
-                    // 활성화된 상태: 다음 레벨까지
-                    nextThreshold = synergyData.thresholds[level]; // level은 0부터 시작하므로 다음 레벨 임계값
-                }
-                else if (!isActive && synergyData.thresholds.Length > 0)
-                {
-                    // 비활성화 상태: 첫 번째 레벨까지
-                    nextThreshold = synergyData.thresholds[0];
-                }
-                else
-                {
-                    nextThreshold = 0; // 최고 레벨이거나 thresholds가 없음
-                }
-                
-                if (nextThreshold > 0)
-                {
-                    float progress = Mathf.Clamp01((float)currentCount / nextThreshold);
-                    progressText.text = $"{currentCount} / {nextThreshold}";
-                    progressFill.style.width = Length.Percent(progress * 100);
-                }
-                else
-                {
-                    progressText.text = $"{currentCount}";
-                    progressFill.style.width = Length.Percent(100);
-                }
-            }
-        }
-
-        // [수정] SynergyData의 effectDescription 사용
-        var effectText = synergyItem.Q<Label>(className: "synergy-effect-text");
-        if (effectText != null)
-        {
-            if (isActive)
-            {
-                var synergyData = GetSynergyDataByTag(synergyTag);
-                if (synergyData != null)
-                {
-                    var effect = synergyData.GetEffect(level);
-                    if (effect != null && !string.IsNullOrEmpty(effect.effectDescription))
-                    {
-                        effectText.text = effect.effectDescription;
-                    }
-                    else
-                    {
-                        effectText.text = GetSynergyEffectDescription(synergyTag, level); // 기본값
-                    }
-                }
-                else
-                {
-                    effectText.text = GetSynergyEffectDescription(synergyTag, level); // 기본값
-                }
-                effectText.AddToClassList("active");
-            }
-            else
-            {
-                effectText.text = "아직 발동되지 않음";
-                effectText.RemoveFromClassList("active");
-            }
-        }
-
-
-        // [추가] 비활성화 라벨 표시/숨김
-        var inactiveLabel = synergyItem.Q<Label>(className: "synergy-inactive-label");
-        if (inactiveLabel != null)
-        {
-            inactiveLabel.style.display = isActive ? DisplayStyle.None : DisplayStyle.Flex;
+            int needForLv1 = synergyData.thresholds.Length > 0 ? synergyData.thresholds[0] : 2;
+            return $"비활성 ({itemCount}/{needForLv1}개)";
         }
     }
 
-    // [새로 추가] SynergyData에서 테두리 색상을 가져와서 적용하는 함수
-    private void ApplySynergyBorderColor(VisualElement synergyItem, string synergyTag, int level, bool isActive)
+    // [새로 추가] 현재 시너지 레벨 반환
+    private int GetCurrentSynergyLevel(string synergyTag)
     {
-        if (_synergyManager == null) return;
-
-        // SynergyManager에서 해당 시너지 데이터 찾기
         var synergyData = GetSynergyDataByTag(synergyTag);
-        if (synergyData == null) return;
+        if (synergyData == null) return 0;
 
-        if (isActive && level > 0)
+        var allItems = GetAllItems();
+        var tagCounts = CalculateTagCounts(allItems);
+        int itemCount = tagCounts.GetValueOrDefault(synergyTag, 0);
+
+        return synergyData.GetMaxLevel(itemCount);
+    }
+
+    // [새로 추가] 레벨 효과 설명 생성
+    private string GetLevelEffectDescription(SynergyEffect effect)
+    {
+        List<string> effects = new List<string>();
+
+        if (effect.hpBonus != 0)
+            effects.Add($"체력 {(effect.hpBonus > 0 ? "+" : "")}{effect.hpBonus}");
+
+        if (effect.physicalAttackBonus != 0)
+            effects.Add($"물리 공격 {(effect.physicalAttackBonus > 0 ? "+" : "")}{effect.physicalAttackBonus}");
+
+        if (effect.magicalAttackBonus != 0)
+            effects.Add($"마법 공격 {(effect.magicalAttackBonus > 0 ? "+" : "")}{effect.magicalAttackBonus}");
+
+        if (effect.defenseBonus != 0)
+            effects.Add($"방어력 {(effect.defenseBonus > 0 ? "+" : "")}{effect.defenseBonus}");
+
+        if (effect.criticalChanceBonus != 0)
+            effects.Add($"치명타 확률 {(effect.criticalChanceBonus > 0 ? "+" : "")}{effect.criticalChanceBonus}%");
+
+        if (effect.attackSpeedBonus != 0)
+            effects.Add($"공격 속도 {(effect.attackSpeedBonus > 0 ? "+" : "")}{effect.attackSpeedBonus}%");
+
+        if (effect.moveSpeedBonus != 0)
+            effects.Add($"이동 속도 {(effect.moveSpeedBonus > 0 ? "+" : "")}{effect.moveSpeedBonus}%");
+
+        // 커스텀 설명이 있으면 추가
+        if (!string.IsNullOrEmpty(effect.effectDescription))
+            effects.Add(effect.effectDescription);
+
+        return effects.Count > 0 ? string.Join(", ", effects) : "효과 없음";
+    }
+
+    // [수정] 해당 시너지를 가진 모든 아이템 아이콘 섹션 생성 (Resources에서 로드)
+    private VisualElement CreateSynergyItemsSection(string synergyTag)
+    {
+        var itemsSection = new VisualElement();
+        itemsSection.AddToClassList("synergy-items-section");
+
+        // Resources 폴더에서 해당 시너지 태그를 가진 모든 아이템 찾기
+        var allItemsWithTag = GetAllItemsWithSynergyTag(synergyTag);
+
+        if (allItemsWithTag.Count == 0)
         {
-            // 활성화된 경우: SynergyEffect에서 설정한 색상 사용
-            var effect = synergyData.GetEffect(level);
-            if (effect != null)
+            var noItemsLabel = new Label("해당 시너지를 가진 아이템이 없습니다.");
+            noItemsLabel.AddToClassList("synergy-no-items");
+            itemsSection.Add(noItemsLabel);
+            return itemsSection;
+        }
+
+        // 아이템 그리드 컨테이너 - 가로 4개씩 배치
+        var itemsGrid = new VisualElement();
+        itemsGrid.AddToClassList("synergy-items-icon-grid"); // 새 클래스
+
+        foreach (var item in allItemsWithTag)
+        {
+            // 아이콘만 표시 (이름, 티어 정보 제거)
+            var itemIcon = new VisualElement();
+            itemIcon.AddToClassList("synergy-item-icon-only");
+            
+            if (item.icon != null)
             {
-                // Unity Color를 UI Toolkit의 스타일로 적용
-                synergyItem.style.borderLeftColor = effect.borderColor;
-                synergyItem.style.borderRightColor = effect.borderColor;
-                synergyItem.style.borderTopColor = effect.borderColor;
-                synergyItem.style.borderBottomColor = effect.borderColor;
+                itemIcon.style.backgroundImage = new StyleBackground(item.icon);
+            }
+            
+            // 보유 여부에 따른 스타일
+            if (!IsItemOwned(item))
+            {
+                itemIcon.AddToClassList("not-owned");
+            }
+            
+            // 툴팁으로 아이템 정보 표시
+            itemIcon.tooltip = $"{item.itemName}\n티어 {item.synergyTier}";
+            
+            itemsGrid.Add(itemIcon);
+        }
+
+        itemsSection.Add(itemsGrid);
+        return itemsSection;
+    }
+
+    // [새로 추가] Resources 폴더에서 특정 시너지 태그를 가진 모든 아이템 찾기
+    private List<ItemData> GetAllItemsWithSynergyTag(string synergyTag)
+    {
+        var items = new List<ItemData>();
+        
+        // Resources/Items 폴더에서 모든 ItemData 로드
+        var allItems = Resources.LoadAll<ItemData>("SynergyItem");
+        
+        foreach (var item in allItems)
+        {
+            if (item != null && item.synergyTags != null && item.synergyTags.Contains(synergyTag))
+            {
+                items.Add(item);
             }
         }
-        else
+        
+        // 티어 높은 순으로 정렬
+        items.Sort((a, b) => b.synergyTier.CompareTo(a.synergyTier));
+        
+        return items;
+    }
+
+    // [새로 추가] 해당 아이템을 현재 보유하고 있는지 확인
+    private bool IsItemOwned(ItemData item)
+    {
+        var ownedItems = GetAllItems();
+        return ownedItems.Contains(item);
+    }
+
+    // [기존 메서드 - 인벤토리 내 보유 아이템만 반환]
+    private List<ItemData> GetItemsWithSynergyTag(string synergyTag)
+    {
+        var items = new List<ItemData>();
+        var allItems = GetAllItems();
+
+        foreach (var item in allItems)
         {
-            // 비활성화된 경우: 기본 회색 색상
-            Color inactiveColor = new Color(0.67f, 0.67f, 0.67f, 1f); // #AAA
-            synergyItem.style.borderLeftColor = inactiveColor;
-            synergyItem.style.borderRightColor = inactiveColor;
-            synergyItem.style.borderTopColor = inactiveColor;
-            synergyItem.style.borderBottomColor = inactiveColor;
+            if (item != null && item.synergyTags != null && item.synergyTags.Contains(synergyTag))
+            {
+                items.Add(item);
+            }
         }
+
+        return items;
+    }
+
+    // [새로 추가] 시너지 보유 아이템 섹션 생성
+    private VisualElement CreateSynergyItemsSection_OLD(string synergyTag)
+    {
+        var itemsSection = new VisualElement();
+        itemsSection.AddToClassList("synergy-items-section");
+
+        // 섹션 제목
+        var itemsTitle = new Label("보유 아이템");
+        itemsTitle.AddToClassList("synergy-items-title");
+        itemsSection.Add(itemsTitle);
+
+        // 해당 시너지 태그를 가진 아이템들 찾기
+        var synergyItems = GetItemsWithSynergyTag(synergyTag);
+
+        if (synergyItems.Count == 0)
+        {
+            var noItemsLabel = new Label("해당 시너지 아이템이 없습니다.");
+            noItemsLabel.AddToClassList("synergy-no-items");
+            itemsSection.Add(noItemsLabel);
+            return itemsSection;
+        }
+
+        // 아이템 그리드 컨테이너
+        var itemsGrid = new VisualElement();
+        itemsGrid.AddToClassList("synergy-items-grid");
+
+        foreach (var item in synergyItems)
+        {
+            var itemContainer = new VisualElement();
+            itemContainer.AddToClassList("synergy-item-container");
+
+            // 아이템 아이콘
+            var itemIcon = new VisualElement();
+            itemIcon.AddToClassList("synergy-item-icon");
+            if (item.icon != null)
+            {
+                itemIcon.style.backgroundImage = new StyleBackground(item.icon);
+            }
+
+            // 아이템 정보 (이름, 티어, 기여도)
+            var itemInfo = new VisualElement();
+            itemInfo.AddToClassList("synergy-item-info");
+
+            var itemName = new Label(item.itemName);
+            itemName.AddToClassList("synergy-item-name");
+
+            var itemStats = new Label($"티어 {item.synergyTier} (기여도: {item.GetSynergyContribution()})");
+            itemStats.AddToClassList("synergy-item-stats");
+
+            itemInfo.Add(itemName);
+            itemInfo.Add(itemStats);
+
+            itemContainer.Add(itemIcon);
+            itemContainer.Add(itemInfo);
+            itemsGrid.Add(itemContainer);
+        }
+
+        itemsSection.Add(itemsGrid);
+        return itemsSection;
+    }
+
+    // [새로 추가] 시너지 컨텍스트 메뉴 위치 조정 (화면 경계 체크)
+    private void AdjustSynergyContextMenuPosition()
+    {
+        if (_synergyContextMenu == null || _root == null) return;
+
+        var rootRect = _root.worldBound;
+        var menuRect = _synergyContextMenu.worldBound;
+
+        // 오른쪽 경계 체크
+        if (menuRect.xMax > rootRect.xMax)
+        {
+            float newLeft = rootRect.xMax - menuRect.width - 10;
+            _synergyContextMenu.style.left = Mathf.Max(10, newLeft);
+        }
+
+        // 하단 경계 체크
+        if (menuRect.yMax > rootRect.yMax)
+        {
+            float newTop = rootRect.yMax - menuRect.height - 10;
+            _synergyContextMenu.style.top = Mathf.Max(10, newTop);
+        }
+    }
+
+    // [새로 추가] 시너지 컨텍스트 메뉴 닫기
+    private void CloseSynergyContextMenu()
+    {
+        if (_synergyContextMenu != null)
+        {
+            _synergyContextMenu.style.display = DisplayStyle.None;
+        }
+        _selectedSynergyTag = null;
     }
 
     // [추가] 시너지 없음 메시지 표시/숨김
@@ -585,66 +844,18 @@ public class InventoryUI : MonoBehaviour
         _synergyUIElements.Clear();
     }
 
-    // [수정] SynergyData의 displayName을 사용한 시너지 표시 이름 가져오기 + 디버깅
+    // [수정] SynergyData의 displayName을 사용한 시너지 표시 이름 가져오기
     private string GetSynergyDisplayName(string tag)
     {
-        var synergyData = GetSynergyDataByTag(tag);  // SynergyManager에서 데이터 가져오기
+        var synergyData = GetSynergyDataByTag(tag);
         
         if (synergyData != null && !string.IsNullOrEmpty(synergyData.displayName))
         {
-            return synergyData.displayName;  // 👈 여기서 displayName 반환
+            return synergyData.displayName;
         }
         
-        return tag;  // 못 찾으면 태그 그대로 반환
+        return tag; // 못 찾으면 태그 그대로 반환
     }
-
-    // [수정] 시너지 효과 설명 가져오기 - SynergyData에서 색상도 함께 관리하도록 확장 가능
-    private string GetSynergyEffectDescription(string tag, int level)
-    {
-        // 태그로 SynergyData 찾기
-        var synergyData = GetSynergyDataByTag(tag);
-        if (synergyData == null || level <= 0) return "효과 없음";
-        
-        // 해당 레벨의 SynergyEffect 가져오기
-        var effect = synergyData.GetEffect(level);
-        if (effect == null) return "효과 없음";
-        
-        List<string> effectParts = new List<string>();
-        
-        // 각 보너스 값이 0이 아니면 텍스트에 추가
-        if (effect.hpBonus != 0)
-            effectParts.Add($"체력 {(effect.hpBonus > 0 ? "+" : "")}{effect.hpBonus}");
-    
-        if (effect.physicalAttackBonus != 0)
-            effectParts.Add($"물리 공격력 {(effect.physicalAttackBonus > 0 ? "+" : "")}{effect.physicalAttackBonus}");
-    
-        if (effect.magicalAttackBonus != 0)
-            effectParts.Add($"마법 공격력 {(effect.magicalAttackBonus > 0 ? "+" : "")}{effect.magicalAttackBonus}");
-    
-        if (effect.defenseBonus != 0)
-            effectParts.Add($"방어력 {(effect.defenseBonus > 0 ? "+" : "")}{effect.defenseBonus}");
-    
-        if (effect.criticalChanceBonus != 0)
-            effectParts.Add($"치명타 확률 {(effect.criticalChanceBonus > 0 ? "+" : "")}{effect.criticalChanceBonus}%");
-    
-        if (effect.attackSpeedBonus != 0)
-            effectParts.Add($"공격 속도 {(effect.attackSpeedBonus > 0 ? "+" : "")}{effect.attackSpeedBonus}%");
-    
-        if (effect.moveSpeedBonus != 0)
-            effectParts.Add($"이동 속도 {(effect.moveSpeedBonus > 0 ? "+" : "")}{effect.moveSpeedBonus}%");
-    
-        // Effect Description이 있으면 추가
-        if (!string.IsNullOrEmpty(effect.effectDescription))
-            effectParts.Add(effect.effectDescription);
-    
-        // 효과가 하나도 없으면
-        if (effectParts.Count == 0)
-            return "효과 없음";
-    
-        // 쉼표로 연결해서 반환
-        return string.Join(", ", effectParts);
-    }
-
 
     // [개선] 더 안전한 SynergyManager 참조 관리
     private SynergyData GetSynergyDataByTag(string tag)
@@ -670,6 +881,208 @@ public class InventoryUI : MonoBehaviour
         }
         
         return _synergyManager.GetSynergyDataByTag(tag);
+    }
+
+    // [수정] SynergyData를 사용한 정확한 임계값과 진행도 계산
+    private void UpdateSynergyElement(string synergyTag, int level, int currentCount, List<ItemData> allItems, bool isActive)
+    {
+        if (!_synergyUIElements.ContainsKey(synergyTag)) return;
+
+        var synergyItem = _synergyUIElements[synergyTag];
+        
+        // [중요] 활성화 상태에 따른 클래스 추가/제거
+        if (isActive)
+        {
+            synergyItem.AddToClassList("active");
+        }
+        else
+        {
+            synergyItem.RemoveFromClassList("active");
+        }
+
+        // [새로 추가] SynergyData에서 색상 정보 가져와서 적용
+        ApplySynergyBorderColor(synergyItem, synergyTag, level, isActive);
+
+        // 레벨 업데이트
+        var levelLabel = synergyItem.Q<Label>(className: "synergy-level");
+        if (levelLabel != null)
+        {
+            if (isActive)
+            {
+                levelLabel.text = $"LV.{level}";
+                levelLabel.AddToClassList("active");
+            }
+            else
+            {
+                levelLabel.text = "대기";
+                levelLabel.RemoveFromClassList("active");
+            }
+        }
+
+        // [수정] SynergyData의 실제 thresholds를 사용한 진행도 업데이트
+        var progressText = synergyItem.Q<Label>(className: "synergy-progress-text");
+        var progressFill = synergyItem.Q<VisualElement>(className: "synergy-progress-fill");
+        
+        if (progressText != null && progressFill != null)
+        {
+            var synergyData = GetSynergyDataByTag(synergyTag);
+            if (synergyData != null)
+            {
+                int nextThreshold;
+                
+                if (isActive && level < synergyData.thresholds.Length)
+                {
+                    // 활성화된 상태: 다음 레벨까지
+                    nextThreshold = synergyData.thresholds[level]; // level은 0부터 시작하므로 다음 레벨 임계값
+                }
+                else if (!isActive && synergyData.thresholds.Length > 0)
+                {
+                    // 비활성화 상태: 첫 번째 레벨까지
+                    nextThreshold = synergyData.thresholds[0];
+                }
+                else
+                {
+                    nextThreshold = 0; // 최고 레벨이거나 thresholds가 없음
+                }
+                
+                if (nextThreshold > 0)
+                {
+                    float progress = Mathf.Clamp01((float)currentCount / nextThreshold);
+                    progressText.text = $"{currentCount} / {nextThreshold}";
+                    progressFill.style.width = Length.Percent(progress * 100);
+                }
+                else
+                {
+                    progressText.text = $"{currentCount}";
+                    progressFill.style.width = Length.Percent(100);
+                }
+            }
+        }
+
+        // [수정] SynergyData의 effectDescription 사용
+        var effectText = synergyItem.Q<Label>(className: "synergy-effect-text");
+        if (effectText != null)
+        {
+            if (isActive)
+            {
+                var synergyData = GetSynergyDataByTag(synergyTag);
+                if (synergyData != null)
+                {
+                    var effect = synergyData.GetEffect(level);
+                    if (effect != null && !string.IsNullOrEmpty(effect.effectDescription))
+                    {
+                        effectText.text = effect.effectDescription;
+                    }
+                    else
+                    {
+                        effectText.text = GetSynergyEffectDescription(synergyTag, level); // 기본값
+                    }
+                }
+                else
+                {
+                    effectText.text = GetSynergyEffectDescription(synergyTag, level); // 기본값
+                }
+                effectText.AddToClassList("active");
+            }
+            else
+            {
+                effectText.text = "아직 발동되지 않음";
+                effectText.RemoveFromClassList("active");
+            }
+        }
+
+        // [수정] SynergyData 기반 다음 레벨 정보
+        var nextLevelText = synergyItem.Q<Label>(className: "synergy-next-level");
+        if (nextLevelText != null)
+        {
+            var synergyData = GetSynergyDataByTag(synergyTag);
+            if (synergyData != null)
+            {
+                int itemsNeeded = synergyData.GetItemsNeededForNextLevel(currentCount);
+                
+                if (itemsNeeded > 0)
+                {
+                    if (isActive)
+                    {
+                        nextLevelText.text = $"다음 레벨까지 {itemsNeeded}개 더 필요";
+                    }
+                    else
+                    {
+                        nextLevelText.text = $"발동까지 {itemsNeeded}개 더 필요";
+                    }
+                    nextLevelText.style.display = DisplayStyle.Flex;
+                }
+                else if (isActive)
+                {
+                    nextLevelText.text = "최고 레벨 달성";
+                    nextLevelText.style.display = DisplayStyle.Flex;
+                }
+                else
+                {
+                    nextLevelText.style.display = DisplayStyle.None;
+                }
+            }
+            else
+            {
+                nextLevelText.style.display = DisplayStyle.None;
+            }
+        }
+
+        // [추가] 비활성화 라벨 표시/숨김
+        var inactiveLabel = synergyItem.Q<Label>(className: "synergy-inactive-label");
+        if (inactiveLabel != null)
+        {
+            inactiveLabel.style.display = isActive ? DisplayStyle.None : DisplayStyle.Flex;
+        }
+    }
+
+    // [새로 추가] SynergyData에서 테두리 색상을 가져와서 적용하는 함수
+    private void ApplySynergyBorderColor(VisualElement synergyItem, string synergyTag, int level, bool isActive)
+    {
+        if (_synergyManager == null) return;
+
+        // SynergyManager에서 해당 시너지 데이터 찾기
+        var synergyData = GetSynergyDataByTag(synergyTag);
+        if (synergyData == null) return;
+
+        if (isActive && level > 0)
+        {
+            // 활성화된 경우: SynergyEffect에서 설정한 색상 사용
+            var effect = synergyData.GetEffect(level);
+            if (effect != null)
+            {
+                // Unity Color를 UI Toolkit의 스타일로 적용
+                synergyItem.style.borderLeftColor = effect.borderColor;
+                synergyItem.style.borderRightColor = effect.borderColor;
+                synergyItem.style.borderTopColor = effect.borderColor;
+                synergyItem.style.borderBottomColor = effect.borderColor;
+            }
+        }
+        else
+        {
+            // 비활성화된 경우: 기본 회색 색상
+            Color inactiveColor = new Color(0.67f, 0.67f, 0.67f, 1f); // #AAA
+            synergyItem.style.borderLeftColor = inactiveColor;
+            synergyItem.style.borderRightColor = inactiveColor;
+            synergyItem.style.borderTopColor = inactiveColor;
+            synergyItem.style.borderBottomColor = inactiveColor;
+        }
+    }
+
+    // [수정] 시너지 효과 설명 가져오기 - SynergyData에서 색상도 함께 관리하도록 확장 가능
+    private string GetSynergyEffectDescription(string tag, int level)
+    {
+        // TODO: 실제로는 SynergyData.cs의 SynergyEffect에서 색상과 효과를 가져와야 함
+        // SynergyData에서 effectDescription과 함께 색상 정보도 관리할 수 있음
+        
+        string baseName = GetSynergyDisplayName(tag);
+        switch (level)
+        {
+            case 1: return $"{baseName} 공격력 +10";
+            case 2: return $"{baseName} 공격력 +25, 치명타 +5%";
+            case 3: return $"{baseName} 공격력 +50, 치명타 +15%, 특수능력 활성화";
+            default: return "효과 없음";
+        }
     }
 
     // 초기 아이템 리스트를 그리드 배열과 장비 슬롯에 분배
@@ -701,6 +1114,7 @@ public class InventoryUI : MonoBehaviour
     private void OnRootClicked(PointerDownEvent evt)
     {
         CloseContextMenu();
+        CloseSynergyContextMenu(); // [추가] 시너지 컨텍스트 메뉴도 닫기
         
         if (!_isMovingItem)
         {
@@ -1021,7 +1435,7 @@ public class InventoryUI : MonoBehaviour
             string levelText = levelLabel?.text ?? "레벨 없음";
             bool isActive = element.ClassListContains("active");
             
-            Debug.Log($"[Dict] {kvp.Key} -> {synergyName} - {levelText} {(isActive ? "(활성화)" : "(비활성화)")}");
+            Debug.Log($"[Dict] {kvp.Key} -> {synergyName} - {levelText} {(isActive ? "(활성화)" : "(비활성화")}");
         }
     }
 
