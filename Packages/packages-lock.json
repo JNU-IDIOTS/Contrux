@@ -103,7 +103,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
+<<<<<<< HEAD
       "version": "2.10.1",
+=======
+      "version": "2.10.2",
+>>>>>>> feature/Angwoohyeon
       "depth": 0,
       "source": "registry",
       "dependencies": {},

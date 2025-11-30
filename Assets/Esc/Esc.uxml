@@ -1,0 +1,122 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Overlay" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center;">
+        
+        <ui:VisualElement name="PausePanel" style="width: 480px; background-color: rgb(18, 18, 18); border-radius: 16px; border-width: 2px; border-color: rgb(80, 80, 80); padding: 8px;">
+            <ui:VisualElement style="flex-grow: 1; border-width: 2px; border-color: rgb(255, 215, 0); border-radius: 12px; padding: 35px; gap: 18px; background-color: rgb(25, 25, 25);">
+                
+                <ui:Label text="PAUSED" style="font-size: 56px; color: rgb(255, 215, 0); -unity-font-style: bold; -unity-text-align: middle-center; text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                <ui:VisualElement style="width: 120px; height: 2px; background-color: rgb(255, 215, 0); margin-top: 5px; border-radius: 2px; align-self: center; margin-bottom: 20px;" />
+                
+                <ui:Button name="BtnResume" text="▶  계속하기" class="menu-btn" style="height: 60px; font-size: 22px; color: rgb(240, 240, 240); background-color: rgb(40, 40, 40); border-width: 1px; border-color: rgb(100, 100, 100); border-radius: 6px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                <ui:Button name="BtnRestart" text="↺  다시하기" class="menu-btn" style="height: 60px; font-size: 22px; color: rgb(240, 240, 240); background-color: rgb(40, 40, 40); border-width: 1px; border-color: rgb(100, 100, 100); border-radius: 6px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                <ui:Button name="BtnControls" text="🎮  조작 설정" class="menu-btn" style="height: 60px; font-size: 22px; color: rgb(240, 240, 240); background-color: rgb(40, 40, 40); border-width: 1px; border-color: rgb(100, 100, 100); border-radius: 6px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                <ui:Button name="BtnSettings" text="⚙  환경 설정" class="menu-btn" style="height: 60px; font-size: 22px; color: rgb(240, 240, 240); background-color: rgb(40, 40, 40); border-width: 1px; border-color: rgb(100, 100, 100); border-radius: 6px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                <ui:Button name="BtnExit" text="✖  종료" class="menu-btn" style="height: 60px; font-size: 22px; color: rgb(255, 100, 100); background-color: rgb(50, 20, 20); border-width: 1px; border-color: rgb(100, 50, 50); border-radius: 6px; margin-top: 10px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                
+                <ui:Label name="PlayTimeLabel" text="Play Time: 00:00:00" style="font-size: 16px; color: rgb(120, 120, 120); -unity-text-align: middle-center; margin-top: 10px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="ControlsPanel" style="display: none; width: 900px; height: 750px; background-color: rgb(20, 20, 20); border-radius: 16px; border-width: 2px; border-color: rgb(80, 80, 80); padding: 8px; position: absolute;">
+            <ui:VisualElement style="flex-grow: 1; border-width: 2px; border-color: rgb(255, 215, 0); border-radius: 12px; background-color: rgb(25, 25, 25); padding: 25px;">
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; border-bottom-width: 1px; border-bottom-color: rgba(255, 255, 255, 0.1); padding-bottom: 15px; margin-bottom: 15px;">
+                    <ui:Label text="KEY BINDINGS" style="font-size: 36px; color: rgb(255, 215, 0); -unity-font-style: bold; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                    <ui:Button name="BtnBackControls" text="✕" style="width: 50px; height: 50px; background-color: rgba(255, 255, 255, 0.05); color: white; font-size: 28px; border-radius: 8px; border-width: 0;" />
+                </ui:VisualElement>
+
+                <ui:ScrollView style="flex-grow: 1; padding-right: 10px;">
+                    <ui:VisualElement style="gap: 10px;">
+                        
+                        <ui:Label text="이동 (Movement)" style="font-size: 18px; color: rgb(150, 150, 150); margin-top: 5px; margin-bottom: 5px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                        <ui:VisualElement style="flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+                            <ui:Button name="Key_Jump" text="점프  [ Space ]" class="key-btn" style="width: 48%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-text-align: middle-left; padding-left: 20px; border-radius: 8px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                            <ui:Button name="Key_Dash" text="대쉬  [ LeftShift ]" class="key-btn" style="width: 48%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-text-align: middle-left; padding-left: 20px; border-radius: 8px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                            <ui:Button name="Key_Hook" text="갈고리  [ E ]" class="key-btn" style="width: 48%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-text-align: middle-left; padding-left: 20px; border-radius: 8px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                            <ui:Button name="Key_Interact" text="상호작용  [ F ]" class="key-btn" style="width: 48%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-text-align: middle-left; padding-left: 20px; border-radius: 8px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                        </ui:VisualElement>
+
+                        <ui:Label text="전투 (Combat)" style="font-size: 18px; color: rgb(150, 150, 150); margin-top: 20px; margin-bottom: 5px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                        <ui:VisualElement style="flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
+                            <ui:Button name="Key_Attack" text="공격  [ A ]" class="key-btn" style="width: 48%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-text-align: middle-left; padding-left: 20px; border-radius: 8px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                            <ui:Button name="Key_Skill1" text="스킬 1  [ Q ]" class="key-btn" style="width: 48%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-text-align: middle-left; padding-left: 20px; border-radius: 8px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                            <ui:Button name="Key_Skill2" text="스킬 2  [ R ]" class="key-btn" style="width: 48%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-text-align: middle-left; padding-left: 20px; border-radius: 8px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:ScrollView>
+
+                <ui:Button name="BtnBackControls" text="저장 후 닫기" style="width: 100%; height: 60px; background-color: rgb(40, 40, 40); color: white; font-size: 20px; -unity-font-style: bold; border-radius: 8px; border-width: 2px; border-color: rgb(80, 80, 80); margin-top: 15px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="SettingsPanel" style="display: none; width: 1000px; height: 800px; background-color: rgb(20, 20, 20); border-radius: 16px; border-width: 3px; border-color: rgb(80, 80, 80); padding: 8px; position: absolute;">
+            <ui:VisualElement style="flex-grow: 1; border-width: 2px; border-color: rgb(255, 215, 0); border-radius: 12px; background-color: rgb(25, 25, 25); padding: 25px;">
+                
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; border-bottom-width: 1px; border-bottom-color: rgba(255, 255, 255, 0.2); padding-bottom: 15px; margin-bottom: 10px;">
+                    <ui:Label text="SETTINGS" style="font-size: 36px; color: rgb(255, 215, 0); -unity-font-style: bold; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                    <ui:Button name="BtnBack" text="✕" style="width: 50px; height: 50px; background-color: rgba(255, 255, 255, 0.05); color: white; font-size: 24px; border-radius: 8px; border-width: 0;" />
+                </ui:VisualElement>
+
+                <ui:ScrollView style="flex-grow: 1; padding-right: 10px;">
+                    <ui:Label text="GAMEPLAY" style="font-size: 14px; color: rgb(150, 150, 150); margin-bottom: 10px; -unity-font-style: bold; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                    <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 20px; margin-bottom: 25px;">
+                        <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center;">
+                            <ui:Label text="언어 (Language)" style="color: rgb(220, 220, 220); font-size: 20px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                            <ui:Button name="BtnLang" text="한국어" style="width: 160px; height: 45px; background-color: rgb(40, 40, 40); color: white; border-radius: 6px; border-width: 1px; border-color: rgb(80, 80, 80); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; margin-top: 15px;">
+                            <ui:Label text="데미지 텍스트 표시" style="color: rgb(220, 220, 220); font-size: 20px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                            <ui:Toggle name="ToggleDmgTxt" value="true" style="width: 50px; height: 40px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    
+                    <ui:Label text="AUDIO" style="font-size: 14px; color: rgb(150, 150, 150); margin-bottom: 10px; -unity-font-style: bold; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                    <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 20px; gap: 15px; margin-bottom: 25px;">
+                        <ui:VisualElement style="flex-direction: row; align-items: center;">
+                            <ui:Label text="전체 음량" style="color: rgb(220, 220, 220); width: 150px; font-size: 18px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                            <ui:Slider name="SliderMaster" low-value="0" high-value="1" value="1" style="flex-grow: 1;" />
+                            <ui:Label name="ValMaster" text="100%" style="color: white; font-size: 18px; width: 50px; -unity-text-align: right;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row; align-items: center;">
+                            <ui:Label text="배경 음악" style="color: rgb(220, 220, 220); width: 150px; font-size: 18px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                            <ui:Slider name="SliderBGM" low-value="0" high-value="1" value="0.8" style="flex-grow: 1;" />
+                            <ui:Label name="ValBGM" text="80%" style="color: white; font-size: 18px; width: 50px; -unity-text-align: right;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row; align-items: center;">
+                            <ui:Label text="효과음" style="color: rgb(220, 220, 220); width: 150px; font-size: 18px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                            <ui:Slider name="SliderSFX" low-value="0" high-value="1" value="1" style="flex-grow: 1;" />
+                            <ui:Label name="ValSFX" text="100%" style="color: white; font-size: 18px; width: 50px; -unity-text-align: right;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+
+                    <ui:Label text="GRAPHICS" style="font-size: 14px; color: rgb(150, 150, 150); margin-bottom: 10px; -unity-font-style: bold; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                    <ui:VisualElement style="background-color: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 20px; gap: 15px;">
+                        
+                        <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center;">
+                            <ui:Label text="전체 화면" style="color: rgb(220, 220, 220); font-size: 20px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                            <ui:Toggle name="ToggleFullscreen" value="true" style="width: 50px; height: 40px;" />
+                        </ui:VisualElement>
+
+                        <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center;">
+                            <ui:Label text="수직 동기화 (V-Sync)" style="color: rgb(220, 220, 220); font-size: 20px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                            <ui:Toggle name="ToggleVSync" value="true" style="width: 50px; height: 40px;" />
+                        </ui:VisualElement>
+
+                        <ui:Label text="해상도" style="color: rgb(220, 220, 220); font-size: 20px; margin-top: 15px; margin-bottom: 5px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');"/>
+                        <ui:VisualElement style="width: 100%;">
+                            <ui:Button name="BtnResolutionDropdown" text="1920 x 1080 ▼" style="height: 50px; background-color: rgb(40, 40, 40); color: white; font-size: 18px; border-radius: 6px; -unity-text-align: middle-left; padding-left: 20px; border-width: 1px; border-color: rgba(255,255,255,0.1); -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                            
+                            <ui:VisualElement name="ResolutionList" style="display: none; position: absolute; top: -140px; left: 0; right: 0; background-color: rgb(30, 30, 30); border-width: 2px; border-color: rgb(80, 80, 80); border-radius: 6px; z-index: 1000;">
+                                <ui:Button name="ResItem_1920" text="1920 x 1080" style="height: 45px; background-color: transparent; color: rgb(200, 200, 200); font-size: 18px; border-width: 0; -unity-text-align: middle-left; padding-left: 20px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                                <ui:Button name="ResItem_1600" text="1600 x 900" style="height: 45px; background-color: transparent; color: rgb(200, 200, 200); font-size: 18px; border-width: 0; -unity-text-align: middle-left; padding-left: 20px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                                <ui:Button name="ResItem_1280" text="1280 x 720" style="height: 45px; background-color: transparent; color: rgb(200, 200, 200); font-size: 18px; border-width: 0; -unity-text-align: middle-left; padding-left: 20px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:ScrollView>
+
+                <ui:Button name="BtnBackBottom" text="설정 저장 후 닫기" style="width: 100%; height: 60px; background-color: rgb(50, 180, 200); color: black; font-size: 20px; -unity-font-style: bold; border-radius: 6px; margin-top: 15px; -unity-font-definition: url('project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold');" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>
