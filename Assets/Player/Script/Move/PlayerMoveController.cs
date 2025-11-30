@@ -61,6 +61,9 @@ public class PlayerMoveController : MonoBehaviour
 
     public void Update()
     {
+        // 🚀 [수정(우현)] 안전장치 추가
+        if (Time.timeScale == 0 || (_ref._Health != null && _ref._Health.isDead)) return;
+
         HandleInput();
     }
 
@@ -78,7 +81,8 @@ public class PlayerMoveController : MonoBehaviour
         }
         else if (_ref._Rb.linearVelocity.y > 0f)
         {
-            if (Input.GetKey(KeyCode.Space))
+            // 🚀 [수정(우현)] KeyManager 사용
+            if (Input.GetKey(KeyManager.Instance.KeyJump)) // KeyCode.Space -> KeyJump
             {
                 extraGravityForce = defaultGravity * (_ascentMultiplier - 1f);
             }
@@ -107,13 +111,16 @@ public class PlayerMoveController : MonoBehaviour
     public void HandleInput()
     {
         moveInput = 0f;
-        if (Input.GetKey(KeyCode.RightArrow)) moveInput = 1f;
-        else if (Input.GetKey(KeyCode.LeftArrow)) moveInput = -1f;
+        // 🚀 [수정(우현)] KeyManager 사용 (좌우 이동)
+        if (Input.GetKey(KeyManager.Instance.KeyRight)) moveInput = 1f;
+        else if (Input.GetKey(KeyManager.Instance.KeyLeft)) moveInput = -1f;
 
-        bool isDownJumpInput = Input.GetKey(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.Space);
+        // 🚀 [수정(우현)] 하향 점프 키 조합 변경
+        bool isDownJumpInput = Input.GetKey(KeyManager.Instance.KeyDown) && Input.GetKeyDown(KeyManager.Instance.KeyJump);
 
-        // 대쉬 입력 (KeyCode.D)
-        if (_ref._Dash != null && (Input.GetKeyDown(KeyCode.D)))
+        // 대쉬 입력 (KeyCode.D -> KeyDash)
+        // 🚀 [수정(우현)] KeyManager 사용
+        if (_ref._Dash != null && (Input.GetKeyDown(KeyManager.Instance.KeyDash)))
         {
             if (!_ref._Dash.IsDashing)
             {
@@ -153,7 +160,8 @@ public class PlayerMoveController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
+        // 🚀 [수정(우현)] KeyManager 사용 (점프)
+        if (Input.GetKeyDown(KeyManager.Instance.KeyJump) && jumpCount < maxJumps)
         {
             {
                 if (_ref._AnimSync != null) _ref._AnimSync.Jump();
@@ -277,18 +285,10 @@ public class PlayerMoveController : MonoBehaviour
         _stepRoutine = null;
     }
 
-    // [삭제] 사용하지 않는 함수 제거
-    /*
-    public IEnumerator RecoverAfterAnimationEnd(int stateHash)
-    {
-        yield return null;
-        _animationSlowRoutine = null;
-    }
-    */
-
     public IEnumerator JumpRoutine()
     {
-        yield return null;
+        // 🚀 [수정(우현)] 점프 멈춤 방지용 안전장치
+        yield return new WaitForSeconds(0.1f);
         isjump = false;
     }
 
@@ -306,16 +306,16 @@ public class PlayerMoveController : MonoBehaviour
         _platformIgnoreRoutine = null;
     }
 
-    // 🚀 [추가] DashSkill이 플레이어의 입력 방향을 알기 위해 필요한 함수 (에러 해결, 우현)
+    // 🚀 [수정(우현)] KeyManager 기반 입력 벡터 반환 함수
     public Vector2 GetInputVector()
     {
         float h = 0f;
-        if (Input.GetKey(KeyCode.RightArrow)) h = 1f;
-        else if (Input.GetKey(KeyCode.LeftArrow)) h = -1f;
+        if (Input.GetKey(KeyManager.Instance.KeyRight)) h = 1f;
+        else if (Input.GetKey(KeyManager.Instance.KeyLeft)) h = -1f;
 
         float v = 0f;
-        if (Input.GetKey(KeyCode.UpArrow)) v = 1f;
-        else if (Input.GetKey(KeyCode.DownArrow)) v = -1f;
+        if (Input.GetKey(KeyManager.Instance.KeyUp)) v = 1f;
+        else if (Input.GetKey(KeyManager.Instance.KeyDown)) v = -1f;
 
         return new Vector2(h, v);
     }

@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     [Header("상태")]
     public float currentHealth;
     public bool isDead = false;
-    private bool _hasRevived = false; // 게임당 1회 부활 체크용
+    private bool _hasRevived = false; 
 
     private PlayerRef _ref;
 
@@ -18,20 +18,32 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        // 게임 시작 시 최대 체력으로 초기화
+        // 🚀 [중요] Start 시점에 스탯이 아직 계산 안 됐을 수 있으므로 강제 갱신 요청
         if (_ref != null && _ref._Status != null)
+        {
+            _ref._Status.CalculateStats();
+        }
+
+        // 1. 저장된 데이터가 있으면 불러오기 (이어하기)
+        if (StatDataManager.Instance != null && StatDataManager.Instance.playerData.currentHP > 0)
+        {
+            currentHealth = StatDataManager.Instance.playerData.currentHP;
+        }
+        // 2. 없으면 최대 체력으로 시작 (기본 100이 아니라 계산된 FinalMaxHP 사용)
+        else if (_ref != null && _ref._Status != null)
         {
             currentHealth = _ref._Status.FinalMaxHP;
         }
         else
         {
-            currentHealth = 100f; // 기본값
+            currentHealth = 100f; // 비상용 기본값
         }
+        
+        Debug.Log($"❤️ 시작 체력: {currentHealth}");
     }
 
     private void Update()
     {
-        // 디버그용: K 키 누르면 20 데미지 입기
         if (Input.GetKeyDown(KeyCode.K))
         {
             TakeDamage(20f);
@@ -42,18 +54,15 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead) return;
 
-        // [방어 공식 적용]
         float def = (_ref != null && _ref._Status != null) ? _ref._Status.FinalDefense : 0f;
         float reducedDmg = Mathf.Max(1f, damage - def);
 
-        // 데미지 감소 배율 적용
         float mult = (_ref != null && _ref._Status != null) ? _ref._Status.DamageReduceMult : 1.0f;
         float finalDamage = reducedDmg * mult;
 
         currentHealth -= finalDamage;
         Debug.Log($"피격! 데미지: {finalDamage} (남은 체력: {currentHealth})");
 
-        // 사망 체크
         if (currentHealth <= 0)
         {
             TryDie();
@@ -62,8 +71,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void TryDie()
     {
-        // 부활 체크 (필요 시 주석 해제하여 사용)
-        /*
+        // 🚀 [수정됨] 주석 해제하여 부활 로직 복구
         if (!_hasRevived && _ref._Status != null && _ref._Status.CanRevive)
         {
             Revive();
@@ -72,35 +80,28 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
-        */
-        Die(); // 지금은 무조건 사망 처리
     }
 
     private void Revive()
     {
         _hasRevived = true;
         float revivePercent = _ref._Status != null ? _ref._Status.ReviveHpPercent : 0.5f;
+        
+        // 최대 체력 비례 회복
         currentHealth = (_ref._Status != null ? _ref._Status.FinalMaxHP : 100f) * revivePercent;
         
-        Debug.Log($"부활 발동! 체력 {currentHealth}로 복구됨.");
+        Debug.Log($"✨ 부활 발동! 체력 {currentHealth}로 복구됨.");
     }
 
     private void Die()
     {
         isDead = true;
         currentHealth = 0;
-        Debug.Log("플레이어 사망...");
+        Debug.Log("💀 플레이어 사망...");
         
-        // 🚀 [수정됨] _ref._Statu 호출 제거 -> 싱글톤 Instance 사용
-        // 사망 시 매니저에게 알림 (아이템 초기화 등)
         if (StatDataManager.Instance != null)
         {
             StatDataManager.Instance.OnPlayerDead();
-            Debug.Log("ㅗ");
-        }
-        else
-        {
-            Debug.LogWarning("StatDataManager 인스턴스를 찾을 수 없습니다.");
         }
     }
 }

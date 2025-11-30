@@ -47,6 +47,9 @@ public class DashSkill : MonoBehaviour
 
     private void Update()
     {
+        // 🚀 [수정(우현)] 일시정지 시 차단
+        if (Time.timeScale == 0) return;
+
         // 쿨타임 회복(우현)
         if (currentStacks < maxStacks)
         {
@@ -55,15 +58,12 @@ public class DashSkill : MonoBehaviour
             {
                 currentStacks++;
                 cooldownTimer = 0f;
-                // Debug.Log($"대쉬 회복! 현재 스택: {currentStacks}");
             }
         }
 
-        // 🚀 [수정 2] 자체 입력 감지는 PlayerMoveController가 호출해주므로 제거하거나 유지해도 되지만,
-        // PlayerMoveController가 TryDash를 호출하는 구조라면 여기서는 입력을 뺍니다.
-        // (만약 PlayerMoveController 없이 단독으로 쓸 때는 아래 주석 해제)
+        // 🚀 [수정(우현)] KeyManager 사용
         /*
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyManager.Instance.KeyDash))
         {
             TryDash();
         }

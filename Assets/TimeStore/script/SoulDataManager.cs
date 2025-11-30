@@ -15,32 +15,22 @@ public class SoulSaveData
 [System.Serializable]
 public class SoulStats 
 {
-    // 🚀 [기획서 기준 변수명 통일]
-    // 공격
-    [Header("[공격 관련]")] // 🚀 구역 나누기
-    public int physicalattack;      // 물리 공격력
-    public int magicattack;         // 마법 공격력
-    public int criticalchance;      // 크리티컬 확률 (+데미지)
-    public int itemcooldownspeed;   // 아이템 쿨타임
-    public int skillcooldownspeed;  // 스킬 쿨타임
-
-    // 방어
-    [Header("[방어 관련]")] // 🚀 구역 나누기
-    public int health;              // 체력
-    public int defensivepower;      // 방어력
-    public int def_dmg_reduce;      // 받는 피해 감소
-    public int def_revive;          // 부활
-
-    // 특수
-    [Header("[특수 능력]")] // 🚀 구역 나누기
-    public int sp_cost_reduce;      // 스팀 비용
-    public int sp_cd_reduce;        // 스팀 쿨타임
-    public int sp_dash_stack;       // 대쉬 스택
-    public int sp_overheat;         // 오버히트
-    
-    // (혹시 몰라 예전 변수나 안 쓰는 변수도 에러 방지용으로 남겨둠 - 필요 없으면 삭제 가능)
-    public int attackspeed;
-    public int movementspeed;
+    public int health;              
+    public int defensivepower;      
+    public int physicalattack;      
+    public int magicattack;         
+    public int attackspeed;         
+    public int movementspeed;       
+    public int skillcooldownspeed;  
+    public int itemcooldownspeed;   
+    public int criticalchance;      
+    public int criticaldamage;      
+    public int def_dmg_reduce;      
+    public int def_revive;          
+    public int sp_cost_reduce;      
+    public int sp_cd_reduce;        
+    public int sp_dash_stack;       
+    public int sp_overheat;         
 }
 
 public class SoulDataManager : MonoBehaviour
@@ -54,7 +44,8 @@ public class SoulDataManager : MonoBehaviour
         if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
         else { Destroy(gameObject); return; }
 
-        filePath = Path.Combine(Application.persistentDataPath, "Ark_stat_v2.json");
+        // 🚀 [수정됨] 파일 이름을 직관적으로 변경
+        filePath = Path.Combine(Application.persistentDataPath, "SoulShop_Data.json");
         LoadGameData();
     }
 
@@ -85,11 +76,7 @@ public class SoulDataManager : MonoBehaviour
     public bool TryUpgradeStat(string statKey, int cost, int maxLevel)
     {
         var field = typeof(SoulStats).GetField(statKey);
-        if (field == null) 
-        {
-            Debug.LogError($"❌ [SoulDataManager] '{statKey}' 변수를 찾을 수 없습니다!");
-            return false;
-        }
+        if (field == null) return false;
 
         int currentLv = (int)field.GetValue(saveData.stats);
         if (currentLv >= maxLevel) return false;

@@ -27,9 +27,7 @@ public class SteamPunk_Hook : MonoBehaviour
     [Tooltip("사슬 텍스처의 하나의 패턴(고리)이 차지하는 월드 길이. 이 값으로 텍스처가 반복됩니다.")]
     public float chainSegmentLength = 1.2f;
 
-    // 🚀 [라인 렌더러 보정 변수 추가]
     [Header("갈고리 스프라이트 오프셋")]
-    [Tooltip("갈고리 스프라이트의 중심(Pivot)에서 사슬 연결부까지의 거리 (월드 스케일)")]
     public float hookSpriteOffset = -0.1f;
 
     [Header("상태 플래그")]
@@ -40,12 +38,10 @@ public class SteamPunk_Hook : MonoBehaviour
 
     private Transform hookOriginalParent;
 
-    // ── 쿨타임 변수 추가 ─────────────────────────────────────────────────
     [Header("갈고리 쿨타임")]
-    [SerializeField] public static float hookCooldown = 3f;
+    public float baseHookCooldown = 3f; 
     private float hookCooldownTimer = 0f;
 
-    // 🚨 컴포넌트 참조 변수 규칙 적용 및 통합
     public Transform _playerTransform;
     private PlayerRef _ref;
     private Vector2 launchDir;
@@ -53,25 +49,18 @@ public class SteamPunk_Hook : MonoBehaviour
 
     private void Awake()
     {
-        // 🚀 [수정] 부모/자식 따지지 않고, 씬 전체에서 "Player" 태그 달린 놈을 찾습니다.
+        // 🚀 [수정(우현)] 태그로 플레이어 찾기 (안전장치)
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        
         if (playerObj != null)
         {
             _ref = playerObj.GetComponent<PlayerRef>();
-            _playerTransform = playerObj.transform; // 플레이어 위치도 자동으로 잡음
-        }
-        else
-        {
-            Debug.LogError("❌ [오류] 'Player' 태그를 가진 오브젝트가 없습니다! 유니티 상단 Tag를 확인하세요.");
+            _playerTransform = playerObj.transform;
         }
 
-        // 나머지 초기화는 그대로
         hookOriginalParent = _hook.parent;
         _hookSpriteRenderer = _hook.GetComponent<SpriteRenderer>();
         if (_hookSpriteRenderer == null) _hookSpriteRenderer = _hook.GetComponentInChildren<SpriteRenderer>();
 
-        // 초기화
         isHookActive = false;
         isLineMax = false;
         isAttachReady = false;
@@ -89,31 +78,24 @@ public class SteamPunk_Hook : MonoBehaviour
 
     private void Update()
     {
-        // ── 쿨타임 처리 ───────────────────────────────────
-        if (hookCooldownTimer > 0f)
-        {
-            hookCooldownTimer -= Time.deltaTime;
-        }
+        // 🚀 [수정(우현)] 일시정지 체크
+        if (Time.timeScale == 0) return;
 
-        // ── 1) 라인 렌더러 활성/위치 갱신 ───────────────────────────────────
+        if (hookCooldownTimer > 0f) hookCooldownTimer -= Time.deltaTime;
+
         if (_chainLR != null && (isHookActive && !isLineMax || isAttachReady || isDashingToHook))
         {
             if (!_chainLR.enabled) _chainLR.enabled = true;
-
             _chainLR.SetPosition(0, _hookStart.position);
 
-            // 🚀 [라인 렌더러 끝점 위치 보정]
             Vector3 hookEndPosition = _hook.position;
-
             if (isHookActive || isAttachReady)
             {
                 Vector2 directionToPlayer = (_hookStart.position - _hook.position).normalized;
                 hookEndPosition = _hook.position + (Vector3)directionToPlayer * hookSpriteOffset;
             }
-
             _chainLR.SetPosition(1, hookEndPosition);
 
-            // 🚀 [사슬 텍스처 타일링 계산]
             float chainLength = Vector2.Distance(_hookStart.position, hookEndPosition);
             float tileCount = chainLength / chainSegmentLength;
             _chainLR.material.mainTextureScale = new Vector2(tileCount, 1);
@@ -123,19 +105,13 @@ public class SteamPunk_Hook : MonoBehaviour
             _chainLR.enabled = false;
         }
 
-        // ── 2) 첫 번째 E: 갈고리 발사 ─────────────────────────────────────────────
-        if (Input.GetKeyDown(KeyCode.E)
-        && !isHookActive
-        && !isAttachReady
-        && !isDashingToHook
-        && hookCooldownTimer <= 0f)
+        // 🚀 [수정(우현)] KeyManager 사용
+        if (Input.GetKeyDown(KeyManager.Instance.KeyHook) && !isHookActive && !isAttachReady && !isDashingToHook && hookCooldownTimer <= 0f)
         {
             LaunchHook();
         }
 
-        // ── 3) 갈고리 상태별 처리 ───────────────────────────────────
-
-        // 3-1) 갈고리 날아가는 중
+        // (이동 로직 기존 유지)
         if (isHookActive && !isAttachReady && !isLineMax && !isDashingToHook)
         {
             _hook.position += (Vector3)(launchDir * Time.deltaTime * hookSpeed);
@@ -144,26 +120,20 @@ public class SteamPunk_Hook : MonoBehaviour
             if (Vector2.Distance(_hookStart.position, _hook.position) >= maxDistance)
             {
                 isLineMax = true;
-                if (_hookSpriteRenderer != null)
-                    _hookSpriteRenderer.enabled = false;
-                if (_chainLR != null && _chainLR.enabled)
-                    _chainLR.enabled = false;
+                if (_hookSpriteRenderer != null) _hookSpriteRenderer.enabled = false;
+                if (_chainLR != null && _chainLR.enabled) _chainLR.enabled = false;
             }
         }
-        // 3-2) 갈고리 복귀 모드
         else if (isHookActive && isLineMax && !isAttachReady && !isDashingToHook)
         {
             _hook.position = Vector2.MoveTowards(_hook.position, _hookStart.position, Time.deltaTime * hookSpeed);
-
             if (Vector2.Distance(_hookStart.position, _hook.position) < 0.1f)
             {
                 isHookActive = false;
                 isLineMax = false;
-                if (_chainLR != null && _chainLR.enabled)
-                    _chainLR.enabled = false;
+                if (_chainLR != null && _chainLR.enabled) _chainLR.enabled = false;
             }
         }
-        // 3-3) 갈고리가 Ring에 걸려서 대기 상태
         else if (isAttachReady && !isDashingToHook)
         {
             HandleAttachReadyInput();
@@ -176,16 +146,15 @@ public class SteamPunk_Hook : MonoBehaviour
         if (_hook.parent != null) _hook.SetParent(null, true);
         _hook.position = _hookStart.position;
 
-        if (_hookSpriteRenderer != null)
-            _hookSpriteRenderer.enabled = true;
+        if (_hookSpriteRenderer != null) _hookSpriteRenderer.enabled = true;
 
         Vector2 dir = Vector2.zero;
-        if (Input.GetKey(KeyCode.UpArrow)) dir.y += 1f;
-        if (Input.GetKey(KeyCode.DownArrow)) dir.y -= 1f;
-        if (Input.GetKey(KeyCode.LeftArrow)) dir.x -= 1f;
-        if (Input.GetKey(KeyCode.RightArrow)) dir.x += 1f;
+        // 🚀 [수정(우현)] KeyManager 사용
+        if (Input.GetKey(KeyManager.Instance.KeyUp)) dir.y += 1f;
+        if (Input.GetKey(KeyManager.Instance.KeyDown)) dir.y -= 1f;
+        if (Input.GetKey(KeyManager.Instance.KeyLeft)) dir.x -= 1f;
+        if (Input.GetKey(KeyManager.Instance.KeyRight)) dir.x += 1f;
 
-        // 🚨 [변경] _playerMove -> _ref._Move
         if (dir == Vector2.zero && _ref._Move != null) dir.x = _ref._Move.GetFacingDir;
         else if (dir == Vector2.zero) dir.x = 1f;
 
@@ -193,7 +162,6 @@ public class SteamPunk_Hook : MonoBehaviour
         isHookActive = true;
         isLineMax = false;
 
-        // 🚀 [갈고리 회전 기능]
         if (_hook != null)
         {
             float targetAngle = Mathf.Atan2(launchDir.y, launchDir.x) * Mathf.Rad2Deg;
@@ -202,7 +170,9 @@ public class SteamPunk_Hook : MonoBehaviour
             _hook.rotation = Quaternion.AngleAxis(finalZRotation, Vector3.forward);
         }
 
-        hookCooldownTimer = hookCooldown;
+        // 상점 스탯 적용
+        float cooldownMult = (_ref._Status != null) ? _ref._Status.ItemCooldownMult : 1.0f;
+        hookCooldownTimer = baseHookCooldown * cooldownMult;
     }
 
     private void DetectRingAndAttach()
@@ -212,67 +182,35 @@ public class SteamPunk_Hook : MonoBehaviour
         {
             _hook.position = hit.ClosestPoint(_hook.position);
             isAttachReady = true;
-
-            if (_ref._Move != null)
-            {
-                // 🚀 [수정됨] 강제 리셋 (true 파라미터 추가 예정)
-                // 방금 점프했더라도 갈고리에 걸리면 즉시 점프 가능 상태로 만듭니다.
-                // 🚨 [변경] _playerMove -> _ref._Move
-                _ref._Move.ResetJumpCount(true);
-            }
-
+            if (_ref._Move != null) _ref._Move.ResetJumpCount(true);
             isHookActive = false;
             isLineMax = false;
-
-            // 🚨 [변경] _playerRb -> _ref._Rb
-            if (_ref._Rb != null)
-            {
-                _ref._Rb.linearVelocity = Vector2.zero;
-            }
-
-            // 🚨 [변경] _playerMove -> _ref._Move
-            if (_ref._Move != null)
-            {
-                _ref._Move.SetAttackLock(true);
-            }
-
+            if (_ref._Rb != null) _ref._Rb.linearVelocity = Vector2.zero;
+            if (_ref._Move != null) _ref._Move.SetAttackLock(true);
             return;
         }
     }
 
     private void HandleAttachReadyInput()
     {
-        // ── 두 번째 E: 대시 시작 ────────────────────────────
-        if (Input.GetKeyDown(KeyCode.E))
+        // 🚀 [수정(우현)] KeyManager 사용
+        if (Input.GetKeyDown(KeyManager.Instance.KeyHook))
         {
             isDashingToHook = true;
-            // 🚨 [변경] _playerMove -> _ref._Move
-            if (_ref._Move != null)
-            {
-                _ref._Move.SetAttackLock(false);
-            }
+            if (_ref._Move != null) _ref._Move.SetAttackLock(false);
             StartCoroutine(ParabolaMoveToHook());
             return;
         }
-
-        // 🚀 [추가됨] 점프(Space) 입력 시 갈고리 해제 및 점프 허용
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        // 🚀 [수정(우현)] KeyJump로 취소
+        if (Input.GetKeyDown(KeyManager.Instance.KeyJump))
         {
-            // true를 전달하여 속도를 0으로 만들지 않고 연결만 끊습니다.
-            // 이후 PlayerMoveController가 같은 프레임에 점프 힘을 가하게 됩니다.
             ResetHookState(true);
             return;
         }
-
-        // ── 자동 해제 ────────────────────────────
-        if (hookDetachTimer > 0.7f)
-        {
-            ResetHookState();
-        }
+        if (hookDetachTimer > 0.7f) ResetHookState();
     }
 
-    // 💡 메서드명 규칙 적용: 대문자로 시작
-    // 🚀 [수정됨] isJumping 파라미터 추가 (기본값 false)
     public void ResetHookState(bool isJumping = false)
     {
         isAttachReady = false;
@@ -280,31 +218,14 @@ public class SteamPunk_Hook : MonoBehaviour
         isDashingToHook = false;
         isLineMax = false;
 
-        if (_hook.parent != hookOriginalParent)
-            _hook.SetParent(hookOriginalParent, true);
-
+        if (_hook.parent != hookOriginalParent) _hook.SetParent(hookOriginalParent, true);
         _hook.position = _hookStart.position;
+        if (_hook != null) _hook.localRotation = Quaternion.identity;
 
-        if (_hook != null)
-        {
-            _hook.localRotation = Quaternion.identity;
-        }
+        if (_hookSpriteRenderer != null) _hookSpriteRenderer.enabled = false;
+        if (_chainLR != null && _chainLR.enabled) _chainLR.enabled = false;
 
-        if (_hookSpriteRenderer != null)
-            _hookSpriteRenderer.enabled = false;
-
-        if (_chainLR != null && _chainLR.enabled)
-            _chainLR.enabled = false;
-
-        // 🚀 [수정됨] 점프 중이 아닐 때만 속도를 0으로 만듭니다.
-        // 점프 중이라면 PlayerMoveController가 가하는 점프 힘을 보존해야 합니다.
-        // 🚨 [변경] _playerRb -> _ref._Rb
-        if (!isJumping && _ref._Rb != null)
-        {
-            _ref._Rb.linearVelocity = Vector2.zero;
-        }
-
-        // 🚨 [변경] _playerMove -> _ref._Move
+        if (!isJumping && _ref._Rb != null) _ref._Rb.linearVelocity = Vector2.zero;
         if (_ref._Move != null) _ref._Move.SetAttackLock(false);
         hookDetachTimer = 0f;
     }
@@ -313,7 +234,6 @@ public class SteamPunk_Hook : MonoBehaviour
     {
         Vector3 startPos = _playerTransform.position;
         Vector3 endPos = _hook.position;
-
         Vector3 midPoint = (startPos + endPos) * 0.5f;
         float distance = Vector2.Distance(startPos, endPos);
         float heightOffset = Mathf.Min(parabolaPeakHeight, distance * 0.5f);
@@ -322,11 +242,7 @@ public class SteamPunk_Hook : MonoBehaviour
         float elapsed = 0f;
         float duration = parabolaDuration;
 
-        // 🚨 [변경] _playerRb -> _ref._Rb
-        if (_ref._Rb != null)
-        {
-            _ref._Rb.linearVelocity = Vector2.zero;
-        }
+        if (_ref._Rb != null) _ref._Rb.linearVelocity = Vector2.zero;
 
         while (elapsed < duration)
         {
@@ -340,20 +256,12 @@ public class SteamPunk_Hook : MonoBehaviour
         }
 
         _playerTransform.position = endPos;
-
-        // 🚨 [변경] _playerRb -> _ref._Rb
-        if (_ref._Rb != null)
-        {
-            _ref._Rb.linearVelocity = Vector2.zero;
-        }
+        if (_ref._Rb != null) _ref._Rb.linearVelocity = Vector2.zero;
 
         isDashingToHook = false;
         isHookActive = false;
         isLineMax = false;
-
         ResetHookState();
-
-        yield break;
     }
 
     private void OnDrawGizmosSelected()

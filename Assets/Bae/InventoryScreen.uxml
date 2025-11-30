@@ -1,0 +1,77 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UI.Toolkit" editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="InventoryScreen.uss" />
+    
+    <ui:VisualElement name="InventoryRoot" class="root-container skul-theme-root" style="background-color: rgba(15, 10, 5, 0.95);">
+        <ui:VisualElement name="SynergyPanel_Left" class="panel panel-left">
+            <ui:Label text="시너지 현황" class="panel-title" />
+            <ui:Label name="SynergyCountText" text="활성 시너지: 0개" class="synergy-count-text" />
+            <ui:ScrollView name="SynergyScrollView" class="synergy-scroll-view">
+                <ui:VisualElement name="SynergyContainer" class="synergy-container" />
+            </ui:ScrollView>
+            <ui:VisualElement name="NoSynergyMessage" class="no-synergy-message">
+                <ui:Label text="활성화된 시너지가 없습니다." class="no-synergy-hint" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="EquipmentPanel_Middle" class="panel panel-middle">
+            <ui:VisualElement name="TopEquipmentBox" class="top-equipment-row">
+                <ui:VisualElement name="LeftStatColumn" class="stat-slot-column">
+                    <ui:VisualElement name="장비 0" class="item-slot" />
+                    <ui:VisualElement name="장비 1" class="item-slot" />
+                    <ui:VisualElement name="장비 2" class="item-slot" />
+                    <ui:VisualElement name="장비 3" class="item-slot" />
+                </ui:VisualElement>
+                <ui:VisualElement name="CharacterPreview" class="character-preview-container">
+                    <ui:VisualElement name="character-preview" class="character-preview" />
+                    <ui:VisualElement name="SpecialSlotRow" class="special-slot-row" />
+                </ui:VisualElement>
+                <ui:VisualElement name="RightStatColumn" class="stat-slot-column">
+                    <ui:VisualElement name="장비 4" class="item-slot" />
+                    <ui:VisualElement name="장비 5" class="item-slot" />
+                    <ui:VisualElement name="장비 6" class="item-slot" />
+                    <ui:VisualElement name="장비 7" class="item-slot" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="InventoryGrid" class="slot-grid" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="ItemInfoPanel_Right" class="panel panel-right">
+            <ui:VisualElement name="PlayerStatsContainer" class="stats-container">
+                <ui:VisualElement class="stats-container-panel">
+                    <ui:Label name="PlayerInfoLabel" text="플레이어 정보" class="panel-title" style="margin-bottom: 20px;" />
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="물리 공격력" class="stat-label" />
+                        <ui:Label name="Stat_PhysAtk" text="150" class="stat-value" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="마법 공격력" class="stat-label" />
+                        <ui:Label name="Stat_MagAtk" text="30" class="stat-value" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="최대 체력" class="stat-label" />
+                        <ui:Label name="Stat_MaxHp" text="1000" class="stat-value" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="stat-row">
+                        <ui:Label text="치명타 확률" class="stat-label" />
+                        <ui:Label name="Stat_Crit" text="5%" class="stat-value" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ItemDetailsContainer" style="display: none; flex-grow: 1;">
+                <ui:Label name="ItemName" text="아이템 이름" class="info-item-name panel-subtitle" />
+                <ui:VisualElement name="ItemIcon" class="info-item-icon" />
+                <ui:ScrollView class="info-scroll-view">
+                    <ui:Label name="ItemDescription" text="설명..." class="info-text" />
+                </ui:ScrollView>
+                <ui:VisualElement class="info-sub-box">
+                    <ui:Label name="ItemSubInfo" text="부가 정보" class="info-text sub-info" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="ContextMenu" style="position: absolute; display: none; background-color: rgb(60, 50, 45); border-width: 2px; border-color: rgb(184, 115, 51); padding: 5px; border-radius: 4px;">
+            <ui:Button name="BtnMove" text="옮기기" style="width: 80px; height: 25px; margin-bottom: 2px; background-color: rgb(80, 65, 60); color: rgb(230, 210, 180); border-width: 0;" />
+            <ui:Button name="BtnDiscard" text="버리기" style="width: 80px; height: 25px; background-color: rgb(100, 50, 50); color: white; border-width: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

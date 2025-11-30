@@ -1,0 +1,257 @@
+/* InventoryScreen.uss - 구조 유지, 색상만 스팀펑크 테마로 변경 */
+
+.root-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 16px;
+    height: 100%;
+}
+
+/* 패널 공통 */
+.panel {
+    border-width: 4px;
+    border-color: #5A3F28; /* 진한 갈색 테두리 */
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #28221D; /* 아주 어두운 갈색 배경 */
+}
+
+.panel-left { 
+    width: 22%; margin: 42px 0px; margin-left: 42px;
+    background-color: #211D1A; /* 조금 더 어두운 배경 */
+    border-color: rgb(184, 115, 51); /* 구리색 테두리 */
+}
+
+/* 가운데 패널 (인벤토리) */
+.panel-middle { 
+    width: 42%; margin: 42px 42px;
+    background-color: rgb(40, 32, 28); /* 메인 컨테이너 배경 */
+    border-top-color: rgb(184, 115, 51); /* 구리색 */
+    border-bottom-color: rgb(90, 60, 40); /* 어두운 갈색 */
+    border-left-color: rgb(90, 60, 40);
+    border-right-color: rgb(184, 115, 51);
+}
+
+/* 오른쪽 패널 (아이템 정보) */
+.panel-right { 
+    width: 36%; margin: 42px 0px; margin-right: 42px;
+    background-color: #211D1A;
+    border-top-color: rgb(184, 115, 51);
+    border-bottom-color: rgb(90, 60, 40);
+    border-left-color: rgb(90, 60, 40);
+    border-right-color: rgb(184, 115, 51);
+}
+
+/* 타이틀 텍스트 */
+.panel-title { 
+    -unity-font-style: bold; font-size: 32px; margin-bottom: 10px;
+    color: rgb(255, 200, 100); /* 골드 */
+}
+
+.panel-subtitle { 
+    -unity-font-style: bold; font-size: 24px;
+    color: rgb(230, 210, 180); /* 양피지색 */
+}
+
+.synergy-count-text {
+    font-size: 18px;
+    color: rgb(230, 210, 180);
+    margin-bottom: 12px;
+    -unity-font-style: bold;
+}
+
+/* 시너지 스크롤 뷰 */
+.synergy-scroll-view {
+    background-color: #322820; /* 내용물 배경 */
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+
+.synergy-container {
+    flex-direction: column;
+    padding: 8px;
+}
+
+/* 시너지 아이템 카드 */
+.synergy-item {
+    background-color: #4B382A; /* 갈색 카드 배경 */
+    border-width: 6px;
+    border-color: #886644;
+    border-radius: 12px;
+    padding: 8px;
+    margin-bottom: 6px;
+    flex-direction: column;
+    opacity: 1.0;
+}
+
+.synergy-item.active {
+    opacity: 1.0;
+    border-width: 3px;
+    border-color: #FFD700; /* 활성 시 골드 테두리 */
+}
+
+.synergy-name {
+    font-size: 24px;
+    -unity-font-style: bold;
+    color: rgb(230, 210, 180);
+    flex-grow: 1;
+}
+
+.synergy-item.active .synergy-name {
+    color: rgb(255, 215, 0); /* 활성 이름 골드 */
+}
+
+/* 시너지 레벨 */
+.synergy-level {
+    font-size: 18px;
+    color: rgb(200, 180, 160);
+    background-color: #554433;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 4px;
+}
+
+.synergy-level.active {
+    color: #221100;
+    -unity-font-style: bold;
+    background-color: #FFAA00; /* 활성 레벨 배경 오렌지 골드 */
+}
+
+/* 시너지 효과 텍스트 */
+.synergy-effect-text {
+    font-size: 11px;
+    color: rgb(180, 160, 140);
+    margin-top: 2px;
+    white-space: normal;
+}
+
+.synergy-effect-text.active {
+    color: #88FF88; /* 활성 효과는 밝은 녹색 유지 (가독성) */
+    -unity-font-style: bold;
+}
+
+/* 상단 장비 영역 */
+.top-equipment-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px; /* 원본 120px은 너무 큰 것 같아 조정했습니다. 원본 유지하려면 120px로 */
+    background-color: #322820;
+    margin: 0px 30px;
+    margin-bottom: 15px;
+}
+
+/* stat 컬럼 */
+.stat-slot-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    height: 460px;
+    width: 120px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    background-color: #4B382A;  
+    border-color: #B87333; /* 구리색 */
+    border-radius: 12px;
+    margin: 0px 20px;
+}
+
+/* 슬롯 기본 스타일 */
+.item-slot {
+    width: 80px;
+    height: 80px;
+    background-color: #322820;
+    border-width: 2px;
+    border-color: #B87333;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* InventoryGrid */
+.slot-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+    padding: 16px;
+    border-width: 3px;
+    background-color: rgb(50, 40, 35);
+    border-color: rgb(230, 210, 180);
+    border-radius: 12px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 호버/선택 강조 */
+.item-slot:hover, .synergy-item:hover {
+    border-color: #FFD800 !important;
+    background-color: rgba(255, 216, 0, 0.1) !important;
+    transition: all 0.2s ease;
+}
+
+/* 정보 패널 텍스트 */
+.info-text {
+    font-size: 24px;
+    color: rgb(230, 210, 180);
+    white-space: normal;
+    margin-bottom: 8px;
+}
+
+.sub-info {
+    font-size: 24px;
+    color: rgb(255, 215, 0); /* 골드 */
+    -unity-font-style: bold;
+    margin-top: 4px;
+}
+
+.info-sub-box {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top-width: 1px;
+    border-top-color: rgba(255, 200, 100, 0.3);
+}
+
+.info-item-icon {
+    width: 200px;
+    height: 200px;
+    margin: 12px;
+    border-radius: 12px;
+    border-width: 2px;
+    border-color: #B87333;
+    background-color: #221100;
+    align-self: center;
+}
+
+/* 캐릭터 프리뷰 */
+.character-preview {
+    width: 240px;
+    height: 400px;
+    background-color: rgb(60, 50, 45);
+    border-color: rgb(230, 210, 180);
+    border-radius: 12px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+/* 스탯 값 색상 */
+.stat-label {
+    font-size: 16px;
+    color: rgb(180, 160, 140);
+}
+
+.stat-value {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}
