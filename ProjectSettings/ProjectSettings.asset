@@ -765,11 +765,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8cbe0461-556a-4b7c-9adc-6af6dcaf0c1c
+  cloudProjectId: f963b2b9-6f8d-4718-991f-e868caa598bd
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Reverse_Stream_RE
-  organizationId: hoon0094
+  projectName: Re_test_0.0.1
+  organizationId: teamidiots777
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
