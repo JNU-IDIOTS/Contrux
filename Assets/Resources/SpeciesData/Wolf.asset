@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c4dcd4e17618a4ba4a37a4114f73be, type: 3}
+  m_Name: Wolf
+  m_EditorClassIdentifier: 
+  speciesTag: Wolf
+  maxCourage: 5
+  aggression: 5
+  maxHP: 4545454
+  attackRange: 2
+  attackAngle: 90
+  indicatorColor: {r: 1, g: 0, b: 0, a: 0.3}
+  NAttackDamage: 40
+  SAttackDamage: 60
+  attackCooldown: 3.5
+  patrolSpeed: 2
+  chaseSpeed: 4
+  detectionRadius: 8
+  loseDetectionRadius: 10
+  raycastDistance: 0.65
+  horizontalOffset: 0.75
+  verticalOffset: 0
+  attackType: 2
+  defense: 1
+  courageDamagePerHit: 2
+  healthBarOffset: {x: 0, y: -0.9, z: 0}
+  alertRadius: 15
+  allyCheckRadius: 5
+  courageBonusPerAlly: 0.2
+  speedBonusPerAlly: 0.5
+  cooldownReductionPerAlly: 0.1
+  MaxPackBonusCount: 5
+  backStepForce: 1
+  busterChasingTime: 1.5
+  busterAttackSpeed: 5
+  enableFlanking: 1
+  flankSpacing: 2
+  isLeader: 0
+  leaderBuffDamageMultiplier: 1.5
+  commandRadius: 15
+  useBerserk: 1
+  berserkThreshold: 0.4
+  berserkSpeedMultiplier: 2

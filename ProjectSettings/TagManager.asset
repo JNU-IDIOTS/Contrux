@@ -6,11 +6,17 @@ TagManager:
   tags:
   - Ring
   - RING
+  - Wolf
+  - Goblin
+  - DwarfBuster
+  - Dwarf
+  - Enemy
+  - Wolf Leader
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - Ground

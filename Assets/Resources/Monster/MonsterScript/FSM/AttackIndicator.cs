@@ -24,6 +24,16 @@ public class AttackIndicator : MonoBehaviour
 
     public void Setup(Sprite sprite, Color color, float angle)
     {
+        // Awake보다 먼저 호출될 수 있으므로 초기화 보장
+        if (meshFilter == null) meshFilter = GetComponent<MeshFilter>();
+        if (meshRenderer == null)
+        {
+            meshRenderer = GetComponent<MeshRenderer>();
+            meshRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        }
+        if (targetCollider == null && transform.parent != null)
+            targetCollider = transform.parent.GetComponent<Collider2D>();
+            
         // 색상 설정
         meshRenderer.material.color = color;
         this.viewAngle = angle;

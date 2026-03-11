@@ -2,6 +2,7 @@
 /*
 
 # --- but keep these ---
+!/.github/
 !/.gitignore
 !/Assets/
 !/ProjectSettings/

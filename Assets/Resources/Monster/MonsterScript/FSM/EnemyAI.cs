@@ -125,13 +125,15 @@ public class EnemyAI : MonoBehaviour, IHealth
     }
     private void Awake()
     {
+        Debug.Log($"[{gameObject.name}] Awake() 시작");
         //종족별 데이터에 맞게 초기값 설정하기
         LoadDataByTag(gameObject.tag);
         if(speciesData == null)
         {
-            Debug.Log(name + "가 SpeciesData 로드 실패! 태그: " + gameObject.tag, this);
+            Debug.Log($"[{gameObject.name}] SpeciesData 로드 실패! 태그: {gameObject.tag}", this);
             return;
         }
+        Debug.Log($"[{gameObject.name}] SpeciesData 로드 성공! maxCourage={speciesData.maxCourage}");
         currentHP = speciesData.maxHP;
         currentCourage = speciesData.maxCourage;
         cooldown = speciesData.attackCooldown;
@@ -150,13 +152,31 @@ public class EnemyAI : MonoBehaviour, IHealth
         objectactive = GetComponent<ObjectActive>();
         dwarfbuster = GetComponent<DwarfBusterBullet>();
         myCollider = GetComponent<Collider2D>(); //자신의 콜라이더 가져오기
-        DebugLogLoadedData();
-
-        if (attackVisualizer != null)
-        {
-            // (스프라이트는 메쉬 방식이라 안 쓰지만, 호환성을 위해 null 전달)
-            attackVisualizer.Setup(null, speciesData.indicatorColor, speciesData.attackAngle);
+        
+        try {
+            DebugLogLoadedData();
+            Debug.LogWarning($"[{gameObject.name}] DebugLogLoadedData() 완료됨");
+        } catch (System.Exception e) {
+            Debug.LogError($"[{gameObject.name}] ❌ DebugLogLoadedData() 에러: {e.Message}\n{e.StackTrace}");
         }
+
+        try {
+            if (attackVisualizer != null)
+            {
+                Debug.LogWarning($"[{gameObject.name}] attackVisualizer.Setup() 호출 중...");
+                // (스프라이트는 메쉬 방식이라 안 쓰지만, 호환성을 위해 null 전달)
+                attackVisualizer.Setup(null, speciesData.indicatorColor, speciesData.attackAngle);
+                Debug.LogWarning($"[{gameObject.name}] attackVisualizer.Setup() 완료됨");
+            }
+            else
+            {
+                Debug.LogWarning($"[{gameObject.name}] !! attackVisualizer is NULL!!");
+            }
+        } catch (System.Exception e) {
+            Debug.LogError($"[{gameObject.name}] ❌ attackVisualizer 에러: {e.Message}\n{e.StackTrace}");
+        }
+        
+        Debug.LogWarning($"[{gameObject.name}] Awake() 완료! activeSelf={gameObject.activeSelf}, enabled={enabled}");
     }
 
 
@@ -218,11 +238,16 @@ public class EnemyAI : MonoBehaviour, IHealth
         IdleState.horizontalOffset = horizontalOffset;
         IdleState.verticalOffset = verticalOffset; 삭제 */
         //Debug.Log(raycastDistance);
-        if (speciesData == null) return; // 종족 데이터가 할당되지 않았으면 정지
+        if (speciesData == null) 
+        {
+            Debug.LogWarning($"[{gameObject.name}] Update(): speciesData is NULL!");
+            return; // 종족 데이터가 할당되지 않았으면 정지
+        }
         if (PlayerTransform == null)
+        {
+            Debug.LogWarning($"[{gameObject.name}] Update(): PlayerTransform is NULL!");
             return; // 아직 할당 안 됐으면 건너뛰기
-        if (PlayerTransform == null)
-            return; // 아직 할당 안 됐으면 건너뛰기
+        }
         if (_playerBackPos == null)
         {
             // 플레이어의 직계 자식 중에서 이름이 "BackPos"인 것을 찾음
@@ -234,7 +259,11 @@ public class EnemyAI : MonoBehaviour, IHealth
             player = PlayerTransform.position;
             _playerBackPos = PlayerTransform.Find("BackPos"); 
         }
-        if (IsDeath) return;
+        if (IsDeath) 
+        {
+            Debug.LogWarning($"[{gameObject.name}] Update(): IsDeath is TRUE!");
+            return;
+        }
 
         courageCheckTimer += Time.deltaTime;
         if (courageCheckTimer >= 0.5f) //0.5초마다 용기 보너스 갱신
@@ -251,6 +280,10 @@ public class EnemyAI : MonoBehaviour, IHealth
                 Debug.Log($"용기 : {currentCourage}");
             }
         }
+        
+        // 디버그: 현재 상태 확인
+        Debug.Log($"[{gameObject.name}] 상태: {currentState?.GetType().Name ?? "NULL"}, player: {player}, distance: {Vector2.Distance(transform.position, player)}");
+        
         currentState?.Update();
 
     }
@@ -653,20 +686,25 @@ public class EnemyAI : MonoBehaviour, IHealth
 
     void LoadDataByTag(string tag)
     {
-        // "Resources/SpeciesData" 폴더에 모든 .asset 파일이 있다고 가정
-        SpeciesData[] allData = Resources.LoadAll<SpeciesData>("SpeciesData");
-
-        foreach (SpeciesData data in allData)
+        // 📌 여기서 경로를 직접 지정 (Assets/Resources/ 이후 경로)
+        string speciesDataPath = "SpeciesData";  // ← 이 부분에서 경로 수정
+        Debug.LogError($"[{gameObject.name}] LoadDataByTag() 호출 - 태그: {tag}");
+        
+        SpeciesData[] allData = Resources.LoadAll<SpeciesData>(speciesDataPath);
+        Debug.LogWarning($"[{gameObject.name}] 로드된 SpeciesData 총 {allData.Length}개");
+        
+        for (int i = 0; i < allData.Length; i++)
         {
-            if (data.speciesTag == tag)
+            Debug.LogWarning($"[{gameObject.name}] SpeciesData[{i}]: speciesTag = '{allData[i].speciesTag}'");
+            if (allData[i].speciesTag == tag)
             {
-                speciesData = data;
-                Debug.Log(gameObject.name + "는 " + speciesData.speciesTag + " 데이터를 로드했습니다.");
+                speciesData = allData[i];
+                Debug.Log($"[{gameObject.name}] ✓ '{speciesData.speciesTag}' 데이터 로드 성공!");
                 return;
             }
         }
 
-        Debug.LogError(gameObject.name + "에 맞는 SpeciesData를 찾을 수 없습니다! (태그: " + tag + ")");
+        Debug.LogError($"[{gameObject.name}] ✗ 실패! 태그 '{tag}'와 매칭되는 SpeciesData가 없습니다!");
     }
 
     private void UpdateCourageBonus()
