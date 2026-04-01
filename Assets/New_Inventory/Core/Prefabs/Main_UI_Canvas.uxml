@@ -2,15 +2,15 @@
     <Style src="project://database/Assets/New_Inventory/Core/Prefabs/Main_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=094055ee333a507408d3cf52e8d552ee&amp;type=3#Main_UI_Canvas" />
     <engine:VisualElement name="container" class="inner" style="flex-grow: 1;">
         <engine:VisualElement name="header" class="header" style="flex-grow: 1;">
-            <engine:VisualElement name="header-left" class="header-item header-left" style="flex-grow: 1;">
+            <engine:Button name="header-left" class="header-item header-left" style="flex-grow: 1;">
                 <engine:VisualElement name="left-chev" class="left-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/left-chev.svg?fileID=7388822144124034973&amp;guid=ca0a8a43e913b4245bed1b75bc46b15e&amp;type=3#left-chev&quot;);" />
-            </engine:VisualElement>
+            </engine:Button>
             <engine:VisualElement name="header-middle" class="header-item header-middle" style="flex-grow: 1;">
                 <engine:Label text="Mock" name="header-title" class="header-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 24px; -unity-text-align: upper-center; letter-spacing: 3.2px; background-color: rgba(55, 55, 55, 0); color: rgba(254, 243, 198, 0.9);" />
             </engine:VisualElement>
-            <engine:VisualElement name="header-right" class="header-item header-right" style="flex-grow: 1;">
+            <engine:Button name="header-right" class="header-item header-right" style="flex-grow: 1;">
                 <engine:VisualElement name="right-chev" class="right-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/right-chev.svg?fileID=7388822144124034973&amp;guid=39ce389d8a1e1dd4da9179cb91c7da36&amp;type=3#right-chev&quot;);" />
-            </engine:VisualElement>
+            </engine:Button>
         </engine:VisualElement>
         <engine:VisualElement name="inner-content" class="inner-content" style="flex-grow: 1;" />
     </engine:VisualElement>
