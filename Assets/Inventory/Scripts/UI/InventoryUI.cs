@@ -108,9 +108,9 @@ public class InventoryUI : MonoBehaviour
         // [추가] 시너지 UI 업데이트
         UpdateSynergyUI();
         
-        // [추가] Initial Items 스냅샷 초기화
-        UpdateInitialItemsSnapshot();
-    }
+        // [추가] Initial Items 스냅샷 초기화 
+        UpdateInitialItemsSnapshot(); 
+    } 
 
     // [추가] 시너지 시스템 초기화
     private void InitializeSynergySystem()

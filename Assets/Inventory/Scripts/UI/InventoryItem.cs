@@ -16,5 +16,5 @@ namespace MyProject.Core
     {
         public int healthBonus;
         public int attackBonus;
-    }
-}
+    } 
+} 
