@@ -8,9 +8,6 @@ public class EnemyAI : MonoBehaviour, IHealth
 {
     public IEnemyState currentState;
     public IEnemyState idleState, chaseState, attackState, fleeState, searchState; //모드 변수 선언.
-    [SerializeField] private GameObject healthBarPrefab;
-    [SerializeField] private Canvas worldSpaceCanvas;
-    private EnemyHealthBarUI healthBarUI;
     // 1. 데이터베이스 원본 (로드됨)
     public SpeciesData speciesData { get; private set; }
 
@@ -22,7 +19,7 @@ public class EnemyAI : MonoBehaviour, IHealth
     private Coroutine alertShieldCoroutine = null;
     private float allyCourageBonus = 0f; // 아군 용기 보너스 누적 변수
     private float courageCheckTimer = 0f;
-    public float currentMoveSpeed { get; private set; } 
+    public float currentMoveSpeed { get; private set; }
     public float currentCooldown { get; private set; }
     private LayerMask enemyLayerMask; // (성능을 위해 레이어 마스크를 캐시)
     public int mySquadRank { get; private set; } = 0;
@@ -38,7 +35,6 @@ public class EnemyAI : MonoBehaviour, IHealth
     public AttackIndicator attackVisualizer;
     //플레이어
     public Vector3 player;
-    private Transform playerT;
     private Transform _playerTransform;
     private Transform _playerBackPos;
     private Transform PlayerTransform //정적캐싱
@@ -65,15 +61,13 @@ public class EnemyAI : MonoBehaviour, IHealth
     public float AttackTimer = 0f;
     public float cooldown = 1.5f;
     public bool canAttack = false;
-    [Tooltip("공격 데미지")]
-    /*public int NattackDamage = 20;
-    public int SattackDamage = 40; 삭제*/
+
 
     [Header("체력")]
     //[SerializeField] public int maxHP = 100; 삭제 
 
     [Header("백스텝")]
-    [SerializeField] private float BackStepForce = 1f; 
+    [SerializeField] private float BackStepForce = 1f;
 
     [Header("넉백 범위 설정")]
     [SerializeField] private float minKnockbackForce = 0.2f;
@@ -83,7 +77,6 @@ public class EnemyAI : MonoBehaviour, IHealth
 
     public bool IsHit { get; protected set; } = false;
 
-    [Header("드워프버스터전용")] //나중에 종족데이터에 추가예정
     public float BusterChasingTime = 0f;
     public float BusterAttackSpeed = 0f;
 
@@ -100,11 +93,9 @@ public class EnemyAI : MonoBehaviour, IHealth
     //몬스터 콜라이더(자신)와 플레이어 콜라이더 저장용
     private Collider2D myCollider;
     private Collider2D playerCollider;
-    
-    [Header("낙하 방지")]
-    /*[SerializeField] private float raycastDistance = 5f;
-    [SerializeField] private float horizontalOffset = 0.5f;
-    [SerializeField] private float verticalOffset = 0.1f; 삭제 */
+
+    [Header("시각화 온오프")]
+    [HideInInspector] public bool showDebugGizmos = false; // 에디터에서 제어할 변수
 
     public Rigidbody2D rb;
     private Coroutine cooldownCoroutine;  // 쿨타임을 위한 코루틴
@@ -128,7 +119,7 @@ public class EnemyAI : MonoBehaviour, IHealth
         Debug.Log($"[{gameObject.name}] Awake() 시작");
         //종족별 데이터에 맞게 초기값 설정하기
         LoadDataByTag(gameObject.tag);
-        if(speciesData == null)
+        if (speciesData == null)
         {
             Debug.Log($"[{gameObject.name}] SpeciesData 로드 실패! 태그: {gameObject.tag}", this);
             return;
@@ -152,15 +143,19 @@ public class EnemyAI : MonoBehaviour, IHealth
         objectactive = GetComponent<ObjectActive>();
         dwarfbuster = GetComponent<DwarfBusterBullet>();
         myCollider = GetComponent<Collider2D>(); //자신의 콜라이더 가져오기
-        
-        try {
+
+        try
+        {
             DebugLogLoadedData();
             Debug.LogWarning($"[{gameObject.name}] DebugLogLoadedData() 완료됨");
-        } catch (System.Exception e) {
+        }
+        catch (System.Exception e)
+        {
             Debug.LogError($"[{gameObject.name}] ❌ DebugLogLoadedData() 에러: {e.Message}\n{e.StackTrace}");
         }
 
-        try {
+        try
+        {
             if (attackVisualizer != null)
             {
                 Debug.LogWarning($"[{gameObject.name}] attackVisualizer.Setup() 호출 중...");
@@ -172,61 +167,22 @@ public class EnemyAI : MonoBehaviour, IHealth
             {
                 Debug.LogWarning($"[{gameObject.name}] !! attackVisualizer is NULL!!");
             }
-        } catch (System.Exception e) {
+        }
+        catch (System.Exception e)
+        {
             Debug.LogError($"[{gameObject.name}] ❌ attackVisualizer 에러: {e.Message}\n{e.StackTrace}");
         }
-        
+
         Debug.LogWarning($"[{gameObject.name}] Awake() 완료! activeSelf={gameObject.activeSelf}, enabled={enabled}");
     }
 
 
     void Start()
     {
-        /*if (CompareTag("Wolf"))
-        {
-            raycastDistance = 0.35f;
-            horizontalOffset = 0.8f;
-            verticalOffset = 0.5f;
-        }
-        else if (CompareTag("Dwarf"))
-        {
-            raycastDistance = 0.3f;
-            horizontalOffset = 0.75f;
-            verticalOffset = 0;
-        }
-        else if (CompareTag("Dwarf_Hammer"))
-        {
-            raycastDistance = 0.3f;
-            horizontalOffset = 0.75f;
-            verticalOffset = 0;
-        }
-        else if (CompareTag("DwarfBuster"))
-        {
-            raycastDistance = 0.3f;
-            horizontalOffset = 1.1f;
-            verticalOffset = 0;
-        }
-        else if (CompareTag("Goblin"))
-        {
-            raycastDistance = 0.3f;
-            horizontalOffset = 0.45f;
-            verticalOffset = 1.5f;
-        }
-        else
-        {
-            raycastDistance = 2f;
-        } 삭제*/
-        //currentHP = maxHP; 삭제
         ChangeState(idleState);
         attacktimer = 0f;
-        var go = Instantiate(healthBarPrefab,worldSpaceCanvas.transform.position, // Vector3
-        worldSpaceCanvas.transform.rotation , /* Quaternion */  worldSpaceCanvas.transform /*�θ� Transform*/ );
-        healthBarUI = go.GetComponent<EnemyHealthBarUI>();
-        if (healthBarUI == null) Debug.LogError("EnemyHealthBarUI 컴포넌트를 찾을 수 없습니다!");
-        healthBarUI.SetTarget(this.GetComponent<IHealth>(), this.transform, speciesData.healthBarOffset);
-        
         //플레이어 콜라이더가 아직 없다면 찾기(플레이어가 씬에 로드 된 후)
-        if(playerCollider == null && PlayerTransform != null)
+        if (playerCollider == null && PlayerTransform != null)
         {
             playerCollider = PlayerTransform.GetComponent<Collider2D>();
         }
@@ -238,7 +194,7 @@ public class EnemyAI : MonoBehaviour, IHealth
         IdleState.horizontalOffset = horizontalOffset;
         IdleState.verticalOffset = verticalOffset; 삭제 */
         //Debug.Log(raycastDistance);
-        if (speciesData == null) 
+        if (speciesData == null)
         {
             Debug.LogWarning($"[{gameObject.name}] Update(): speciesData is NULL!");
             return; // 종족 데이터가 할당되지 않았으면 정지
@@ -254,12 +210,12 @@ public class EnemyAI : MonoBehaviour, IHealth
             _playerBackPos = PlayerTransform.Find("BackPos");
         }
         // 위치 계산
-        if(!justAlerted)
+        if (!justAlerted)
         {
             player = PlayerTransform.position;
-            _playerBackPos = PlayerTransform.Find("BackPos"); 
+            _playerBackPos = PlayerTransform.Find("BackPos");
         }
-        if (IsDeath) 
+        if (IsDeath)
         {
             Debug.LogWarning($"[{gameObject.name}] Update(): IsDeath is TRUE!");
             return;
@@ -280,10 +236,10 @@ public class EnemyAI : MonoBehaviour, IHealth
                 Debug.Log($"용기 : {currentCourage}");
             }
         }
-        
+
         // 디버그: 현재 상태 확인
         Debug.Log($"[{gameObject.name}] 상태: {currentState?.GetType().Name ?? "NULL"}, player: {player}, distance: {Vector2.Distance(transform.position, player)}");
-        
+
         currentState?.Update();
 
     }
@@ -395,7 +351,7 @@ public class EnemyAI : MonoBehaviour, IHealth
     public void DealAreaDamage(Vector2 point, float radius, int damage)
     {
         float finalDamage = damage;
-        if(currentLeader != null && !currentLeader.IsDeath)
+        if (currentLeader != null && !currentLeader.IsDeath)
         {
             finalDamage *= speciesData.leaderBuffDamageMultiplier;
         }
@@ -437,7 +393,7 @@ public class EnemyAI : MonoBehaviour, IHealth
                     // 몬스터가 보는 방향 (오른쪽: 1, 왼쪽: -1)
                     // (EnemyAI는 Scale.x로 방향을 돌리므로 이를 기준으로 잡습니다)
                     Vector2 facingDir = transform.localScale.x < 0 ? Vector2.left : Vector2.right;
-                    
+
                     // 몬스터 -> 플레이어 방향 벡터
                     Vector2 dirToTarget = (hit.transform.position - transform.position).normalized;
 
@@ -455,7 +411,7 @@ public class EnemyAI : MonoBehaviour, IHealth
                 float kbForce = Random.Range(minKnockbackForce, maxKnockbackForce);
                 float kbUpForce = Random.Range(minKnockbackUpwardForce, maxKnockbackUpwardForce);
                 playerHealth.TakeDamage((int)finalDamage);
-                
+
                 // TODO: 넉백 기능은 나중에 구현
                 // playerKnockback.ApplyKnockback(transform, kbForce, kbUpForce);
             }
@@ -482,7 +438,7 @@ public class EnemyAI : MonoBehaviour, IHealth
         // TODO: 경험치 시스템 추가 시 활성화
         // PlayerExpManager.AddExp(90);
 
-            Destroy(gameObject);
+        Destroy(gameObject);
     }
     public void Backstep()
     {
@@ -502,7 +458,7 @@ public class EnemyAI : MonoBehaviour, IHealth
     {
         //Debug.Log($"isplayerinrange는 {playerInRange}");
         return playerInRange;
-        
+
     }
 
     // IsPlayerAttackable
@@ -585,7 +541,7 @@ public class EnemyAI : MonoBehaviour, IHealth
 
     private void OnDrawGizmosSelected()
     {
-        if(speciesData == null)
+        if (speciesData == null || !showDebugGizmos)
         {
             Awake(); // Awake를 강제로 호출하여, 기본값을 사용하게 함
             // 여기서는 speciesData가 로드된 이후에만 그리도록 함
@@ -638,7 +594,7 @@ public class EnemyAI : MonoBehaviour, IHealth
             Gizmos.DrawLine(rayOrigin, rayOrigin + (Vector3)(rayDir * speciesData.raycastDistance));
             // -----------------------
             Gizmos.DrawSphere(rayOrigin, 0.04f);
-         }
+        }
     }
 
     public void TakeDamage(float damage) // <-- float으로 변경
@@ -648,14 +604,14 @@ public class EnemyAI : MonoBehaviour, IHealth
         // --- 1. HP 계산 (SpeciesData 연동) ---
         // '방어력' 규칙을 읽어와서 최종 데미지 계산
         float finalDamage = Mathf.Max(1, damage - speciesData.defense); // 최소 1 데미지
-    
+
         // 데미지를 정수로 변환 (체력은 보통 정수이므로)
-        currentHP -= Mathf.RoundToInt(finalDamage); 
+        currentHP -= Mathf.RoundToInt(finalDamage);
 
         // --- 2. 용기 계산 (SpeciesData 연동) 리더 효과와 연동---
-        if(currentLeader != null && !currentLeader.IsDeath)
+        if (currentLeader != null && !currentLeader.IsDeath)
         {
-            
+
         }
         else
         {
@@ -665,9 +621,9 @@ public class EnemyAI : MonoBehaviour, IHealth
         Debug.Log($"{gameObject.name} | HP: {currentHP}/{speciesData.maxHP} | 용기: {currentCourage} (+{allyCourageBonus}) / {speciesData.maxHP}");
         // --- 3. 상태 변경 (기존 로직) ---
         float effectiveCourage = currentCourage + allyCourageBonus;
-        if(speciesData.isLeader && speciesData.useBerserk && !isBerserkMode)
+        if (speciesData.isLeader && speciesData.useBerserk && !isBerserkMode)
         {
-            if(currentHP <= speciesData.maxHP * speciesData.berserkThreshold)
+            if (currentHP <= speciesData.maxHP * speciesData.berserkThreshold)
             {
                 ActivateBerserk();
             }
@@ -689,10 +645,10 @@ public class EnemyAI : MonoBehaviour, IHealth
         // 📌 여기서 경로를 직접 지정 (Assets/Resources/ 이후 경로)
         string speciesDataPath = "SpeciesData";  // ← 이 부분에서 경로 수정
         Debug.LogError($"[{gameObject.name}] LoadDataByTag() 호출 - 태그: {tag}");
-        
+
         SpeciesData[] allData = Resources.LoadAll<SpeciesData>(speciesDataPath);
         Debug.LogWarning($"[{gameObject.name}] 로드된 SpeciesData 총 {allData.Length}개");
-        
+
         for (int i = 0; i < allData.Length; i++)
         {
             Debug.LogWarning($"[{gameObject.name}] SpeciesData[{i}]: speciesTag = '{allData[i].speciesTag}'");
@@ -722,7 +678,7 @@ public class EnemyAI : MonoBehaviour, IHealth
             {
                 allyCount++;
 
-                if(col.TryGetComponent<EnemyAI>(out EnemyAI allyAI))
+                if (col.TryGetComponent<EnemyAI>(out EnemyAI allyAI))
                 {
                     // 리더 찾기
                     if (allyAI.speciesData.isLeader && !allyAI.IsDeath)
@@ -733,14 +689,14 @@ public class EnemyAI : MonoBehaviour, IHealth
             }
         }
         allyCount = Mathf.Min(allyCount, (int)speciesData.MaxPackBonusCount);
-        
+
         // 보너스 계산
         this.allyCourageBonus = allyCount * speciesData.courageBonusPerAlly;
 
-       
+
         float bonusSpeed = allyCount * speciesData.speedBonusPerAlly;
         this.currentMoveSpeed = speciesData.chaseSpeed + bonusSpeed;
-        if(currentLeader != null && currentLeader.isBerserkMode) //리더 광폭화 버프 적용
+        if (currentLeader != null && currentLeader.isBerserkMode) //리더 광폭화 버프 적용
         {
             this.currentMoveSpeed *= currentLeader.speciesData.berserkSpeedMultiplier;
             this.currentCooldown *= 0.5f; //리더가 광폭화 상태면 쿨타임 절반
@@ -757,7 +713,7 @@ public class EnemyAI : MonoBehaviour, IHealth
         Collider2D[] allies = Physics2D.OverlapCircleAll(transform.position, speciesData.alertRadius, enemyLayerMask);
 
         // 내가 현재 쫓고 있는 플레이어의 위치
-        Vector3 playerPos = player; 
+        Vector3 playerPos = player;
 
         foreach (var col in allies)
         {
@@ -769,7 +725,7 @@ public class EnemyAI : MonoBehaviour, IHealth
             if (col.TryGetComponent<EnemyAI>(out EnemyAI allyAI))
             {
                 // 'ChangeState' 대신, 'Alert' 함수를 호출하여 "타겟 위치"를 전달
-                allyAI.Alert(playerPos); 
+                allyAI.Alert(playerPos);
             }
         }
     }
@@ -811,7 +767,7 @@ public class EnemyAI : MonoBehaviour, IHealth
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player, speciesData.alertRadius, enemyLayerMask);
         List<EnemyAI> squad = new List<EnemyAI>();
-        
+
         foreach (var col in colliders)
         {
             if (col.TryGetComponent<EnemyAI>(out EnemyAI ai))
@@ -822,30 +778,31 @@ public class EnemyAI : MonoBehaviour, IHealth
         }
 
         // 정렬 로직 (떨림 방지 핵심) 
-        squad.Sort((a, b) => 
+        squad.Sort((a, b) =>
         {
             float distA = Vector2.Distance(a.transform.position, player);
             float distB = Vector2.Distance(b.transform.position, player);
-            
+
             // 거리가 '비슷하면' (0.5m 이내 차이) -> 거리 무시하고 ID로 고정!
             // (이렇게 해야 같은 줄에 있는 애들끼리 자리를 안 바꿈)
             if (Mathf.Abs(distA - distB) < 2.0f)
             {
                 return a.GetInstanceID().CompareTo(b.GetInstanceID());
             }
-            
+
             // 거리가 확실히 차이 나면 -> 거리순 정렬
             return distA.CompareTo(distB);
         });
 
         // 내 등수 저장
         mySquadRank = squad.IndexOf(this);
-    }    public Vector3 GetFlankingTargetPos()
+    }
+    public Vector3 GetFlankingTargetPos()
     {
         if (player == null) return transform.position;
 
         // --- [수정] 플레이어의 회전(Facing)을 무시하고, 절대적인 왼쪽/오른쪽 배정 ---
-        
+
         // 짝수 등수(0, 2, 4...) -> 무조건 플레이어 왼쪽 (-1)
         // 홀수 등수(1, 3, 5...) -> 무조건 플레이어 오른쪽 (+1)
         // (플레이어가 어디를 보든 상관없이 고정된 자리입니다)
@@ -854,7 +811,7 @@ public class EnemyAI : MonoBehaviour, IHealth
         // 거리 계산 (등수 / 2)
         // 0,1등: 1열 (flankSpacing 거리)
         // 2,3등: 2열 (flankSpacing + 1.5m) ...
-        int rowNumber = mySquadRank / 2; 
+        int rowNumber = mySquadRank / 2;
         float finalSpacing = speciesData.flankSpacing + (rowNumber * 0.5f); // 1.5f는 줄 간격
 
         // 목표 위치 계산
@@ -897,17 +854,17 @@ public class EnemyAI : MonoBehaviour, IHealth
         isMyGhostActive = enable;
 
         int enemyLayer = LayerMask.NameToLayer("Enemy");
-        
+
         if (enable)
         {
-            globalGhostCount++; 
+            globalGhostCount++;
             // 1명이라도 유령이면 -> 적끼리 충돌 끔
             if (globalGhostCount > 0 && enemyLayer != -1)
                 Physics2D.IgnoreLayerCollision(enemyLayer, enemyLayer, true);
         }
         else
         {
-            globalGhostCount--; 
+            globalGhostCount--;
             if (globalGhostCount < 0) globalGhostCount = 0;
 
             // 아무도 유령이 아니면 -> 적끼리 충돌 다시 켬
@@ -942,7 +899,7 @@ public class EnemyAI : MonoBehaviour, IHealth
 
         currentLeader = null; // 리더 참조 제거
         currentCourage = 0;   // 용기 바닥남
-        
+
         Debug.Log($"[{gameObject.name}] 리더 사망! 공포에 질려 도망칩니다!");
         ChangeState(fleeState); // 즉시 도주 상태로 전환
     }
@@ -962,7 +919,7 @@ public class EnemyAI : MonoBehaviour, IHealth
             {
                 // 부하들의 속도를 강제로 올림 (UpdateCourageBonus에서 덮어씌워질 수 있으므로, 
                 // 아예 BerserkMode 변수를 부하도 갖게 하거나, 버프 수치를 조작해야 함)
-                
+
                 // 여기서는 간단하게 '용기 보너스' 함수에 영향을 주는 방식으로 구현 추천
                 // 혹은 즉발적인 효과 부여:
                 minion.GetAnimator().speed = 2.0f; // 애니메이션 속도 2배
@@ -994,32 +951,32 @@ public class EnemyAI : MonoBehaviour, IHealth
         Debug.Log(logMessage);
     }
 
-    
+
     // <summary>
     /// 순찰용 절벽 감지 레이캐스트를 씬(Scene) 뷰에 시각화합니다.
     /// </summary>
     private void OnDrawGizmos()
     {
         // 1. speciesData가 없으면 그리지 않음
-        if (speciesData == null) return;
+        if (speciesData == null || !showDebugGizmos) return;
 
         // --- 2. 경보 범위 (Alert Radius) 시각화 ---
         // '무리 본능' 헤더가 있다고 가정
-        if (speciesData.alertRadius > 0) 
+        if (speciesData.alertRadius > 0)
         {
-            Gizmos.color = new Color(1f, 0.92f, 0.016f, 0.3f); // (반투명 노란색)
+            Gizmos.color = new Color(1f, 0.92f, 0.016f, 0.15f); // (반투명 노란색)
             Gizmos.DrawSphere(transform.position, speciesData.alertRadius);
         }
         // 3. 현재 방향 (오른쪽: 1, 왼쪽: -1)
         // (IdleState의 moveDir을 직접 알 수 없으므로, 현재 바라보는 방향을 사용)
-        int moveDir = (transform.localScale.x < 0f) ? -1 : 1; 
+        int moveDir = (transform.localScale.x < 0f) ? -1 : 1;
 
         // 4. 레이캐스트 시작점 계산
         Vector2 rayOrigin = new Vector2(
             transform.position.x + (speciesData.horizontalOffset * moveDir),
             transform.position.y - speciesData.verticalOffset
         );
-        
+
         // 5. 레이캐스트 방향 및 길이
         Vector2 rayDirection = Vector2.down;
         float distance = speciesData.raycastDistance;
@@ -1037,7 +994,7 @@ public class EnemyAI : MonoBehaviour, IHealth
         {
             Gizmos.color = Color.red; // 땅 감지 실패!
         }
-        
+
         Gizmos.DrawLine(rayOrigin, rayOrigin + (rayDirection * distance));
     }
     #region IHealth 구현

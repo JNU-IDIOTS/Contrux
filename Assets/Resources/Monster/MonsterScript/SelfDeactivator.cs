@@ -8,7 +8,7 @@ public class SelfDeactivator : MonoBehaviour
         DeactivateSelf();
     }
 
-    private void FixedUpdate()
+    private void OnEnable()
     {
         if (gameObject.activeSelf)
         {
@@ -24,7 +24,7 @@ public class SelfDeactivator : MonoBehaviour
     private IEnumerator SelfDeativate()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("´Ù½Ã ½ÇÇà");
+        Debug.Log("ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½");
         DeactivateSelf();
     }
 }
