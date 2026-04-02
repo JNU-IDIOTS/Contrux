@@ -1,0 +1,51 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="setting-title" src="project://database/Assets/New_Inventory/Features/Feature_Settings/Prefabs/UI_Component/setting-title.uxml?fileID=9197481963319205126&amp;guid=ba5bff3446bb045d2ab747d9a5df8ec0&amp;type=3#setting-title" />
+    <engine:Template name="setting-option" src="project://database/Assets/New_Inventory/Features/Feature_Settings/Prefabs/UI_Component/setting-option.uxml?fileID=9197481963319205126&amp;guid=95fcdcaa548774bc2afc5e90e32d722d&amp;type=3#setting-option" />
+    <Style src="project://database/Assets/New_Inventory/Core/Prefabs/Main_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=094055ee333a507408d3cf52e8d552ee&amp;type=3#Main_UI_Canvas" />
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Settings/Prefabs/Settings_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=ada1d76d03da944f39a07b80d058df57&amp;type=3#Settings_UI_Canvas" />
+    <engine:VisualElement name="container" class="inner" style="flex-grow: 1;">
+        <engine:VisualElement name="header" class="header" style="flex-grow: 1;">
+            <engine:Button name="header-left" class="header-item header-left" style="flex-grow: 1;">
+                <engine:VisualElement name="left-chev" class="left-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/left-chev.svg?fileID=7388822144124034973&amp;guid=ca0a8a43e913b4245bed1b75bc46b15e&amp;type=3#left-chev&quot;);" />
+            </engine:Button>
+            <engine:VisualElement name="header-middle" class="header-item header-middle" style="flex-grow: 1;">
+                <engine:Label text="Mock" name="header-title" class="header-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 24px; -unity-text-align: upper-center; letter-spacing: 3.2px; background-color: rgba(55, 55, 55, 0); color: rgba(254, 243, 198, 0.9);" />
+            </engine:VisualElement>
+            <engine:Button name="header-right" class="header-item header-right" style="flex-grow: 1;">
+                <engine:VisualElement name="right-chev" class="right-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/right-chev.svg?fileID=7388822144124034973&amp;guid=39ce389d8a1e1dd4da9179cb91c7da36&amp;type=3#right-chev&quot;);" />
+            </engine:Button>
+        </engine:VisualElement>
+        <engine:VisualElement name="inner-content" class="inner-content" style="flex-grow: 1;">
+            <engine:VisualElement name="setting-panel" class="setting-panel" style="flex-grow: 1;">
+                <engine:VisualElement name="settings-list" class="settings-list" style="flex-grow: 1;">
+                    <engine:VisualElement name="settings-category-element" class="settings-cateogry-element" style="flex-grow: 1;">
+                        <engine:Label text="MOCK" emoji-fallback-support="false" name="settings-list-title" class="settings-list-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); word-spacing: 0; letter-spacing: 3.2px;" />
+                    </engine:VisualElement>
+                    <engine:VisualElement name="settings-category-container" class="settings-category-container" style="flex-grow: 1;">
+                        <engine:Button text="Controls" class="setting-category-button" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 16px;" />
+                        <engine:Button text="Display" class="setting-category-button" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 16px;" />
+                        <engine:Button text="Sound/FX" name="Button" class="setting-category-button" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 16px;" />
+                        <engine:Button text="Exit" class="setting-category-button" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 16px;" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement name="settings-content" class="settings-content" style="flex-grow: 1;">
+                    <engine:ScrollView>
+                        <engine:Instance template="setting-title" name="setting-title">
+                            <engine:Instance template="setting-option" />
+                        </engine:Instance>
+                        <engine:VisualElement class="setting-option" style="flex-grow: 1;">
+                            <engine:Label text="Label" class="setting-detail" />
+                            <engine:VisualElement class="keybinding" style="flex-grow: 1;">
+                                <engine:Label text="Label" class="keybinding-title" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:ScrollView>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+    <engine:VisualElement class="setting-check" style="flex-grow: 1;">
+        <engine:Button text="reset to default" class="setting-reset" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); letter-spacing: 2px;" />
+        <engine:Button text="apply changes" class="setting-save" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); letter-spacing: 2px;" />
+    </engine:VisualElement>
+</engine:UXML>
