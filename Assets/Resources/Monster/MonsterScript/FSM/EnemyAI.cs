@@ -62,10 +62,6 @@ public class EnemyAI : MonoBehaviour, IHealth
     public float cooldown = 1.5f;
     public bool canAttack = false;
 
-
-    [Header("체력")]
-    //[SerializeField] public int maxHP = 100; 삭제 
-
     [Header("백스텝")]
     [SerializeField] private float BackStepForce = 1f;
 
@@ -173,7 +169,7 @@ public class EnemyAI : MonoBehaviour, IHealth
             Debug.LogError($"[{gameObject.name}] ❌ attackVisualizer 에러: {e.Message}\n{e.StackTrace}");
         }
 
-        Debug.LogWarning($"[{gameObject.name}] Awake() 완료! activeSelf={gameObject.activeSelf}, enabled={enabled}");
+        //Debug.LogWarning($"[{gameObject.name}] Awake() 완료! activeSelf={gameObject.activeSelf}, enabled={enabled}");
     }
 
 
@@ -541,11 +537,15 @@ public class EnemyAI : MonoBehaviour, IHealth
 
     private void OnDrawGizmosSelected()
     {
-        if (speciesData == null || !showDebugGizmos)
+        // 1. Awake() 대신 진짜 필요한 데이터 로드 함수만 호출
+        if (speciesData == null)
         {
-            Awake(); // Awake를 강제로 호출하여, 기본값을 사용하게 함
-            // 여기서는 speciesData가 로드된 이후에만 그리도록 함
+            LoadDataByTag(gameObject.tag);
         }
+
+        // 데이터 로드 실패했거나, 기즈모 보기 설정이 꺼져있으면 즉시 종료
+        if (speciesData == null || !showDebugGizmos) return;
+
         // 플레이어 방향선
         if (_playerTransform != null)
         {
@@ -561,26 +561,24 @@ public class EnemyAI : MonoBehaviour, IHealth
             Gizmos.DrawWireSphere(attackPoint.position, attackRangeradius);
         }
 
-        // DetectionArea 범위 (자식 CircleCollider2D 기준)
-        var det = transform.Find("DetectionArea");
-        if (det != null)
+        // 2. 완벽하게 추가한 탐지 범위 시각화
+        if (speciesData != null)
         {
-            var cc = det.GetComponent<CircleCollider2D>();
-            if (cc != null)
-            {
-                Gizmos.color = new Color(1f, 0.5f, 0f, 0.8f);
-                Vector3 c = cc.transform.TransformPoint(cc.offset);
-                Gizmos.DrawWireSphere(c, cc.radius);
-            }
+            // 기본 탐지 범위 (보라색)
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(transform.position, speciesData.detectionRadius);
+
+            // 추적 상실 범위 (파란색)
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, speciesData.loseDetectionRadius);
         }
 
         // 낙하 방지 레이
-        if (speciesData != null) // 데이터가 있을 때만 그림
+        if (speciesData != null)
         {
             int facing = (transform.localScale.x < 0f) ? 1 : -1;
 
             Vector3 rayOrigin = new Vector3(
-                // --- ✨ 추가/수정 (11) ---
                 transform.position.x + (speciesData.horizontalOffset * facing),
                 transform.position.y - speciesData.verticalOffset,
                 transform.position.z
@@ -592,7 +590,6 @@ public class EnemyAI : MonoBehaviour, IHealth
 
             Gizmos.color = hit.collider ? Color.green : Color.red;
             Gizmos.DrawLine(rayOrigin, rayOrigin + (Vector3)(rayDir * speciesData.raycastDistance));
-            // -----------------------
             Gizmos.DrawSphere(rayOrigin, 0.04f);
         }
     }
@@ -644,23 +641,23 @@ public class EnemyAI : MonoBehaviour, IHealth
     {
         // 📌 여기서 경로를 직접 지정 (Assets/Resources/ 이후 경로)
         string speciesDataPath = "SpeciesData";  // ← 이 부분에서 경로 수정
-        Debug.LogError($"[{gameObject.name}] LoadDataByTag() 호출 - 태그: {tag}");
+        //Debug.LogError($"[{gameObject.name}] LoadDataByTag() 호출 - 태그: {tag}");
 
         SpeciesData[] allData = Resources.LoadAll<SpeciesData>(speciesDataPath);
-        Debug.LogWarning($"[{gameObject.name}] 로드된 SpeciesData 총 {allData.Length}개");
+        //Debug.LogWarning($"[{gameObject.name}] 로드된 SpeciesData 총 {allData.Length}개");
 
         for (int i = 0; i < allData.Length; i++)
         {
-            Debug.LogWarning($"[{gameObject.name}] SpeciesData[{i}]: speciesTag = '{allData[i].speciesTag}'");
+            //Debug.LogWarning($"[{gameObject.name}] SpeciesData[{i}]: speciesTag = '{allData[i].speciesTag}'");
             if (allData[i].speciesTag == tag)
             {
                 speciesData = allData[i];
-                Debug.Log($"[{gameObject.name}] ✓ '{speciesData.speciesTag}' 데이터 로드 성공!");
+                //Debug.Log($"[{gameObject.name}] ✓ '{speciesData.speciesTag}' 데이터 로드 성공!");
                 return;
             }
         }
 
-        Debug.LogError($"[{gameObject.name}] ✗ 실패! 태그 '{tag}'와 매칭되는 SpeciesData가 없습니다!");
+        //Debug.LogError($"[{gameObject.name}] ✗ 실패! 태그 '{tag}'와 매칭되는 SpeciesData가 없습니다!");
     }
 
     private void UpdateCourageBonus()
@@ -707,8 +704,14 @@ public class EnemyAI : MonoBehaviour, IHealth
 
         if (allyCount > 0) Debug.Log($"[무리 버프] 속도: {currentMoveSpeed}, 쿨타임: {currentCooldown}");
     }
-    public void AlertNearbyAllies()
+    // isChainReaction: 남의 소리를 듣고 릴레이로 전파하는 중인지 여부
+    public void AlertNearbyAllies(bool isChainReaction = false)
     {
+        // 리더가 없는데 연쇄 반응으로 들어온 경보면 전파 차단
+        if (isChainReaction && currentLeader == null && !speciesData.isLeader)
+        {
+            return;
+        }
         // 'alertRadius' 범위 안의 "Enemy" 레이어를 가진 모든 콜라이더를 찾음
         Collider2D[] allies = Physics2D.OverlapCircleAll(transform.position, speciesData.alertRadius, enemyLayerMask);
 

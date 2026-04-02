@@ -346,7 +346,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196109561}
   m_CullTransparentMesh: 1
---- !u!21 &384113849
+--- !u!21 &288118402
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 384113849}
+  - {fileID: 793241645}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1030,6 +1030,47 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -1}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!21 &793241645
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default (Instance)
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 0, b: 0, a: 0.3}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &847860618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1414,6 @@ GameObject:
   - component: {fileID: 1145099320}
   - component: {fileID: 1145099319}
   - component: {fileID: 1145099318}
-  - component: {fileID: 1145099321}
   m_Layer: 6
   m_Name: Square (1)
   m_TagString: Wolf
@@ -1497,57 +1537,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1145099321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145099317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4851faa6eded9f241b8655373f61bad1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCourage: 5
-  hasDealtDamage: 0
-  justAlerted: 0
-  lastKnownPos: {x: 0, y: 0, z: 0}
-  playerInRange: 0
-  playerAttackable: 0
-  attackRange: 2
-  currentLeader: {fileID: 0}
-  attackVisualizer: {fileID: 0}
-  player: {x: 0, y: 0, z: 0}
-  moveSpeed: 0
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  attackRangeradius: 2
-  attackPoint: {fileID: 0}
-  AttackTimer: 0
-  cooldown: 3.5
-  canAttack: 0
-  BackStepForce: 1
-  minKnockbackForce: 0.2
-  maxKnockbackForce: 0.4
-  minKnockbackUpwardForce: 0.2
-  maxKnockbackUpwardForce: 0.4
-  BusterChasingTime: 0
-  BusterAttackSpeed: 0
-  waitScore: 0
-  currentHP: 4545454
-  IsDeath: 0
-  IsAttacking: 0
-  IsMoving: 0
-  attacktimer: 0
-  steampunk: 0
-  magic: 0
-  select: 0
-  showDebugGizmos: 0
-  rb: {fileID: 0}
-  attackAreaObject: {fileID: 0}
-  dwarfbuster: {fileID: 0}
 --- !u!1 &1215678593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,7 +1866,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1521976452}
+  - {fileID: 288118402}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1919,47 +1908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12947ae755cc6a47be1968601129b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!21 &1521976452
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default (Instance)
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 0.3}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &1558131552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,48 +2303,6 @@ MonoBehaviour:
   SteamCoolSpeedMult: 1
   BonusDashCount: 0
   IsOverheatEnhanced: 0
---- !u!114 &177377278881053477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5879133131405559803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e9fc8eaec9f4b643be0e0e7ee087bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 50
-  currentHP: 0
-  IsDead: 0
-  healthBarPrefab: {fileID: 0}
-  worldSpaceCanvas: {fileID: 0}
-  healthBarOffset: {x: 0, y: 1.5, z: 0}
-  healthBarUI: {fileID: 0}
-  enemy: {fileID: 0}
-  ani: {fileID: 0}
---- !u!114 &177377279719542909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5879133131640810659}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e9fc8eaec9f4b643be0e0e7ee087bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 50
-  currentHP: 0
-  IsDead: 0
-  healthBarPrefab: {fileID: 0}
-  worldSpaceCanvas: {fileID: 0}
-  healthBarOffset: {x: 0, y: 1.5, z: 0}
-  healthBarUI: {fileID: 0}
-  enemy: {fileID: 0}
-  ani: {fileID: 0}
 --- !u!4 &943377285176941691
 Transform:
   m_ObjectHideFlags: 0
@@ -2939,11 +2845,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6039304984241565651, guid: e1df07cac10927e4da589e82505e91bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4
+      value: 5.49
       objectReference: {fileID: 0}
     - target: {fileID: 6039304984241565651, guid: e1df07cac10927e4da589e82505e91bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.43
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: 6039304984241565651, guid: e1df07cac10927e4da589e82505e91bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2987,7 +2893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701223910321995387, guid: e1df07cac10927e4da589e82505e91bf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6701223910321995387, guid: e1df07cac10927e4da589e82505e91bf, type: 3}
       propertyPath: m_TagString
@@ -3216,7 +3122,6 @@ GameObject:
   - component: {fileID: 5040527668202358876}
   - component: {fileID: 4279036961307365791}
   - component: {fileID: 2310010966710288742}
-  - component: {fileID: 177377278881053477}
   - component: {fileID: 5111607253086387344}
   - component: {fileID: 8551714696453483129}
   m_Layer: 3
@@ -3239,7 +3144,6 @@ GameObject:
   - component: {fileID: 5040527668370236164}
   - component: {fileID: 4279036961072134855}
   - component: {fileID: 2310010965938186814}
-  - component: {fileID: 177377279719542909}
   - component: {fileID: 5111607253253789640}
   - component: {fileID: 8551714696621605153}
   m_Layer: 3
@@ -3362,7 +3266,7 @@ MonoBehaviour:
   moveSpeed: 1
   playerLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 512
   attackRangeradius: 2
   attackPoint: {fileID: 4443499035449986965}
   AttackTimer: 0
@@ -3427,7 +3331,7 @@ MonoBehaviour:
   BusterChasingTime: 0
   BusterAttackSpeed: 0
   waitScore: 0
-  currentHP: 4545454
+  currentHP: 100
   IsDeath: 0
   IsAttacking: 0
   IsMoving: 0

@@ -21,7 +21,7 @@ public class AttackState : IEnemyState
         enemy.PrepareForAttack();
         enemy.GetRigidbody().linearVelocity = new Vector2(0, enemy.GetRigidbody().linearVelocity.y);
         Debug.Log("�����غ���");
-        if(ani != null)
+        if (ani != null)
         {
             ani.SetMoving(false);
         }
@@ -31,12 +31,9 @@ public class AttackState : IEnemyState
     {
         if (enemy.canAttack)
         {
-            /*if (enemy.CompareTag("DwarfBuster")) BusterAttack();
-            else if(enemy.CompareTag("Wolf")) WolfAttack();
-            else ExecuteAttack(); 조건 분기 삭제*/
-            if(!enemy.justAlerted)
+            if (!enemy.justAlerted)
             {
-                enemy.AlertNearbyAllies(); // 경보 발령
+                enemy.AlertNearbyAllies(false); // 내가 직접 패는 중이니까 최초 발령자로 취급
             }
             enemy.StartCoroutine(AttackRoutine());
             // '데이터'에 저장된 공격 타입으로 분기
@@ -77,7 +74,7 @@ public class AttackState : IEnemyState
                 // SAttack (특수 공격)
                 ani.SAttack();
                 // 쿨타임도 데이터에서 읽어옴 (SAttack은 1.5배)
-                enemy.cooldown = enemy.speciesData.attackCooldown * 1.5f; 
+                enemy.cooldown = enemy.speciesData.attackCooldown * 1.5f;
             }
             else
             {
@@ -96,7 +93,7 @@ public class AttackState : IEnemyState
     private void BusterAttack()
     {
         enemy.canAttack = false;
-        
+
         // '공격성'이 높을수록 돌진(SAttack) 확률 증가
         float roll = Random.Range(0f, 10f);
 
@@ -156,7 +153,7 @@ public class AttackState : IEnemyState
     }
     public void Exit()
     {
-        if(enemy.attackVisualizer != null)
+        if (enemy.attackVisualizer != null)
         {
             enemy.attackVisualizer.Hide();
         }

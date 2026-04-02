@@ -24,8 +24,8 @@ MonoBehaviour:
   attackCooldown: 4
   patrolSpeed: 2
   chaseSpeed: 4
-  detectionRadius: 8
-  loseDetectionRadius: 10
+  detectionRadius: 7
+  loseDetectionRadius: 11
   raycastDistance: 0.65
   horizontalOffset: 0.75
   verticalOffset: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
   defense: 1
   courageDamagePerHit: 2
   healthBarOffset: {x: 0, y: -0.9, z: 0}
-  alertRadius: 15
+  alertRadius: 10
   allyCheckRadius: 5
   courageBonusPerAlly: 0.2
   speedBonusPerAlly: 0.5

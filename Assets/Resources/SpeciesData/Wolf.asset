@@ -15,7 +15,7 @@ MonoBehaviour:
   speciesTag: Wolf
   maxCourage: 5
   aggression: 5
-  maxHP: 4545454
+  maxHP: 100
   attackRange: 2
   attackAngle: 90
   indicatorColor: {r: 1, g: 0, b: 0, a: 0.3}
@@ -24,8 +24,8 @@ MonoBehaviour:
   attackCooldown: 3.5
   patrolSpeed: 2
   chaseSpeed: 4
-  detectionRadius: 8
-  loseDetectionRadius: 10
+  detectionRadius: 5
+  loseDetectionRadius: 8
   raycastDistance: 0.65
   horizontalOffset: 0.75
   verticalOffset: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
   defense: 1
   courageDamagePerHit: 2
   healthBarOffset: {x: 0, y: -0.9, z: 0}
-  alertRadius: 15
+  alertRadius: 5
   allyCheckRadius: 5
   courageBonusPerAlly: 0.2
   speedBonusPerAlly: 0.5
