@@ -30,11 +30,11 @@ public class IdleState : IEnemyState
         // --- 3. Enter 함수 정리 ---
         groundLayer = LayerMask.NameToLayer("Ground");
         floatGroundLayer = LayerMask.NameToLayer("FloatGround");
-        
+
         movePhaseTimer = 0f;
         movePhaseDuration = Random.Range(1f, 2f);  // 첫 행동 결정까지의 시간
         moveDir = 0;
-        
+
         enemy.StopMoving();
         ani.SetMoving(false);
     }
@@ -83,7 +83,7 @@ public class IdleState : IEnemyState
             movePhaseDuration = Random.Range(1.5f, 4.0f); // 다음 결정까지 1.5~4초
 
             // 3. 다음 행동 결정 (이동 or 정지)
-            float decision = Random.value; 
+            float decision = Random.value;
             if (decision < 0.4f)
             {
                 moveDir = 0; // 40% 확률로 '정지'
@@ -116,7 +116,7 @@ public class IdleState : IEnemyState
             float distance = enemy.speciesData.raycastDistance;
 
             RaycastHit2D[] hits = Physics2D.RaycastAll(rayOrigin, rayDirection, distance, 1 << groundLayer | 1 << floatGroundLayer); // ★수정★ 레이어마스크 사용
-            
+
             if (hits.Length > 0)
             {
                 onGround = true;
@@ -131,7 +131,7 @@ public class IdleState : IEnemyState
                 movePhaseDuration = Random.Range(1f, 2f); // ★수정★ 멈춰서 생각할 시간 (1~2초)
             }
         }
-        
+
         // 5. 'moveDir' 값에 따라 '행동'
         if (moveDir == 0)
         {
@@ -148,9 +148,9 @@ public class IdleState : IEnemyState
             enemy.GetRigidbody().linearVelocity = new Vector2(moveDir * enemyspeed, enemy.GetRigidbody().linearVelocity.y);
             ani.SetMoving(true);
             enemy.FaceDirection(moveDir);
-            
+
             // ★디버그★ (이동이 실행되는지 확인)
-            // Debug.Log($"[IdleState] 이동 중... 방향: {moveDir}, 속도: {enemyspeed}");
+            Debug.Log($"[IdleState] 이동 중... 방향: {moveDir}, 속도: {enemyspeed}");
         }
     }
 

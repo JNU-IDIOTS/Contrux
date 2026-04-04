@@ -97,7 +97,6 @@ public class EnemyAI : MonoBehaviour, IHealth
     private Coroutine cooldownCoroutine;  // 쿨타임을 위한 코루틴
     private MonsterAnimatorController ani;
     public GameObject attackAreaObject;
-    private DetectionArea detection;
     private DwarfBuster_SAttack_Collider hitboxScript;
     private ObjectActive objectactive;
     public DwarfBusterBullet dwarfbuster;
@@ -135,7 +134,6 @@ public class EnemyAI : MonoBehaviour, IHealth
         attackState = new AttackState(this, ani);
         fleeState = new FleeState(this, ani); //도주 상태
         searchState = new SearchState(this, ani); //수색 상태
-        detection = GetComponent<DetectionArea>();
         objectactive = GetComponent<ObjectActive>();
         dwarfbuster = GetComponent<DwarfBusterBullet>();
         myCollider = GetComponent<Collider2D>(); //자신의 콜라이더 가져오기
@@ -460,16 +458,14 @@ public class EnemyAI : MonoBehaviour, IHealth
     // IsPlayerAttackable
     public bool IsPlayerAttackable()
     {
-        if (attackPoint == null || IsDeath)
-            return false;
+        // 플레이어 정보가 없거나 죽었으면 컷
+        if (player == null || IsDeath) return false;
 
-        // attackPoint(GameObject 자식)에 붙은 Collider2D 가져오기
-        Collider2D col = attackPoint.GetComponent<Collider2D>();
-        if (col == null)
-            return false;
-        bool isplayerattackable = col.IsTouchingLayers(playerLayer);
-        // col 모양 그대로 playerLayer와 겹치는지 체크
-        return isplayerattackable;
+        // 플레이어와의 거리를 수학적으로 계산
+        float distanceToPlayer = Vector2.Distance(transform.position, player);
+
+        // 그 거리가 종족 데이터의 사거리(attackRange)보다 짧거나 같으면 공격 가능!
+        return distanceToPlayer <= speciesData.attackRange;
     }
 
     // Ground Check 추가 (점프 시 사용)
@@ -555,11 +551,8 @@ public class EnemyAI : MonoBehaviour, IHealth
         }
 
         // 공격 범위
-        if (attackPoint != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPoint.position, attackRangeradius);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, speciesData.attackRange);
 
         // 2. 완벽하게 추가한 탐지 범위 시각화
         if (speciesData != null)
