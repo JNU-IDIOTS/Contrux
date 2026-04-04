@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 
-public class EnemyAI : MonoBehaviour, IHealth
+public class EnemyAI : MonoBehaviour
 {
     public IEnemyState currentState;
     public IEnemyState idleState, chaseState, attackState, fleeState, searchState; //모드 변수 선언.
@@ -993,10 +993,6 @@ public class EnemyAI : MonoBehaviour, IHealth
 
         Gizmos.DrawLine(rayOrigin, rayOrigin + (rayDirection * distance));
     }
-    #region IHealth 구현
-    // UI가 이 값을 읽어갑니다
-    float IHealth.currentHP => this.currentHP;
-    float IHealth.maxHP => (speciesData != null) ? this.speciesData.maxHP : 100; // (널 참조 방지)
-    #endregion
+
 }
 

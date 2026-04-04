@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MagicGoblinAI : MonoBehaviour, IHealth
+public class MagicGoblinAI : MonoBehaviour
 {
     [Header("=== Health Settings ===")]
     [Tooltip("최대 체력")] public int maxHP = 5;
@@ -32,9 +32,6 @@ public class MagicGoblinAI : MonoBehaviour, IHealth
     // 플레이어 추적
     private Transform playerTransform;
 
-    // UI
-    private EnemyHealthBarUI healthBarUI;
-
     // 애니메이터 컨트롤러
     private MonsterAnimatorController ani;
 
@@ -62,24 +59,13 @@ public class MagicGoblinAI : MonoBehaviour, IHealth
         }
 
         var hbGO = Instantiate(healthBarPrefab, healthBarCanvas.transform);
-        healthBarUI = hbGO.GetComponent<EnemyHealthBarUI>();
-        if (healthBarUI == null)
-        {
-            Debug.LogError("[MagicGoblinAI] healthBarPrefab에 EnemyHealthBarUI가 없습니다.", this);
-            return;
-        }
-        healthBarUI.SetTarget(this, transform, healthBarOffset);
-        healthBarUI.UpdateHealthUI();
     }
 
     private void OnDisable()
     {
-        if (healthBarUI != null)
-            Destroy(healthBarUI.gameObject);
+
     }
 
-    float IHealth.currentHP => currentHP;
-    float IHealth.maxHP => maxHP;
 
     public void TakeDamage(float damage)
     {
@@ -87,7 +73,6 @@ public class MagicGoblinAI : MonoBehaviour, IHealth
 
         lastDamageTime = Time.time;
         currentHP -= damage;
-        healthBarUI?.UpdateHealthUI();
 
         if (currentHP <= 0) Die();
     }
@@ -97,7 +82,6 @@ public class MagicGoblinAI : MonoBehaviour, IHealth
         isDead = true;
         StopAllCoroutines();
         this.enabled = false;
-        if (healthBarUI != null) Destroy(healthBarUI.gameObject);
         Destroy(gameObject, 1f);
     }
 
