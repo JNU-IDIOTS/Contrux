@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.map-container {
+  margin: 46px 60px;
+  background-color: #141210;
+  border-radius: 18px;
+  position: relative;
+}
+
+.zoom-indicator {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 92px;
+  height: 30px;
+  border-radius: 8px;
+  border-color: rgba(87, 83, 77, 0.5);
+  border-width: 1px;
+  background-color: rgba(41, 37, 36, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 8px;
+}
+
+.zoom-indicator-icon {
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  background-size: contain;
+}
+
+.zoom-indicator-text {
+  font-size: 12px;
+  color: #d4a017;
+  /* height: 24px; */
+  /* -unity-text-align: middle-center; */
+}
