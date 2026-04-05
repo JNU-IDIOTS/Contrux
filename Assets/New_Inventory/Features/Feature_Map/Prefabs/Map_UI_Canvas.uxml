@@ -36,7 +36,17 @@
                                     <engine:Label text="+ / -" name="key-indicator-text" />
                                 </engine:VisualElement>
                             </engine:VisualElement>
-                            <engine:Label text="Label" name="key-role-text" />
+                            <engine:Label text="확대/축소" name="key-role-text" />
+                        </engine:VisualElement>
+                        <engine:VisualElement template="Key_Guide_List_Item">
+                            <engine:VisualElement name="key-guide-list-item" style="flex-grow: 1;">
+                                <engine:VisualElement name="key-indicator-container" style="flex-grow: 1;">
+                                    <engine:VisualElement name="key-indicator" style="flex-grow: 1;">
+                                        <engine:Label text="Q" name="key-indicator-text" />
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                                <engine:Label text="PING 찍기&#10;" name="key-role-text" />
+                            </engine:VisualElement>
                         </engine:VisualElement>
                     </engine:VisualElement>
                 </engine:VisualElement>

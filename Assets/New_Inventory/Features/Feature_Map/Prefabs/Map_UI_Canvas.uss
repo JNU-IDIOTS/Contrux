@@ -185,4 +185,5 @@
 #key-role-text {
   font-size: 20px;
   color: #c8a84e;
+  letter-spacing: 24px;
 }
