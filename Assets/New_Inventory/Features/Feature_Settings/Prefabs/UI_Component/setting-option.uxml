@@ -1,9 +1,9 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/New_Inventory/Features/Feature_Settings/Prefabs/Settings_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=ada1d76d03da944f39a07b80d058df57&amp;type=3#Settings_UI_Canvas" />
     <engine:VisualElement name="setting-option" class="setting-option" style="flex-grow: 1;">
-        <engine:Label text="Label" name="setting-detail" class="setting-detail" />
+        <engine:Label text="Label" name="setting-detail" class="setting-detail" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Inter/Inter_18pt-Regular.ttf?fileID=12800000&amp;guid=9345863f5684940409d1c15c6bc36392&amp;type=3#Inter_18pt-Regular&quot;); font-size: 12px; letter-spacing: 2.4px;" />
         <engine:VisualElement name="keybinding" class="keybinding" style="flex-grow: 1;">
-            <engine:Label text="Label" name="keybinding-title" class="keybinding-title" />
+            <engine:Label text="Label" name="keybinding-title" class="keybinding-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); letter-spacing: 1px;" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

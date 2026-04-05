@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="panel-corners-container" style="flex-grow: 1;">
+        <engine:VisualElement name="corner-topleft" class="panel-corners top-left" style="flex-grow: 1;" />
+        <engine:VisualElement name="corner-topright" class="panel-corners top-right" style="flex-grow: 1;" />
+        <engine:VisualElement name="corner-bottomleft" class="panel-corners bottom-left" style="flex-grow: 1;" />
+        <engine:VisualElement name="corner-bottomright" class="panel-corners bottom-right" style="flex-grow: 1;" />
+    </engine:VisualElement>
+</engine:UXML>

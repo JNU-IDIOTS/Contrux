@@ -1,0 +1,85 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Inventory/Prefabs/Inventory_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=e7660b65b5b894c53baa5f837eb609ae&amp;type=3#Inventory_UI_Canvas" />
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Inventory/Prefabs/Panel_Corners_Container.uss?fileID=7433441132597879392&amp;guid=0016756c740794750bdc5b0c81499d5e&amp;type=3#Panel_Corners_Container" />
+    <engine:VisualElement name="container" class="inner" style="flex-grow: 1;">
+        <engine:VisualElement name="header" class="header" style="flex-grow: 1;">
+            <engine:Button name="header-left" class="header-item header-left" style="flex-grow: 1;">
+                <engine:VisualElement name="left-chev" class="left-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/left-chev.svg?fileID=7388822144124034973&amp;guid=ca0a8a43e913b4245bed1b75bc46b15e&amp;type=3#left-chev&quot;);" />
+            </engine:Button>
+            <engine:VisualElement name="header-middle" class="header-item header-middle" style="flex-grow: 1;">
+                <engine:Label text="Setting" name="header-title" class="header-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 24px; -unity-text-align: upper-center; letter-spacing: 3.2px; background-color: rgba(55, 55, 55, 0); color: rgba(254, 243, 198, 0.9);" />
+            </engine:VisualElement>
+            <engine:Button name="header-right" class="header-item header-right" style="flex-grow: 1;">
+                <engine:VisualElement name="right-chev" class="right-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/right-chev.svg?fileID=7388822144124034973&amp;guid=39ce389d8a1e1dd4da9179cb91c7da36&amp;type=3#right-chev&quot;);" />
+            </engine:Button>
+        </engine:VisualElement>
+        <engine:VisualElement name="inner-content" class="inner-content" style="flex-grow: 1;">
+            <engine:VisualElement name="general" class="General" style="flex-grow: 1;">
+                <engine:VisualElement name="general-left" class="General-left" style="flex-grow: 1;">
+                    <engine:VisualElement name="weapon" class="General-Panel weapon" style="flex-grow: 1;">
+                        <engine:VisualElement name="weapon-top" class="weapon-top" style="flex-grow: 1;">
+                            <engine:Label text="Weapon" name="weapon-title" class="weapon-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 24px;" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="panel-corners-container" style="flex-grow: 1;">
+                            <engine:VisualElement name="corner-topleft" class="panel-corners top-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-topright" class="panel-corners top-right" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomleft" class="panel-corners bottom-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomright" class="panel-corners bottom-right" style="flex-grow: 1;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="Inventory" class="General-Panel" style="flex-grow: 1;">
+                        <engine:VisualElement name="weapon-top" class="weapon-top" style="flex-grow: 1;">
+                            <engine:Label text="Inventory" class="weapon-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 24px;" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="inventory-bottom" class="inventory-bottom" style="flex-grow: 1;">
+                            <engine:VisualElement name="item-grid" class="inventory-grid" style="flex-grow: 1;">
+                                <engine:VisualElement name="slot_1" class="slot" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_4" class="slot" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_7" class="slot last" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_2" class="slot" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_5" class="slot" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_8" class="slot last" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_3" class="slot last-col" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_6" class="slot last-col" style="flex-grow: 1;" />
+                                <engine:VisualElement name="slot_9" class="slot last last-col" style="flex-grow: 1;" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                        <engine:VisualElement name="panel-corners-container" style="flex-grow: 1;">
+                            <engine:VisualElement name="corner-topleft" class="panel-corners top-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-topright" class="panel-corners top-right" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomleft" class="panel-corners bottom-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomright" class="panel-corners bottom-right" style="flex-grow: 1;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement name="general-right" class="general-right" style="flex-grow: 1;">
+                    <engine:VisualElement name="description" class="General-Panel Description" style="flex-grow: 1;">
+                        <engine:VisualElement name="weapon-top" class="weapon-top" style="flex-grow: 1;">
+                            <engine:Label text="Description" name="weapon-title" class="weapon-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 24px;" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="description-content" class="description-content" style="flex-grow: 1;">
+                            <engine:Label text="증기 동력으로 작동하는 정밀 활. 황동 기어가 장전 속도를 높여준다." name="description-context" class="description-context" style="font-size: 16px; -unity-font-definition: url(&quot;project://database/Assets/Font/Inter/Inter_28pt-Regular.ttf?fileID=12800000&amp;guid=9789493dad86b4d11a42371320775099&amp;type=3#Inter_28pt-Regular&quot;);" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="panel-corners-container" style="flex-grow: 1;">
+                            <engine:VisualElement name="corner-topleft" class="panel-corners top-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-topright" class="panel-corners top-right" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomleft" class="panel-corners bottom-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomright" class="panel-corners bottom-right" style="flex-grow: 1;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement name="stat" class="General-Panel" style="flex-grow: 1;">
+                        <engine:VisualElement name="weapon-top" class="weapon-top" style="flex-grow: 1;">
+                            <engine:Label text="Stat" name="weapon-title" class="weapon-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;); font-size: 24px;" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="panel-corners-container" style="flex-grow: 1;">
+                            <engine:VisualElement name="corner-topleft" class="panel-corners top-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-topright" class="panel-corners top-right" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomleft" class="panel-corners bottom-left" style="flex-grow: 1;" />
+                            <engine:VisualElement name="corner-bottomright" class="panel-corners bottom-right" style="flex-grow: 1;" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

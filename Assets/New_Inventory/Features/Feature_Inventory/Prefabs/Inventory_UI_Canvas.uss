@@ -1,0 +1,165 @@
+.inner {
+  margin: 50px 55px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-height: 54px;
+  height: 54px;
+  border-color: red;
+  border-width: 1px;
+  margin-bottom: 20px;
+}
+
+.header-item {
+  height: 100%;
+  padding: 0 30px;
+  margin-right: 16px;
+  border-radius: 14px;
+  background-color: #1c1917;
+  border-width: 1px;
+  border-color: rgba(87, 83, 77, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-left,
+.header-right {
+  max-width: 54px;
+  width: 54px;
+  padding: 14px 20px;
+}
+
+.header-right {
+  margin-right: 0;
+}
+
+.header-middle {
+  max-width: 224px;
+  width: 224px;
+}
+
+.inner-content {
+  display : flex;
+  flex-direction : row;
+  background-color: #1c1917;
+  border-radius: 12px;
+  padding :45.5px 59px;
+}
+
+.chev {
+  width: auto;
+  min-width: 10px;
+  height: 100%;
+  max-height: 100%;
+  -unity-background-scale-mode: scale-to-fit;
+}
+
+.header-title {
+  font-size: 18px;
+}
+
+.General{
+  display : flex;
+  flex-direction : row;
+}
+.General-left{
+  display : flex;
+  flex-grow : 0.43;
+  flex-basis : 800px;
+  margin-right : 40px;
+  
+}
+.general-right{
+  display : flex;
+  flex-grow : 0.5;
+  flex-basis : 840px;
+  flex-direction : row;
+
+}
+.General-Panel{
+  flex-grow : 0.5;
+  flex-basis : 412px;
+  border-radius : 14px;
+  background-color : rgba(28,25,23,0.6);
+  border-color :rgba(87,83,77,0.8);
+  border-width : 1px;
+}
+.General-Panel.weapon{
+  min-width : 800px;
+  margin-bottom : 30px;
+  position: relative;
+  
+}
+.General-Panel.Description{
+  margin-right : 40px;
+}
+.weapon-top{
+  max-height : 58px;
+  padding : 12px 20px;
+  color : rgba(254,230,133,0.8);
+  border-bottom-width :1px;
+  border-color : rgba(68,64,59,0.5); 
+}
+.unity-label.weapon-title{
+  margin-left : 20px;
+  margin-top :12px;
+  color : rgba(254,230,133,0.8);
+  padding : 0px;
+  margin : 0px;
+}
+.General-panel.inventory{
+  min-height : 412px;
+}
+.inventory-bottom{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  padding : 24px 0px;
+}
+.inventory-grid{
+  display : flex;
+  flex-wrap : wrap;
+
+  min-height : 280px;
+  min-width : 280px;
+  max-width : 280px;
+  max-height : 280px;
+}
+.slot {
+  width: 80px; 
+  height : 80px;
+  flex-shrink : 0;
+
+  background-color : rgba(41,37,36,0.8);
+  border-radius : 10px;
+  border-width : 1px;
+  border-color : #FFFFFF;
+
+  margin-right : 20px;
+  margin-bottom : 20px;
+  padding : 16px;
+
+}
+.slot.last-col{
+  margin-right : 0;
+}
+.slot.last{
+  margin-bottom : 0;
+}
+
+.description-content{
+  padding : 20px 24px;
+}
+.unity-label.description-context{
+  white-space : normal;
+  color : #A6A09B;
+  padding : 0px;
+  margin : 0px;
+}
+
