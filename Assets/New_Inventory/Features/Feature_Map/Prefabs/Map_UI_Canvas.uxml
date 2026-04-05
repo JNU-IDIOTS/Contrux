@@ -1,5 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <engine:Template name="Map_Room_Area_Prefab" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_Room_Area_Prefab.uxml?fileID=9197481963319205126&amp;guid=082de8383d8a0c747b95a63fbb72a24d&amp;type=3#Map_Room_Area_Prefab" />
+    <engine:Template name="Area_Type_List_Item" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Area_Type_List_Item.uxml?fileID=9197481963319205126&amp;guid=a7e66161a04489847848f9c2ef430ec8&amp;type=3#Area_Type_List_Item" />
     <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=1d39a2834e4677c448e2ed16bb69cf53&amp;type=3#Map_UI_Canvas" />
     <engine:VisualElement template="Main_UI_Canvas" style="height: 1080px;">
         <Style src="project://database/Assets/New_Inventory/Core/Prefabs/Main_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=094055ee333a507408d3cf52e8d552ee&amp;type=3#Main_UI_Canvas" />
@@ -23,12 +24,7 @@
                     </engine:VisualElement>
                     <engine:Instance template="Map_Room_Area_Prefab" />
                     <engine:VisualElement name="area-type-list" class="area-type-list" style="flex-grow: 1;">
-                        <engine:VisualElement name="area-type-list-item" class="area-type-list-item" style="flex-grow: 1;">
-                            <engine:VisualElement name="area-type-icon-container" style="flex-grow: 1;">
-                                <engine:VisualElement name="area-type-icon" style="flex-grow: 1;" />
-                            </engine:VisualElement>
-                            <engine:Label text="CURRENT PLACE" name="area-type-text" style="-unity-font-definition: url(&quot;project://database/Assets/Inventory/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=1642ea2a3f474e84faf3e2c31aa81dca&amp;type=3#NotInter-Regular&quot;);" />
-                        </engine:VisualElement>
+                        <engine:Instance template="Area_Type_List_Item" name="Area_Type_List_Item" />
                     </engine:VisualElement>
                 </engine:VisualElement>
             </engine:VisualElement>

@@ -134,6 +134,5 @@
 #area-type-text {
   font-size: 12px;
   letter-spacing: 24px;
-  text-transform: uppercase;
   color: #c8a84e;
 }
