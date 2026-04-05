@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.map-container {
+  margin: 46px 60px;
+  background-color: #141210;
+  border-radius: 18px;
+  position: relative;
+  padding: 20px;
+  /* 기본값 stretch 방지를위해 부모요소에 직접 align-items속성을 지정함.  */
+  align-items: flex-start;
+}
+
+.zoom-indicator {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 92px;
+  height: 30px;
+  border-radius: 8px;
+  border-color: rgba(87, 83, 77, 0.5);
+  border-width: 1px;
+  background-color: rgba(41, 37, 36, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 8px;
+}
+
+.zoom-indicator-icon {
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  background-size: contain;
+}
+
+.zoom-indicator-text {
+  font-size: 12px;
+  color: #d4a017;
+  height: 24px;
+  -unity-text-align: middle-center;
+}
+
+.area-type-list {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  width: 230px;
+  height: 136px;
+  border-radius: 18px;
+  border-width: 1px;
+  border-color: rgba(139, 105, 20, 0.4);
+  background-color: #1e1a14;
+  padding: 20px;
+}
+
+/* 굳이 클래스 추가할 필요없이 하나의 클래스만 필요한 상황이라면 요소의 이름을 아이디선택자로 지정해서 사용할 수 있다. */
+
+#area-type-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 12px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: rgba(139, 105, 20, 0.5);
+  background-color: #2a2218;
+}
+
+#key-guide-list {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+#key-indicator-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 4px;
+}

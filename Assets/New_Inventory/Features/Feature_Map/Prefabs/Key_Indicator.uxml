@@ -1,0 +1,5 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="key-indicator" style="flex-grow: 1;">
+        <engine:Label text="CTRL" name="key-indicator-text" style="-unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+    </engine:VisualElement>
+</engine:UXML>

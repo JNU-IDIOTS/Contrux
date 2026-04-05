@@ -1,0 +1,60 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="Map_Room_Area_Prefab" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_Room_Area.uxml?fileID=9197481963319205126&amp;guid=082de8383d8a0c747b95a63fbb72a24d&amp;type=3#Map_Room_Area" />
+    <engine:Template name="Area_Type_List_Item" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Area_Type_List_Item.uxml?fileID=9197481963319205126&amp;guid=a7e66161a04489847848f9c2ef430ec8&amp;type=3#Area_Type_List_Item" />
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=1d39a2834e4677c448e2ed16bb69cf53&amp;type=3#Map_UI_Canvas" />
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Area_Type_List_Item.uss?fileID=7433441132597879392&amp;guid=ce988c5638e6f214eae85d820884d4d2&amp;type=3#Area_Type_List_Item" />
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Key_Guide_List_Item.uss?fileID=7433441132597879392&amp;guid=cd4b9880a5571434e933d6388bea36c9&amp;type=3#Key_Guide_List_Item" />
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Key_Indicator.uss?fileID=7433441132597879392&amp;guid=8052514b06e0da44f8bcdea831455547&amp;type=3#Key_Indicator" />
+    <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_Room_Area.uss?fileID=7433441132597879392&amp;guid=4786fd875c617fc499b7d13d998a965a&amp;type=3#Map_Room_Area" />
+    <engine:VisualElement template="Main_UI_Canvas" style="height: 1080px;">
+        <Style src="project://database/Assets/New_Inventory/Core/Prefabs/Main_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=094055ee333a507408d3cf52e8d552ee&amp;type=3#Main_UI_Canvas" />
+        <engine:VisualElement name="container" class="inner" style="flex-grow: 1;">
+            <engine:VisualElement name="header" class="header" style="flex-grow: 1;">
+                <engine:Button name="header-left" class="header-item header-left" style="flex-grow: 1;">
+                    <engine:VisualElement name="left-chev" class="left-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/left-chev.svg?fileID=7388822144124034973&amp;guid=ca0a8a43e913b4245bed1b75bc46b15e&amp;type=3#left-chev&quot;);" />
+                </engine:Button>
+                <engine:VisualElement name="header-middle" class="header-item header-middle" style="flex-grow: 1;">
+                    <engine:Label text="Mock" name="header-title" class="header-title" style="-unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20ExtraBold.ttf?fileID=12800000&amp;guid=446be1256eb31f7498cdd0f1aa86d876&amp;type=3#PF스타더스트 3.0 ExtraBold&quot;); font-size: 24px; -unity-text-align: upper-center; letter-spacing: 3.2px; background-color: rgba(55, 55, 55, 0); color: rgba(254, 243, 198, 0.9);" />
+                </engine:VisualElement>
+                <engine:Button name="header-right" class="header-item header-right" style="flex-grow: 1;">
+                    <engine:VisualElement name="right-chev" class="right-chev chev" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Core/Prefabs/img/right-chev.svg?fileID=7388822144124034973&amp;guid=39ce389d8a1e1dd4da9179cb91c7da36&amp;type=3#right-chev&quot;);" />
+                </engine:Button>
+            </engine:VisualElement>
+            <engine:VisualElement name="inner-content" class="inner-content" style="flex-grow: 1;">
+                <engine:VisualElement name="map-container" class="map-container" style="flex-grow: 1; -unity-font-definition: url(&quot;project://database/Assets/Font/Cinzel/Cinzel-Regular.ttf?fileID=12800000&amp;guid=ab1bffba72b4a1642b7c88424d83418a&amp;type=3#Cinzel-Regular&quot;);">
+                    <engine:VisualElement name="zoom-indicator" class="zoom-indicator" style="flex-grow: 1;">
+                        <engine:VisualElement name="zoom-indicator-icon" class="zoom-indicator-icon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/img/zoom-indicator-plus.svg?fileID=7388822144124034973&amp;guid=2b29bc6e3a2d8b84ca5d2136689d8cd5&amp;type=3#zoom-indicator-plus&quot;);" />
+                        <engine:Label name="zoom-indicator-text" text="200%" class="zoom-indicator-text" style="flex-grow: 1; letter-spacing: 24px; word-spacing: 0; -unity-text-align: middle-center; -unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+                    </engine:VisualElement>
+                    <engine:Instance template="Map_Room_Area_Prefab" />
+                    <engine:VisualElement name="area-type-list" class="area-type-list" style="flex-grow: 1;">
+                        <engine:Instance template="Area_Type_List_Item" name="Area_Type_List_Item" />
+                    </engine:VisualElement>
+                    <engine:VisualElement name="key-guide-list" style="flex-grow: 1;">
+                        <engine:VisualElement name="key-guide-list-item" style="flex-grow: 1;">
+                            <engine:VisualElement name="key-indicator-container" style="flex-grow: 1;">
+                                <engine:VisualElement name="key-indicator" style="flex-grow: 1;">
+                                    <engine:Label text="CTRL" name="key-indicator-text" style="-unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+                                </engine:VisualElement>
+                                <engine:VisualElement name="key-indicator" style="flex-grow: 1;">
+                                    <engine:Label text="+ / -" name="key-indicator-text" style="-unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+                                </engine:VisualElement>
+                            </engine:VisualElement>
+                            <engine:Label text="확대/축소" name="key-role-text" style="-unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;); letter-spacing: 0;" />
+                        </engine:VisualElement>
+                        <engine:VisualElement template="Key_Guide_List_Item">
+                            <engine:VisualElement name="key-guide-list-item" style="flex-grow: 1;">
+                                <engine:VisualElement name="key-indicator-container" style="flex-grow: 1;">
+                                    <engine:VisualElement name="key-indicator" style="flex-grow: 1;">
+                                        <engine:Label text="Q" name="key-indicator-text" style="-unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;);" />
+                                    </engine:VisualElement>
+                                </engine:VisualElement>
+                                <engine:Label text="PING 찍기&#10;" name="key-role-text" style="-unity-font-definition: url(&quot;project://database/Assets/Font/UXML/PF%EC%8A%A4%ED%83%80%EB%8D%94%EC%8A%A4%ED%8A%B8%203.0%20Bold.ttf?fileID=12800000&amp;guid=ee474bccf43ee6b4abf44fa205782674&amp;type=3#PF스타더스트 3.0 Bold&quot;); letter-spacing: 0;" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
