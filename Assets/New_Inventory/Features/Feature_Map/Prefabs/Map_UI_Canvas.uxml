@@ -1,7 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <engine:Template name="Map_Room_Area_Prefab" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_Room_Area_Prefab.uxml?fileID=9197481963319205126&amp;guid=082de8383d8a0c747b95a63fbb72a24d&amp;type=3#Map_Room_Area_Prefab" />
     <engine:Template name="Area_Type_List_Item" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Area_Type_List_Item.uxml?fileID=9197481963319205126&amp;guid=a7e66161a04489847848f9c2ef430ec8&amp;type=3#Area_Type_List_Item" />
-    <engine:Template name="Key_Indicator" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Key_Indicator.uxml?fileID=9197481963319205126&amp;guid=b6272b20d20ffd841b993d2b8ed4999c&amp;type=3#Key_Indicator" />
     <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=1d39a2834e4677c448e2ed16bb69cf53&amp;type=3#Map_UI_Canvas" />
     <engine:VisualElement template="Main_UI_Canvas" style="height: 1080px;">
         <Style src="project://database/Assets/New_Inventory/Core/Prefabs/Main_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=094055ee333a507408d3cf52e8d552ee&amp;type=3#Main_UI_Canvas" />
@@ -33,9 +32,9 @@
                                 <engine:VisualElement name="key-indicator" style="flex-grow: 1;">
                                     <engine:Label text="CTRL" name="key-indicator-text" />
                                 </engine:VisualElement>
-                                <engine:Instance template="Key_Indicator">
-                                    <AttributeOverrides element-name="key-indicator-text" text="+ / -" />
-                                </engine:Instance>
+                                <engine:VisualElement name="key-indicator" style="flex-grow: 1;">
+                                    <engine:Label text="+ / -" name="key-indicator-text" />
+                                </engine:VisualElement>
                             </engine:VisualElement>
                             <engine:Label text="Label" name="key-role-text" />
                         </engine:VisualElement>

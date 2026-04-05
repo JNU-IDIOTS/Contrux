@@ -161,6 +161,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 4px;
 }
 
 #key-indicator {
@@ -173,10 +174,15 @@
   border-color: rgba(139, 105, 20, 0.5);
   opacity: 0.6;
   background-color: #2a2218;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 #key-indicator-text {
   font-size: 16px;
   color: #fff;
+}
+
+#key-role-text {
+  font-size: 20px;
+  color: #c8a84e;
 }
