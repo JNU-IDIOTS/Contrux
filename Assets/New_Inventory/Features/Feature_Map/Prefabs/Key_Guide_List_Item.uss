@@ -1,0 +1,17 @@
+#key-guide-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 8px;
+}
+
+/* 마지막 요소에는 last-item이라는 가상 클래스를 꼭 사용해주세요. */
+#key-guide-list-item.last-item {
+  margin-right: 0;
+}
+
+#key-role-text {
+  font-size: 20px;
+  color: #c8a84e;
+  letter-spacing: 24px;
+}
