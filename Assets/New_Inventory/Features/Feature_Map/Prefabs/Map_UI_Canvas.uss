@@ -10,7 +10,7 @@
   border-radius: 18px;
   position: relative;
   padding: 20px;
-  /* 기본값 stretch 방지  */
+  /* 기본값 stretch 방지를위해 부모요소에 직접 align-items속성을 지정함.  */
   align-items: flex-start;
 }
 
@@ -78,4 +78,62 @@
   display: block;
   background-color: #d41717;
   opacity: 0.5;
+}
+
+.area-type-list {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  width: 230px;
+  height: 136px;
+  border-radius: 18px;
+  border-width: 1px;
+  border-color: rgba(139, 105, 20, 0.4);
+  background-color: #1e1a14;
+  padding: 20px;
+}
+
+.area-type-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  max-height: 24px;
+}
+
+/* 굳이 클래스 추가할 필요없이 하나의 클래스만 필요한 상황이라면 요소의 이름을 아이디선택자로 지정해서 사용할 수 있다. */
+
+#area-type-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  margin-right: 12px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: rgba(139, 105, 20, 0.5);
+  background-color: #2a2218;
+}
+
+#area-type-icon {
+  width: 12px;
+  height: 12px;
+  max-height: 12px;
+  border-radius: 50%;
+  background-color: #d4a017;
+}
+
+#area-type-icon.boss {
+  background-color: rgba(212, 23, 23, 0.4);
+}
+
+#area-type-text {
+  font-size: 12px;
+  letter-spacing: 24px;
+  text-transform: uppercase;
+  color: #c8a84e;
 }

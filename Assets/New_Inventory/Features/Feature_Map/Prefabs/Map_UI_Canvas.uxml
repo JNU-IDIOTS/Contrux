@@ -22,6 +22,14 @@
                         <engine:Label name="zoom-indicator-text" text="200%" class="zoom-indicator-text" style="flex-grow: 1; letter-spacing: 24px; word-spacing: 0; -unity-text-align: middle-center;" />
                     </engine:VisualElement>
                     <engine:Instance template="Map_Room_Area_Prefab" />
+                    <engine:VisualElement name="area-type-list" class="area-type-list" style="flex-grow: 1;">
+                        <engine:VisualElement name="area-type-list-item" class="area-type-list-item" style="flex-grow: 1;">
+                            <engine:VisualElement name="area-type-icon-container" style="flex-grow: 1;">
+                                <engine:VisualElement name="area-type-icon" style="flex-grow: 1;" />
+                            </engine:VisualElement>
+                            <engine:Label text="CURRENT PLACE" name="area-type-text" style="-unity-font-definition: url(&quot;project://database/Assets/Inventory/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=1642ea2a3f474e84faf3e2c31aa81dca&amp;type=3#NotInter-Regular&quot;);" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
                 </engine:VisualElement>
             </engine:VisualElement>
         </engine:VisualElement>
