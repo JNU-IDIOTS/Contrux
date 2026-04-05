@@ -1,4 +1,5 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="Map_Room_Area_Prefab" src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_Room_Area_Prefab.uxml?fileID=9197481963319205126&amp;guid=082de8383d8a0c747b95a63fbb72a24d&amp;type=3#Map_Room_Area_Prefab" />
     <Style src="project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/Map_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=1d39a2834e4677c448e2ed16bb69cf53&amp;type=3#Map_UI_Canvas" />
     <engine:VisualElement template="Main_UI_Canvas" style="height: 1080px;">
         <Style src="project://database/Assets/New_Inventory/Core/Prefabs/Main_UI_Canvas.uss?fileID=7433441132597879392&amp;guid=094055ee333a507408d3cf52e8d552ee&amp;type=3#Main_UI_Canvas" />
@@ -20,6 +21,7 @@
                         <engine:VisualElement name="zoom-indicator-icon" class="zoom-indicator-icon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/New_Inventory/Features/Feature_Map/Prefabs/img/zoom-indicator-plus.svg?fileID=7388822144124034973&amp;guid=2b29bc6e3a2d8b84ca5d2136689d8cd5&amp;type=3#zoom-indicator-plus&quot;);" />
                         <engine:Label name="zoom-indicator-text" text="200%" class="zoom-indicator-text" style="flex-grow: 1; letter-spacing: 24px; word-spacing: 0; -unity-text-align: middle-center;" />
                     </engine:VisualElement>
+                    <engine:Instance template="Map_Room_Area_Prefab" />
                 </engine:VisualElement>
             </engine:VisualElement>
         </engine:VisualElement>
