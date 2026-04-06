@@ -2893,7 +2893,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4443499034544383181}
   - component: {fileID: 2730703721373470332}
-  - component: {fileID: 6443238055940445111}
   m_Layer: 8
   m_Name: AttackArea
   m_TagString: Wolf
@@ -2911,7 +2910,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4443499035449986965}
   - component: {fileID: 2730703721675302180}
-  - component: {fileID: 6443238056645196015}
   m_Layer: 0
   m_Name: AttackArea
   m_TagString: Wolf
@@ -2941,7 +2939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5879133131640810659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,30 +2963,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6443238055940445111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5332361891990941048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35274d2639968b742bec265b34cd55a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6443238056645196015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5332361892897064480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35274d2639968b742bec265b34cd55a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8551714696453483129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3124,7 +3098,7 @@ MonoBehaviour:
   steampunk: 0
   magic: 0
   select: 0
-  showDebugGizmos: 0
+  showDebugGizmos: 1
   rb: {fileID: 4279036961072134855}
   attackAreaObject: {fileID: 5332361891990941048}
   dwarfbuster: {fileID: 0}

@@ -130,7 +130,8 @@ public class EnemyMasterDebugger : EditorWindow
         if (GUILayout.Button("FLEE")) _selectedAI.ChangeState(_selectedAI.fleeState);
         EditorGUILayout.EndHorizontal();
 
-        if (GUILayout.Button("KILL ENEMY", GUILayout.Height(30))) _selectedAI.TakeDamage(9999);
+        // 🎯 뇌 대신 심장(Health) 컴포넌트에 데미지를 주도록 수정!
+        if (GUILayout.Button("KILL ENEMY", GUILayout.Height(30))) _selectedAI._enemyHealth.TakeDamage(9999);
     }
 
     private void DrawStatSection()
@@ -138,10 +139,22 @@ public class EnemyMasterDebugger : EditorWindow
         EditorGUILayout.Space();
         GUILayout.Label("실시간 데이터", EditorStyles.boldLabel);
         EditorGUILayout.BeginVertical("box");
-        EditorGUILayout.LabelField("HP", $"{_selectedAI.currentHP} / {_selectedAI.speciesData?.maxHP}");
-        EditorGUILayout.LabelField("용기", $"{_selectedAI.currentCourage:F1} (+{_selectedAI.currentCourage})");
-        EditorGUILayout.LabelField("분대 랭크", _selectedAI.mySquadRank.ToString());
-        EditorGUILayout.Toggle("플레이어 감지", _selectedAI.playerInRange);
+
+        // 🎯 데이터들을 심장(Health)과 무전기(Squad)에서 가져오도록 수정!
+        EditorGUILayout.LabelField("HP", $"{_selectedAI._enemyHealth.currentHP} / {_selectedAI.speciesData?.maxHP}");
+        EditorGUILayout.LabelField("용기", $"{_selectedAI._enemyHealth.currentCourage:F1}");
+        EditorGUILayout.LabelField("분대 랭크", _selectedAI._enemySquad.mySquadRank.ToString());
+
+        bool isPlayerDetected = false;
+        // player가 null일 때 에러 안 나도록 안전장치(&& _selectedAI.player != null) 추가
+        if (_selectedAI.speciesData != null && _selectedAI.player != null)
+        {
+            float dist = Vector2.Distance(_selectedAI.transform.position, _selectedAI.player);
+            isPlayerDetected = dist <= _selectedAI.speciesData.detectionRadius;
+        }
+
+        EditorGUILayout.Toggle("플레이어 감지(거리 계산)", isPlayerDetected);
+
         EditorGUILayout.EndVertical();
     }
 
